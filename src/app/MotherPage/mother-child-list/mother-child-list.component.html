@@ -1,0 +1,26 @@
+
+            <h3>Your Children</h3>
+            <div class="col-md">
+              <ul class="media-list">
+                <li class="media"  *ngFor="let child of children" (click)="onSelect(child)"  >
+                  <a class="pull-left"><img class="img-circle media-object" src="..\..\..\images\profile_pic\child\child1.jpg" height="64" width="64"></a>
+                  <div class="media-body">
+                 
+                    <h3 class="media-heading">{{child.first_name}}</h3>
+                    <span><h5><label><b>Last Name :</b></label>{{child.last_name}}     <label><b>DOB :</b></label> {{child.date_of_birth}}     <label><b>Blood group :</b></label> {{child.blood_group}}  </h5></span>  
+                  </div>
+                
+
+                </li>
+              </ul>
+            </div>
+
+
+            
+            
+   <!--<app-child-window *ngIf="currentChild" [child]= "currentChild"></app-child-window> -->          
+  <router-outlet></router-outlet>
+  
+  
+
+

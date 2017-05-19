@@ -1,0 +1,110 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+  </head>
+  
+   <body>
+  
+      <div class="section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="nav nav-pills">
+                <h1>Mother</h1>
+                <h3>Full Name</h3>
+                <li class="active">
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">Change Role</a>
+                </li>
+                <li>
+                  <a href="#">logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+ 
+      <br>
+    <div class="section" >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="col-md-12">
+                  <ul class="list-group">
+                <a [routerLink]="['dashboard']" ><li class="list-group-item">
+               <h4>Dashboard</h4> </li></a>
+                
+                <a [routerLink]="['schedule']" routerLinkActive="active"><li class="list-group-item"><h4>Scedule</h4></li></a>
+                <a [routerLink]="['sendmsg']" routerLinkActive="active"><li class="list-group-item">
+               <h4>Send a Message</h4></li></a>
+               <a [routerLink]="['schedule']" routerLinkActive="active"><li class="list-group-item">
+               <h4>Schedule</h4></li></a>
+                <a [routerLink]="['children']" routerLinkActive="active"><li class="list-group-item">
+                <h4>Your Children</h4></li></a>
+             <!--   <a [routerLink]="['econtacts']" routerLinkActive="active"><li class="list-group-item"><h4>Emergancy Contacts</h4></li></a>
+              -->
+              </ul>
+
+            </div>
+          </div>
+        
+         
+         
+      
+              <div class="container-fluid" > 
+                  <div class="col-md-8" style="background-color:white;">
+                     <router-outlet></router-outlet>
+                    <!--your dashboard component
+                    <div *ngIf="navButtonSelected==0">
+                      <app-mother-dashboard></app-mother-dashboard>
+                    </div>
+                    <!--your Notification component-->
+                    <div *ngIf="navButtonSelected==1">
+                      <h1>Notification</h1>
+                    </div>
+                    <!--your Your Health component-->
+                    <div *ngIf="navButtonSelected==2">
+                      <h1>Your Health</h1>
+                    </div>
+                    <!--your Massege component-->
+                    <div *ngIf="navButtonSelected==3">
+                      <h1>Massege</h1>
+                    </div>
+                    <!--your child list component
+                    <div *ngIf="navButtonSelected==4">
+                      <app-mother-child-list></app-mother-child-list>
+                    </div>-->
+                    <!--your Schedule component-->
+                    <div *ngIf="navButtonSelected==5">
+                      <h1>Scedule</h1>
+                    </div>
+                    <!--your contactlist component-->
+                    <div *ngIf="navButtonSelected==6">
+                      <h1>Emergancy</h1>
+                    </div>  
+                      
+                    
+
+                </div>
+            </div>
+         </div>  
+      </div>
+    </div>     
+   
+        <div class="section" >
+          <!--child component-->
+            
+
+        </div>
+ 
+    
+  </body>
+
+</html>

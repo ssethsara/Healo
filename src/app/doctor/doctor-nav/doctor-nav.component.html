@@ -1,0 +1,79 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+  </head>
+  
+   <body>
+  
+      <div class="section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="nav nav-pills">
+                <h1>Doctor</h1>
+                <div *ngIf="profile.firstName">
+                   <h3>{{profile.firstName}} {{profile.lastName}}</h3>
+                </div>
+                 
+                <li class="active">
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a (click)="logout()">logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+ 
+      <br>
+    <div class="section" >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="col-md-12">
+                  <ul class="list-group">
+                      <a [routerLink]="['dashboard']" ><li class="list-group-item"><h4>Dashboard</h4> </li></a>
+                      <a [routerLink]="['stat']" routerLinkActive="active"><li class="list-group-item"><h4>Statistics</h4></li></a>
+                     
+                      <a [routerLink]="['schedule']" routerLinkActive="active"><li class="list-group-item"><h4>Scedule</h4></li></a>
+                      <a [routerLink]="['messages']" routerLinkActive="active"><li class="list-group-item"><h4>Send a Message</h4></li></a>
+                      <a [routerLink]="['searchchild']" routerLinkActive="active"><li class="list-group-item"><h4>Search Children</h4></li></a>
+           <!--           <a [routerLink]="['contacts']" routerLinkActive="active"><li class="list-group-item"><h4>Contacts</h4></li></a>
+               -->       
+                   </ul>
+
+            </div>
+          </div>
+        
+         
+         
+      
+              <div class="container-fluid" > 
+                  <div class="col-md-8" style="background-color:white;">
+                     <router-outlet></router-outlet>
+                  
+                      
+                    
+
+                </div>
+            </div>
+         </div>  
+      </div>
+    </div>     
+   
+        <div class="section" >
+          <!--child component-->
+        
+
+        </div>
+ 
+    
+  </body>
+
+</html>

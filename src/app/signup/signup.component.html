@@ -1,0 +1,60 @@
+    
+    <div class="section">
+    
+          <div class="col-md-6">
+                  <form role="form" [formGroup]="signupForm" (ngSubmit)="addUser($event)">
+                    <div class="form-group">
+                      <label class="control-label" >First Name</label>
+                      <input class="form-control" formControlName="firstName" name="firstName" placeholder="First Name" type="text">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label" >Last Name</label>
+                      <input class="form-control" formControlName="lastName" name="lastName"  placeholder="Last Name" type="text">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label" for="exampleInputEmail1">Email address</label>
+                      <input class="form-control" formControlName="email" name="email" id="exampleInputEmail1" placeholder="Enter email" type="email">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label" >NIC</label>
+                      <input class="form-control" formControlName="nic" name="nic" placeholder="your nic number" type="text">
+                    </div>
+                     <div class="form-group">
+                      <label class="control-label" >Address</label>
+                      <input class="form-control" formControlName="address" name="address" placeholder="Address" type="text">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label" >Phone Number</label>
+                      <input class="form-control" formControlName="phoneNo" name="phoneNo" placeholder="Phone Number" type="text">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label" for="exampleInputPassword1">Password</label>
+                      <input class="form-control" formControlName="password" name="password" id="exampleInputPassword1" placeholder="Password" type="password">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Confirm Password</label>
+                      <input class="form-control" formControlName="password2" name="password2" type="password" placeholder="Confirm Password">
+                    </div>
+                    <div class="form-group">
+                      <label for="sel1">Select Your Role:</label>
+                        <select class="form-control" formControlName="role" name="role">
+                          <option value=1>Admin</option>
+                          <option value=2>Doctor</option>
+                          <option value=3>Mother</option>
+                          <option value=4>Midwife</option>
+                          <option value=5>Nurse</option>
+                        </select>
+                      </div>
+
+
+
+
+                    <button type="submit" class="btn btn-primary">SignUp</button>
+
+                   <a [routerLink]="['../../users/login']" class="btn btn-default">login</a>
+                  </form>
+                </div>
+
+</div>   
+      
+   

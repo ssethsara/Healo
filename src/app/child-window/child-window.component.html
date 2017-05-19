@@ -1,0 +1,129 @@
+<div class="section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="..\..\images\profile_pic\child\child1.jpg" class="img-responsive">
+              <div class="caption">
+                <h2 *ngIf="child">{{child.firstName}}</h2>
+                Showing product details for product: {{childId}}
+                 <div>
+                <a href="#"><h3>
+                      <b>Health Status</b>
+                  </h3></a>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" style="width: 60%;">60% Healthy</div>
+                  </div>
+                  <h3>
+                    <b>Weight</b>
+                  </h3>
+                  <h4 *ngIf="child" >{{child.weight}} kg</h4>
+                  <h3>
+                    <b>Height</b>
+                  </h3>
+                  <h4 *ngIf="child" >{{child.height}} cm</h4>
+              
+              </div>
+              </div>
+            </div>
+           
+          
+          </div>
+         
+          <div class="col-md-8">
+         
+            <table class="table table-hover">
+              <tbody>
+                <tr>
+                  <td>
+                    <b>Full name :</b>
+                  </td>
+                  <td *ngIf='child' >{{child.firstName}} {{child.surname}}</td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Age :</b>
+                  </td>
+                  <td *ngIf='child' >{{child.dateOfBirth}}</td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Blood Group :</b>
+                  </td>
+                  <td *ngIf='child' >{{child.blood_group}}</td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Speacial Reason to Care :</b>
+                  </td>
+                  <td *ngIf='child'>{{child.SRC}}</td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Mother's Name' :</b>
+                  </td>
+                  <td *ngIf='child' >{{child.user.firstName}} </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Last Clinic visit :</b>
+                  </td>
+                  <td *ngIf='child'>{{child.last_clinic_date}}</td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Last Midwife visit :</b>
+                  </td>
+                  <td *ngIf='child'>{{child.last_midwife_visit_date}}</td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Last Vacinated date:</b>
+                  </td>
+                  <td *ngIf='child'>{{child.last_doctor_check_date}}</td>
+                </tr>
+              </tbody>
+
+                  
+            </table>
+                <a data-toggle="modal" *ngIf=checVaccineEnabled class="btn btn-block btn-lg btn-primary" (click)=" RoleAction()">{{checkORVaccin}}</a>
+            <div>
+              
+              <div class="col-md-12">
+                
+                <h1>Doctor's Speacial Notes</h1>
+                <p *ngIf='child'>{{child.doctor_notes}}</p>
+               
+                <a class="btn btn-default">More Notes</a>
+              </div>
+              <div class="col-md-12">
+                <h1>Midwife's Speacial Notes</h1>
+                <p *ngIf='child'>{{child.midwife_notes}}</p>
+                <a class="btn btn-default">More Notes</a>
+
+                <div class="row"><br><br></div>
+                  <div class="row">
+                  <div class="col-md-12">
+                    <a class="btn btn-primary" [routerLink]="['immu']">Immulization Table</a>
+                    <a class="btn btn-primary" [routerLink]="['weight']">weight Charts</a>
+                  </div>
+                </div> 
+
+              </div>
+            </div>
+
+           
+
+
+          </div>
+
+          
+          <router-outlet></router-outlet>
+          
+
+        </div>
+      </div>
+ 
+ </div>
+
+

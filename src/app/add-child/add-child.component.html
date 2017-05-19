@@ -1,0 +1,60 @@
+<div  class="col-md-8">
+            <form role="form" [formGroup]="ChildRegForm" (ngSubmit)="postChild($event)">
+              <div class="form-group has-success">
+                <label class="control-label">First Name</label>
+                <input class="form-control input-lg" formControlName="firstName" name="firstName" placeholder="Enter first Name" type="text">
+              </div>
+              <div class="form-group has-success">
+                <label class="control-label">Last Name</label>
+                <input class="form-control input-lg" formControlName="lastName" name="lastName" placeholder="Enter last Name" type="text">
+              </div>
+              <div class="form-group has-success">
+                <label class="control-label">surname</label>
+                <input class="form-control input-lg" formControlName="surname" name="surname" placeholder="Enter surname" type="text">
+              </div>
+              <div class="form-group has-success">
+                <label class="control-label">Date of Birth</label>
+                <input type="date" formControlName="dateOfBirth" name="dateOfBirth" class="form-control input-lg" placeholder="Enter Date of Birth">
+              </div>
+              <!--blood type-->
+              <div class="form-group has-success">
+                <label class="control-label">Blood type</label>
+              
+                    <input type="radio" formControlName="blood" name="blood" value="3"><label>A+</label>
+               
+                    <input type="radio" formControlName="blood" name="blood" value="4"><label>A-</label>
+                
+                    <input type="radio" formControlName="blood" name="blood" value="5"><label>B+</label>
+                
+                    <input type="radio" formControlName="blood" name="blood" value="6"><label>B-</label>
+                
+                    <input type="radio" formControlName="blood" name="blood" value="1"><label>O+</label>
+               
+                    <input type="radio" formControlName="blood" name="blood" value="2"><label>O-</label>
+                
+                    <input type="radio" formControlName="blood" name="blood" value="7"><label>AB+</label>
+                
+                    <input type="radio" formControlName="blood" name="blood" value="8"><label>AB-</label>
+                
+              </div>
+              <!--bGender-->
+              <div class="form-group has-success">
+                <label class="control-label">Gender</label>
+               
+
+                <div class="radio-inline">
+                   <label>
+                    <input type="radio" formControlName="gender" name="gender" value="1">Male</label>
+                </div>
+                <div class="radio-inline">
+                  <label>
+                    <input type="radio" formControlName="gender" name="gender" value="0">Female</label>
+                </div>
+              </div>
+              <div class="form-group has-success">
+                <label class="control-label">Mother/Guardian NIC</label>
+                <input class="form-control input-lg" placeholder="Enter NIC" type="text" formControlName="motherid" name="motherid">
+              </div>
+              <button type="submit" class="btn btn-lg btn-primary">Add Child</button>
+            </form>
+          </div>

@@ -1,0 +1,75 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #d9d9d9;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+body{
+     
+}
+
+.page-header
+{
+  
+  background-color: #ff1a21;
+   height: 100px;
+  
+
+}
+
+.headFont
+{
+  font-family: 'Fjalla One', sans-serif;
+
+  font-size: 58px;
+  color:white;
+  
+
+}
+
+.headFSmal{
+  font-size: 20px;
+  color:white;
+}
+
+
+.cross
+{
+  color: white;
+  font-size:100px;
+  
+}
+
+.btn-danger2 {
+  color: #fff;
+  background-color: #77ff33;
+  border-color: #77ff33;
+}
+
+.nav-default
+{
+  border-width: 100px;
+  padding: 15px;
+}
+
+
+.signinbtn {
+position: absolute;
+top: 75px;
+right : 10px;
+}
+
+.Header-name
+{
+  position: absolute;
+  right:150px;
+  left:150px;
+  -webkit-text-fill-color:white; 
+}

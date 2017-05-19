@@ -1,0 +1,24 @@
+<div id="search-component">
+
+
+
+  <h3>Search Child</h3>
+
+  <form>
+  <input class="form-control input-md" #searchBox  (keyup)="search(searchBox.value)" /></form>
+  <div>
+    <div class="col-md-12" >
+          <ul  class="list-group-item" *ngFor="let child of children | async" >
+                    <li class="list-group-item" Style="position:relative; Z-index:2; " *ngIf="child" (click)=" gotoDetail(child)">
+                       <a>{{child.firstName}} {{child.lastName}} {{child.surname}}</a>
+                    </li> </ul>
+
+                    <div Style="position:relative; Z-index:1">
+                    <router-outlet></router-outlet>
+                    </div>
+    </div>
+  </div>
+</div>
+
+
+  
