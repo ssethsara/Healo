@@ -1,2 +1,0 @@
-# Healo
-Child Healthcare program
