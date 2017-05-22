@@ -580,9 +580,10 @@ var UserService = (function () {
     UserService.prototype.loginUser = function (userLogin) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Headers */]({ 'Content-Type': 'application/json' });
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
-        return this.http.post(this.loginURL, JSON.stringify(userLogin), options)
+        var log = this.http.post(this.loginURL, JSON.stringify(userLogin), options)
             .map(this.extractData)
             .catch(this.handleError);
+        return log;
     };
     UserService.prototype.getUser = function () {
         this.http.get('users/auth/userdata', { withCredentials: true })
@@ -592,9 +593,15 @@ var UserService = (function () {
         this.http.get('users/auth/logout')
             .map(function (res) { return res.json(); });
     };
+    UserService.prototype.route = function () {
+        console.log("logging test");
+        this.router.navigate(['doctor']);
+        return true;
+    };
     UserService.prototype.extractData = function (res) {
         var body = res.json();
-        return body.data || {};
+        console.log(this.route());
+        return body || {};
     };
     UserService.prototype.handleError = function (error) {
         // In a real world app, you might use a remote logging infrastructure

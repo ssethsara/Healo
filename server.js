@@ -21,6 +21,7 @@ var multer=require('multer');
 const api = require('./server/api');
 const users = require('./server/users');
 const child = require('./server/child');
+const clinic = require('./server/clinic');
 
 const app=express();
 
@@ -100,6 +101,7 @@ res.locals.error=req.flash('error');
 app.use('/api', api);
 app.use('/users', users);
 app.use('/child', child);
+app.use('/clinic', clinic);
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {

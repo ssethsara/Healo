@@ -1,8 +1,11 @@
-import { Injectable } from '@angular/core';
+import {Component, Injectable} from '@angular/core';
 import { Headers, RequestOptions } from '@angular/http';
 import { Http, Response }          from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { Router }from '@angular/router';
+import { Router,ActivatedRoute }from '@angular/router';
+
+
+import {LocationStrategy, HashLocationStrategy} from '@angular/common'; 
 
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
@@ -44,10 +47,13 @@ loginUser(userLogin): Observable<Login> {
     var headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
 
-    return this.http.post(this.loginURL,JSON.stringify(userLogin), options)
+    var log = this.http.post(this.loginURL,JSON.stringify(userLogin), options)
                     .map(this.extractData)
                     .catch(this.handleError);
                     
+                    
+                      
+       return log;             
   }
 
 getUser(){
@@ -62,11 +68,25 @@ logout(){
 }
 
 
+route(){
+  console.log("logging test");
+  this.router.navigate(['doctor']);
+
+  return true;
+}
+
+
   private extractData(res) {
   let body = res.json();
   
-                      
-  return body.data || { };
+  
+ 
+ console.log(this.route());
+ 
+
+  
+                  
+  return body || { };
 }
 
 
