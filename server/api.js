@@ -5,7 +5,6 @@ var models = require("./models");
 
 
 
-
 /* GET home page. */
 router.get('/child', function(req, res) {
   models.child.all().then(function(child) {
