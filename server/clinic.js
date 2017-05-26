@@ -22,8 +22,8 @@ else{
     
     var date = date.getDate();
     var injection= req.body.injection;
-    var childID= req.body.childID;
-    var nurseID= req.body.nurseID;
+   // var childID= req.body.childID;
+    //var nurseID= req.body.nurseID;
     var remarks= req.body.remarks;
 
 //TEMP
@@ -39,8 +39,8 @@ else{
                 
                         date:date,
                         injection_name:injection,
-                        chil_id:childID,
-                        nurse_id:nurseID,
+                        chil_id:1,
+                        nurse_id:1,
                         remarks:remarks,
                         
                 

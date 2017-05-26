@@ -1,316 +1,570 @@
 webpackJsonp([0,4],{
 
-/***/ 1092:
-/***/ (function(module, exports) {
+/***/ 1000:
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "\n            <h3>Your Children</h3>\n            <div class=\"col-md\">\n              <ul class=\"media-list\">\n                <li class=\"media\"  *ngFor=\"let child of children\" (click)=\"onSelect(child)\"  >\n                  <a class=\"pull-left\"><img class=\"img-circle media-object\" src=\"..\\..\\..\\images\\profile_pic\\child\\child1.jpg\" height=\"64\" width=\"64\"></a>\n                  <div class=\"media-body\">\n                 \n                    <h3 class=\"media-heading\">{{child.first_name}}</h3>\n                    <span><h5><label><b>Last Name :</b></label>{{child.last_name}}     <label><b>DOB :</b></label> {{child.date_of_birth}}     <label><b>Blood group :</b></label> {{child.blood_group}}  </h5></span>  \n                  </div>\n                \n\n                </li>\n              </ul>\n            </div>\n\n\n            \n            \n   <!--<app-child-window *ngIf=\"currentChild\" [child]= \"currentChild\"></app-child-window> -->          \n  <router-outlet></router-outlet>\n  \n  \n\n\n"
+var map = {
+	"./af": 458,
+	"./af.js": 458,
+	"./ar": 465,
+	"./ar-dz": 459,
+	"./ar-dz.js": 459,
+	"./ar-kw": 460,
+	"./ar-kw.js": 460,
+	"./ar-ly": 461,
+	"./ar-ly.js": 461,
+	"./ar-ma": 462,
+	"./ar-ma.js": 462,
+	"./ar-sa": 463,
+	"./ar-sa.js": 463,
+	"./ar-tn": 464,
+	"./ar-tn.js": 464,
+	"./ar.js": 465,
+	"./az": 466,
+	"./az.js": 466,
+	"./be": 467,
+	"./be.js": 467,
+	"./bg": 468,
+	"./bg.js": 468,
+	"./bn": 469,
+	"./bn.js": 469,
+	"./bo": 470,
+	"./bo.js": 470,
+	"./br": 471,
+	"./br.js": 471,
+	"./bs": 472,
+	"./bs.js": 472,
+	"./ca": 473,
+	"./ca.js": 473,
+	"./cs": 474,
+	"./cs.js": 474,
+	"./cv": 475,
+	"./cv.js": 475,
+	"./cy": 476,
+	"./cy.js": 476,
+	"./da": 477,
+	"./da.js": 477,
+	"./de": 480,
+	"./de-at": 478,
+	"./de-at.js": 478,
+	"./de-ch": 479,
+	"./de-ch.js": 479,
+	"./de.js": 480,
+	"./dv": 481,
+	"./dv.js": 481,
+	"./el": 482,
+	"./el.js": 482,
+	"./en-au": 483,
+	"./en-au.js": 483,
+	"./en-ca": 484,
+	"./en-ca.js": 484,
+	"./en-gb": 485,
+	"./en-gb.js": 485,
+	"./en-ie": 486,
+	"./en-ie.js": 486,
+	"./en-nz": 487,
+	"./en-nz.js": 487,
+	"./eo": 488,
+	"./eo.js": 488,
+	"./es": 490,
+	"./es-do": 489,
+	"./es-do.js": 489,
+	"./es.js": 490,
+	"./et": 491,
+	"./et.js": 491,
+	"./eu": 492,
+	"./eu.js": 492,
+	"./fa": 493,
+	"./fa.js": 493,
+	"./fi": 494,
+	"./fi.js": 494,
+	"./fo": 495,
+	"./fo.js": 495,
+	"./fr": 498,
+	"./fr-ca": 496,
+	"./fr-ca.js": 496,
+	"./fr-ch": 497,
+	"./fr-ch.js": 497,
+	"./fr.js": 498,
+	"./fy": 499,
+	"./fy.js": 499,
+	"./gd": 500,
+	"./gd.js": 500,
+	"./gl": 501,
+	"./gl.js": 501,
+	"./gom-latn": 502,
+	"./gom-latn.js": 502,
+	"./he": 503,
+	"./he.js": 503,
+	"./hi": 504,
+	"./hi.js": 504,
+	"./hr": 505,
+	"./hr.js": 505,
+	"./hu": 506,
+	"./hu.js": 506,
+	"./hy-am": 507,
+	"./hy-am.js": 507,
+	"./id": 508,
+	"./id.js": 508,
+	"./is": 509,
+	"./is.js": 509,
+	"./it": 510,
+	"./it.js": 510,
+	"./ja": 511,
+	"./ja.js": 511,
+	"./jv": 512,
+	"./jv.js": 512,
+	"./ka": 513,
+	"./ka.js": 513,
+	"./kk": 514,
+	"./kk.js": 514,
+	"./km": 515,
+	"./km.js": 515,
+	"./kn": 516,
+	"./kn.js": 516,
+	"./ko": 517,
+	"./ko.js": 517,
+	"./ky": 518,
+	"./ky.js": 518,
+	"./lb": 519,
+	"./lb.js": 519,
+	"./lo": 520,
+	"./lo.js": 520,
+	"./lt": 521,
+	"./lt.js": 521,
+	"./lv": 522,
+	"./lv.js": 522,
+	"./me": 523,
+	"./me.js": 523,
+	"./mi": 524,
+	"./mi.js": 524,
+	"./mk": 525,
+	"./mk.js": 525,
+	"./ml": 526,
+	"./ml.js": 526,
+	"./mr": 527,
+	"./mr.js": 527,
+	"./ms": 529,
+	"./ms-my": 528,
+	"./ms-my.js": 528,
+	"./ms.js": 529,
+	"./my": 530,
+	"./my.js": 530,
+	"./nb": 531,
+	"./nb.js": 531,
+	"./ne": 532,
+	"./ne.js": 532,
+	"./nl": 534,
+	"./nl-be": 533,
+	"./nl-be.js": 533,
+	"./nl.js": 534,
+	"./nn": 535,
+	"./nn.js": 535,
+	"./pa-in": 536,
+	"./pa-in.js": 536,
+	"./pl": 537,
+	"./pl.js": 537,
+	"./pt": 539,
+	"./pt-br": 538,
+	"./pt-br.js": 538,
+	"./pt.js": 539,
+	"./ro": 540,
+	"./ro.js": 540,
+	"./ru": 541,
+	"./ru.js": 541,
+	"./sd": 542,
+	"./sd.js": 542,
+	"./se": 543,
+	"./se.js": 543,
+	"./si": 544,
+	"./si.js": 544,
+	"./sk": 545,
+	"./sk.js": 545,
+	"./sl": 546,
+	"./sl.js": 546,
+	"./sq": 547,
+	"./sq.js": 547,
+	"./sr": 549,
+	"./sr-cyrl": 548,
+	"./sr-cyrl.js": 548,
+	"./sr.js": 549,
+	"./ss": 550,
+	"./ss.js": 550,
+	"./sv": 551,
+	"./sv.js": 551,
+	"./sw": 552,
+	"./sw.js": 552,
+	"./ta": 553,
+	"./ta.js": 553,
+	"./te": 554,
+	"./te.js": 554,
+	"./tet": 555,
+	"./tet.js": 555,
+	"./th": 556,
+	"./th.js": 556,
+	"./tl-ph": 557,
+	"./tl-ph.js": 557,
+	"./tlh": 558,
+	"./tlh.js": 558,
+	"./tr": 559,
+	"./tr.js": 559,
+	"./tzl": 560,
+	"./tzl.js": 560,
+	"./tzm": 562,
+	"./tzm-latn": 561,
+	"./tzm-latn.js": 561,
+	"./tzm.js": 562,
+	"./uk": 563,
+	"./uk.js": 563,
+	"./ur": 564,
+	"./ur.js": 564,
+	"./uz": 566,
+	"./uz-latn": 565,
+	"./uz-latn.js": 565,
+	"./uz.js": 566,
+	"./vi": 567,
+	"./vi.js": 567,
+	"./x-pseudo": 568,
+	"./x-pseudo.js": 568,
+	"./yo": 569,
+	"./yo.js": 569,
+	"./zh-cn": 570,
+	"./zh-cn.js": 570,
+	"./zh-hk": 571,
+	"./zh-hk.js": 571,
+	"./zh-tw": 572,
+	"./zh-tw.js": 572
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 1000;
+
 
 /***/ }),
 
 /***/ 1093:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-8\">\n            <h1>Emergancy Contacts</h1>\n            <table class=\"table\">\n              <thead>\n                <tr>\n                  <th></th>\n                  <th>Occupation</th>\n                  <th>Office Address</th>\n                  <th>Telephone No</th>\n                  <th>Email</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr>\n                  <td></td>\n                  <td>Health officer</td>\n                  <td>12/Kottawa/Pannipitiya</td>\n                  <td>0715632428</td>\n                  <td>sdsd@sffr.com</td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>Midwife</td>\n                  <td>23/Arawwala/Maharagama</td>\n                  <td>0715623442</td>\n                  <td>sdsd@sffr.com</td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>PHI</td>\n                  <td>23/piliyandala</td>\n                  <td>0715632458</td>                 \n                  <td>sdsd@sffr.com</td>\n                </tr>\n              </tbody>\n            </table>\n</div>"
+module.exports = "\n            <h3>Your Children</h3>\n            <div class=\"col-md\">\n              <ul class=\"media-list\">\n                <li class=\"media\"  *ngFor=\"let child of children\" (click)=\"onSelect(child)\"  >\n                  <a class=\"pull-left\"><img class=\"img-circle media-object\" src=\"..\\..\\..\\images\\profile_pic\\child\\child1.jpg\" height=\"64\" width=\"64\"></a>\n                  <div class=\"media-body\">\n                 \n                    <h3 class=\"media-heading\">{{child.first_name}}</h3>\n                    <span><h5><label><b>Last Name :</b></label>{{child.last_name}}     <label><b>DOB :</b></label> {{child.date_of_birth}}     <label><b>Blood group :</b></label> {{child.blood_group}}  </h5></span>  \n                  </div>\n                \n\n                </li>\n              </ul>\n            </div>\n\n\n            \n            \n   <!--<app-child-window *ngIf=\"currentChild\" [child]= \"currentChild\"></app-child-window> -->          \n  <router-outlet></router-outlet>\n  \n  \n\n\n"
 
 /***/ }),
 
 /***/ 1094:
 /***/ (function(module, exports) {
 
-module.exports = "\n        <div class=\"container\">  \n            <h1>Dashboard</h1>\n            <h1></h1>\n            <div class=\"col-md-5\">\n             <div class=\"thumbnail\">\n                  <img  src=\"..\\..\\..\\images\\profile_pic\\Mother\\mother1.jpg\" class=\"img-responsive img-rounded\">\n                  <div class=\"caption\">\n                  <a href=\"#\"><h4>Health Status</h4></a>\n                  <div class=\"progress\">\n                    <div class=\"progress-bar progress-bar-success\" role=\"progressbar\" style=\"width: 60%;\">60% Healthy</div>\n                  </div>\n                  <h4>Weight</h4>\n                  <h5>56 kg</h5>\n                  <h4>Height</h4>\n                  <h5>5.3 feet</h5>\n                </div>\n              </div>  \n             </div> \n            <div class=\"col-md-6\">\n              <ul class=\"list-group\"  >\n                <li class=\"list-group-item\">Age : <p style=\"text-align: right; \">34 </p></li>\n                <li class=\"list-group-item\">No of Children : <p style=\"text-align: right; \">3</p></li>\n                <li class=\"list-group-item\">Last Doctor Checkup : <p style=\"text-align: right; \">12/10/16</p></li>\n                <li class=\"list-group-item\">Last Midwife visit : <p style=\"text-align: right; \">25/10/16 </p></li>\n                <li class=\"list-group-item\">Last Clinic Date :<p style=\"text-align: right; \"> 12/10/16</p></li>\n               \n              </ul>\n            </div>\n         </div>   \n"
+module.exports = "<div class=\"col-md-8\">\n            <h1>Emergancy Contacts</h1>\n            <table class=\"table\">\n              <thead>\n                <tr>\n                  <th></th>\n                  <th>Occupation</th>\n                  <th>Office Address</th>\n                  <th>Telephone No</th>\n                  <th>Email</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr>\n                  <td></td>\n                  <td>Health officer</td>\n                  <td>12/Kottawa/Pannipitiya</td>\n                  <td>0715632428</td>\n                  <td>sdsd@sffr.com</td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>Midwife</td>\n                  <td>23/Arawwala/Maharagama</td>\n                  <td>0715623442</td>\n                  <td>sdsd@sffr.com</td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>PHI</td>\n                  <td>23/piliyandala</td>\n                  <td>0715632458</td>                 \n                  <td>sdsd@sffr.com</td>\n                </tr>\n              </tbody>\n            </table>\n</div>"
 
 /***/ }),
 
 /***/ 1095:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  mother-notifications works!\n</p>\n"
+module.exports = "\n        <div class=\"container\">  \n            <h1>Dashboard</h1>\n            <h1></h1>\n            <div class=\"col-md-5\">\n             <div class=\"thumbnail\">\n                  <img  src=\"..\\..\\..\\images\\profile_pic\\Mother\\mother1.jpg\" class=\"img-responsive img-rounded\">\n                  <div class=\"caption\">\n                  <a href=\"#\"><h4>Health Status</h4></a>\n                  <div class=\"progress\">\n                    <div class=\"progress-bar progress-bar-success\" role=\"progressbar\" style=\"width: 60%;\">60% Healthy</div>\n                  </div>\n                  <h4>Weight</h4>\n                  <h5>56 kg</h5>\n                  <h4>Height</h4>\n                  <h5>5.3 feet</h5>\n                </div>\n              </div>  \n             </div> \n            <div class=\"col-md-6\">\n              <ul class=\"list-group\"  >\n                <li class=\"list-group-item\">Age : <p style=\"text-align: right; \">34 </p></li>\n                <li class=\"list-group-item\">No of Children : <p style=\"text-align: right; \">3</p></li>\n                <li class=\"list-group-item\">Last Doctor Checkup : <p style=\"text-align: right; \">12/10/16</p></li>\n                <li class=\"list-group-item\">Last Midwife visit : <p style=\"text-align: right; \">25/10/16 </p></li>\n                <li class=\"list-group-item\">Last Clinic Date :<p style=\"text-align: right; \"> 12/10/16</p></li>\n               \n              </ul>\n            </div>\n         </div>   \n"
 
 /***/ }),
 
 /***/ 1096:
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n  \n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   \n  </head>\n  \n   <body>\n  \n      <div class=\"section\">\n        <div class=\"container-fluid\">\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <ul class=\"nav nav-pills\">\n                <h1>Mother</h1>\n                <h3>Full Name</h3>\n                <li class=\"active\">\n                  <a href=\"#\">Home</a>\n                </li>\n                <li>\n                  <a href=\"#\">Change Role</a>\n                </li>\n                <li>\n                  <a href=\"#\">logout</a>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n   \n \n      <br>\n    <div class=\"section\" >\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <div class=\"col-md-12\">\n                  <ul class=\"list-group\">\n                <a [routerLink]=\"['dashboard']\" ><li class=\"list-group-item\">\n               <h4>Dashboard</h4> </li></a>\n                \n                <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Scedule</h4></li></a>\n                <a [routerLink]=\"['sendmsg']\" routerLinkActive=\"active\"><li class=\"list-group-item\">\n               <h4>Send a Message</h4></li></a>\n               <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\">\n               <h4>Schedule</h4></li></a>\n                <a [routerLink]=\"['children']\" routerLinkActive=\"active\"><li class=\"list-group-item\">\n                <h4>Your Children</h4></li></a>\n             <!--   <a [routerLink]=\"['econtacts']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Emergancy Contacts</h4></li></a>\n              -->\n              </ul>\n\n            </div>\n          </div>\n        \n         \n         \n      \n              <div class=\"container-fluid\" > \n                  <div class=\"col-md-8\" style=\"background-color:white;\">\n                     <router-outlet></router-outlet>\n                    <!--your dashboard component\n                    <div *ngIf=\"navButtonSelected==0\">\n                      <app-mother-dashboard></app-mother-dashboard>\n                    </div>\n                    <!--your Notification component-->\n                    <div *ngIf=\"navButtonSelected==1\">\n                      <h1>Notification</h1>\n                    </div>\n                    <!--your Your Health component-->\n                    <div *ngIf=\"navButtonSelected==2\">\n                      <h1>Your Health</h1>\n                    </div>\n                    <!--your Massege component-->\n                    <div *ngIf=\"navButtonSelected==3\">\n                      <h1>Massege</h1>\n                    </div>\n                    <!--your child list component\n                    <div *ngIf=\"navButtonSelected==4\">\n                      <app-mother-child-list></app-mother-child-list>\n                    </div>-->\n                    <!--your Schedule component-->\n                    <div *ngIf=\"navButtonSelected==5\">\n                      <h1>Scedule</h1>\n                    </div>\n                    <!--your contactlist component-->\n                    <div *ngIf=\"navButtonSelected==6\">\n                      <h1>Emergancy</h1>\n                    </div>  \n                      \n                    \n\n                </div>\n            </div>\n         </div>  \n      </div>\n    </div>     \n   \n        <div class=\"section\" >\n          <!--child component-->\n            \n\n        </div>\n \n    \n  </body>\n\n</html>"
+module.exports = "<p>\n  mother-notifications works!\n</p>\n"
 
 /***/ }),
 
 /***/ 1097:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  child-display works!\n</p>\n"
+module.exports = "<html>\n  \n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   \n  </head>\n  \n   <body>\n  \n      <div class=\"section\">\n        <div class=\"container-fluid\">\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <ul class=\"nav nav-pills\">\n                <h1>Mother</h1>\n                <h3>Full Name</h3>\n                <li class=\"active\">\n                  <a href=\"#\">Home</a>\n                </li>\n                <li>\n                  <a href=\"#\">Change Role</a>\n                </li>\n                <li>\n                  <a href=\"#\">logout</a>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n   \n \n      <br>\n    <div class=\"section\" >\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <div class=\"col-md-12\">\n                  <ul class=\"list-group\">\n                <a [routerLink]=\"['dashboard']\" ><li class=\"list-group-item\">\n               <h4>Dashboard</h4> </li></a>\n                \n                <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Scedule</h4></li></a>\n                <a [routerLink]=\"['sendmsg']\" routerLinkActive=\"active\"><li class=\"list-group-item\">\n               <h4>Send a Message</h4></li></a>\n               <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\">\n               <h4>Schedule</h4></li></a>\n                <a [routerLink]=\"['children']\" routerLinkActive=\"active\"><li class=\"list-group-item\">\n                <h4>Your Children</h4></li></a>\n             <!--   <a [routerLink]=\"['econtacts']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Emergancy Contacts</h4></li></a>\n              -->\n              </ul>\n\n            </div>\n          </div>\n        \n         \n         \n      \n              <div class=\"container-fluid\" > \n                  <div class=\"col-md-8\" style=\"background-color:white;\">\n                     <router-outlet></router-outlet>\n                    <!--your dashboard component\n                    <div *ngIf=\"navButtonSelected==0\">\n                      <app-mother-dashboard></app-mother-dashboard>\n                    </div>\n                    <!--your Notification component-->\n                    <div *ngIf=\"navButtonSelected==1\">\n                      <h1>Notification</h1>\n                    </div>\n                    <!--your Your Health component-->\n                    <div *ngIf=\"navButtonSelected==2\">\n                      <h1>Your Health</h1>\n                    </div>\n                    <!--your Massege component-->\n                    <div *ngIf=\"navButtonSelected==3\">\n                      <h1>Massege</h1>\n                    </div>\n                    <!--your child list component\n                    <div *ngIf=\"navButtonSelected==4\">\n                      <app-mother-child-list></app-mother-child-list>\n                    </div>-->\n                    <!--your Schedule component-->\n                    <div *ngIf=\"navButtonSelected==5\">\n                      <h1>Scedule</h1>\n                    </div>\n                    <!--your contactlist component-->\n                    <div *ngIf=\"navButtonSelected==6\">\n                      <h1>Emergancy</h1>\n                    </div>  \n                      \n                    \n\n                </div>\n            </div>\n         </div>  \n      </div>\n    </div>     \n   \n        <div class=\"section\" >\n          <!--child component-->\n            \n\n        </div>\n \n    \n  </body>\n\n</html>"
 
 /***/ }),
 
 /***/ 1098:
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"search-component\">\n\n\n\n  <h3>Search Child</h3>\n\n  <form>\n  <input class=\"form-control input-md\" #searchBox  (keyup)=\"search(searchBox.value)\" /></form>\n  <div>\n    <div class=\"col-md-12\" >\n          <ul  class=\"list-group-item\" *ngFor=\"let child of children | async\" >\n                    <li class=\"list-group-item\" Style=\"position:relative; Z-index:2; \" *ngIf=\"child\" (click)=\" gotoDetail(child)\">\n                       <a>{{child.firstName}} {{child.lastName}} {{child.surname}}</a>\n                    </li> </ul>\n\n                    <div Style=\"position:relative; Z-index:1\">\n                    <router-outlet></router-outlet>\n                    </div>\n    </div>\n  </div>\n</div>\n\n\n  "
+module.exports = "<p>\n  child-display works!\n</p>\n"
 
 /***/ }),
 
 /***/ 1099:
 /***/ (function(module, exports) {
 
-module.exports = "<div  class=\"col-md-8\">\n            <form role=\"form\" [formGroup]=\"ChildRegForm\" (ngSubmit)=\"postChild($event)\">\n              <div class=\"form-group has-success\">\n                <label class=\"control-label\">First Name</label>\n                <input class=\"form-control input-lg\" formControlName=\"firstName\" name=\"firstName\" placeholder=\"Enter first Name\" type=\"text\">\n              </div>\n              <div class=\"form-group has-success\">\n                <label class=\"control-label\">Last Name</label>\n                <input class=\"form-control input-lg\" formControlName=\"lastName\" name=\"lastName\" placeholder=\"Enter last Name\" type=\"text\">\n              </div>\n              <div class=\"form-group has-success\">\n                <label class=\"control-label\">surname</label>\n                <input class=\"form-control input-lg\" formControlName=\"surname\" name=\"surname\" placeholder=\"Enter surname\" type=\"text\">\n              </div>\n              <div class=\"form-group has-success\">\n                <label class=\"control-label\">Date of Birth</label>\n                <input type=\"date\" formControlName=\"dateOfBirth\" name=\"dateOfBirth\" class=\"form-control input-lg\" placeholder=\"Enter Date of Birth\">\n              </div>\n              <!--blood type-->\n              <div class=\"form-group has-success\">\n                <label class=\"control-label\">Blood type</label>\n              \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"3\"><label>A+</label>\n               \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"4\"><label>A-</label>\n                \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"5\"><label>B+</label>\n                \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"6\"><label>B-</label>\n                \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"1\"><label>O+</label>\n               \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"2\"><label>O-</label>\n                \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"7\"><label>AB+</label>\n                \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"8\"><label>AB-</label>\n                \n              </div>\n              <!--bGender-->\n              <div class=\"form-group has-success\">\n                <label class=\"control-label\">Gender</label>\n               \n\n                <div class=\"radio-inline\">\n                   <label>\n                    <input type=\"radio\" formControlName=\"gender\" name=\"gender\" value=\"1\">Male</label>\n                </div>\n                <div class=\"radio-inline\">\n                  <label>\n                    <input type=\"radio\" formControlName=\"gender\" name=\"gender\" value=\"0\">Female</label>\n                </div>\n              </div>\n              <div class=\"form-group has-success\">\n                <label class=\"control-label\">Mother/Guardian NIC</label>\n                <input class=\"form-control input-lg\" placeholder=\"Enter NIC\" type=\"text\" formControlName=\"motherid\" name=\"motherid\">\n              </div>\n              <button type=\"submit\" class=\"btn btn-lg btn-primary\">Add Child</button>\n            </form>\n          </div>"
+module.exports = "<div id=\"search-component\">\n\n\n\n  <h3>Search Child</h3>\n\n  <form>\n  <input class=\"form-control input-md\" #searchBox  (keyup)=\"search(searchBox.value)\" /></form>\n  <div>\n    <div class=\"col-md-12\" >\n          <ul  class=\"list-group-item\" *ngFor=\"let child of children | async\" >\n                    <li class=\"list-group-item\" Style=\"position:relative; Z-index:2; \" *ngIf=\"child\" (click)=\" gotoDetail(child)\">\n                       <a>{{child.firstName}} {{child.lastName}} {{child.surname}}</a>\n                    </li> </ul>\n\n                    <div Style=\"position:relative; Z-index:1\">\n                    <router-outlet></router-outlet>\n                    </div>\n    </div>\n  </div>\n</div>\n\n\n  "
 
 /***/ }),
 
 /***/ 1100:
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"message\" [ngClass]=\"{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error' }\">{{message.text}}</div>"
+module.exports = "<div  class=\"col-md-8\">\n            <form role=\"form\" [formGroup]=\"ChildRegForm\" (ngSubmit)=\"postChild($event)\">\n              <div class=\"form-group has-success\">\n                <label class=\"control-label\">First Name</label>\n                <input class=\"form-control input-lg\" formControlName=\"firstName\" name=\"firstName\" placeholder=\"Enter first Name\" type=\"text\">\n              </div>\n              <div class=\"form-group has-success\">\n                <label class=\"control-label\">Last Name</label>\n                <input class=\"form-control input-lg\" formControlName=\"lastName\" name=\"lastName\" placeholder=\"Enter last Name\" type=\"text\">\n              </div>\n              <div class=\"form-group has-success\">\n                <label class=\"control-label\">surname</label>\n                <input class=\"form-control input-lg\" formControlName=\"surname\" name=\"surname\" placeholder=\"Enter surname\" type=\"text\">\n              </div>\n              <div class=\"form-group has-success\">\n                <label class=\"control-label\">Date of Birth</label>\n                <input type=\"date\" formControlName=\"dateOfBirth\" name=\"dateOfBirth\" class=\"form-control input-lg\" placeholder=\"Enter Date of Birth\">\n              </div>\n              <!--blood type-->\n              <div class=\"form-group has-success\">\n                <label class=\"control-label\">Blood type</label>\n              \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"3\"><label>A+</label>\n               \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"4\"><label>A-</label>\n                \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"5\"><label>B+</label>\n                \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"6\"><label>B-</label>\n                \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"1\"><label>O+</label>\n               \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"2\"><label>O-</label>\n                \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"7\"><label>AB+</label>\n                \n                    <input type=\"radio\" formControlName=\"blood\" name=\"blood\" value=\"8\"><label>AB-</label>\n                \n              </div>\n              <!--bGender-->\n              <div class=\"form-group has-success\">\n                <label class=\"control-label\">Gender</label>\n               \n\n                <div class=\"radio-inline\">\n                   <label>\n                    <input type=\"radio\" formControlName=\"gender\" name=\"gender\" value=\"1\">Male</label>\n                </div>\n                <div class=\"radio-inline\">\n                  <label>\n                    <input type=\"radio\" formControlName=\"gender\" name=\"gender\" value=\"0\">Female</label>\n                </div>\n              </div>\n              <div class=\"form-group has-success\">\n                <label class=\"control-label\">Mother/Guardian NIC</label>\n                <input class=\"form-control input-lg\" placeholder=\"Enter NIC\" type=\"text\" formControlName=\"motherid\" name=\"motherid\">\n              </div>\n              <button type=\"submit\" class=\"btn btn-lg btn-primary\">Add Child</button>\n            </form>\n          </div>"
 
 /***/ }),
 
 /***/ 1101:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  api works!\n</p>\n"
+module.exports = "<div *ngIf=\"message\" [ngClass]=\"{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error' }\">{{message.text}}</div>"
 
 /***/ }),
 
 /***/ 1102:
 /***/ (function(module, exports) {
 
-module.exports = "\n<head>\n  <base href=\"/\">\n</head>\n<body style=\"background-color:#f93636\">\n  \n<div class =\"section\" >\n  <div class =\"container-fluid\">\n  <div class=\"page-header\">\n\n       <div>\n        <img class=\"img-responsive\" src=\"./images/Healo.jpg\" alt=\"Chania\" style=\"width:148px ;height: 99px\">\n        </div>\n\n    </div>\n\n       \n         \n         <!-- <app-mothernev></app-mothernev>-->\n                \n    </div>\n</div>\n<div class=\"col-md-12 col-xs-12 col-sm-12\" style=\"min-height: 1500px; top:50px \" >\n     <router-outlet></router-outlet>\n\n </div>\n      \n  <footer class=\"section section-primary col-md-12 col-xs-12 col-sm-12\" style=\"position: relative; bottom:10px;  background-color:#f93636 \">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-sm-4\">\n            <h1>HealO+</h1>\n            <p>copyrights 2017</p>\n          </div>\n          <div class=\"col-sm-6\">\n            <p class=\"text-info text-right\">\n              <br>\n              <br>\n            </p>\n            <div class=\"row\">\n              <div class=\"col-md-12 hidden-lg hidden-md hidden-sm text-left\">\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-instagram text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-twitter text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-facebook text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-github text-inverse\"></i></a>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-md-12 hidden-xs text-right\">\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-instagram text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-twitter text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-facebook text-inverse\"></i></a>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </footer>\n\n</body>  "
+module.exports = "<p>\n  api works!\n</p>\n"
 
 /***/ }),
 
 /***/ 1103:
 /***/ (function(module, exports) {
 
-module.exports = "\n    <div style=\"width:75%;\">\n        <canvas id=\"canvas\"></canvas>\n    </div>\n    <br>\n    <br>\n    <button id=\"randomizeData\">Randomize Data</button>\n    <button id=\"addDataset\">Add Dataset</button>\n    <button id=\"removeDataset\">Remove Dataset</button>\n    <button id=\"addData\">Add Data</button>\n    <button id=\"removeData\">Remove Data</button>\n    <script>\n\t    var dataset1 = [12, 15, 24, 36,48, 54, 63]\n        var MONTHS = [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\", \"August\", \"September\", \"October\", \"November\", \"December\"];\n        var config = {\n            type: 'line',\n            data: {\n                labels: [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\",\"August\", \"September\", \"October\", \"November\", \"December\"],\n                datasets: [{\n                    label: \"My First dataset\",\n                    backgroundColor: window.chartColors.red,\n                    borderColor: window.chartColors.red,\n                    data: dataset1,\n                    fill: false,\n                }]\n            },\n            options: {\n                responsive: true,\n                title:{\n                    display:true,\n                    text:'Child height grapgh'\n                },\n                tooltips: {\n                    mode: 'index',\n                    intersect: false,\n                },\n                hover: {\n                    mode: 'nearest',\n                    intersect: true\n                },\n                scales: {\n                    xAxes: [{\n                        display: true,\n                        scaleLabel: {\n                            display: true,\n                            labelString: 'Month'\n                        }\n                    }],\n                    yAxes: [{\n                        display: true,\n                        scaleLabel: {\n                            display: true,\n                            labelString: 'height'\n                        }\n                    }]\n                }\n            }\n        };\n\n        window.onload = function() {\n            var ctx = document.getElementById(\"canvas\").getContext(\"2d\");\n            window.myLine = new Chart(ctx, config);\n        };\n\n        document.getElementById('randomizeData').addEventListener('click', function() {\n            config.data.datasets.forEach(function(dataset) {\n                dataset.data = dataset.data.map(function() {\n                    return randomScalingFactor();\n                });\n\n            });\n\n            window.myLine.update();\n        });\n\n        var colorNames = Object.keys(window.chartColors);\n        document.getElementById('addDataset').addEventListener('click', function() {\n            var colorName = colorNames[config.data.datasets.length % colorNames.length];\n            var newColor = window.chartColors[colorName];\n            var newDataset = {\n                label: 'Dataset ' + config.data.datasets.length,\n                backgroundColor: newColor,\n                borderColor: newColor,\n                data: [],\n                fill: false\n            };\n\n            for (var index = 0; index < config.data.labels.length; ++index) {\n                newDataset.data.push(randomScalingFactor());\n            }\n\n            config.data.datasets.push(newDataset);\n            window.myLine.update();\n        });\n\n        document.getElementById('addData').addEventListener('click', function() {\n            if (config.data.datasets.length > 0) {\n                var month = MONTHS[config.data.labels.length % MONTHS.length];\n                config.data.labels.push(month);\n\n                config.data.datasets.forEach(function(dataset) {\n                    dataset.data.push(randomScalingFactor());\n                });\n\n                window.myLine.update();\n            }\n        });\n\n        document.getElementById('removeDataset').addEventListener('click', function() {\n            config.data.datasets.splice(0, 1);\n            window.myLine.update();\n        });\n\n        document.getElementById('removeData').addEventListener('click', function() {\n            config.data.labels.splice(-1, 1); // remove the label first\n\n            config.data.datasets.forEach(function(dataset, datasetIndex) {\n                dataset.data.pop();\n            });\n\n            window.myLine.update();\n        });\n    </script>\n\n"
+module.exports = "\n<head>\n  <base href=\"/\">\n</head>\n<body style=\"background-color:#f93636\">\n  \n<div class =\"section\" >\n  <div class =\"container-fluid\">\n  <div class=\"page-header\">\n\n       <div>\n        <img class=\"img-responsive\" src=\"./images/Healo.jpg\" alt=\"Chania\" style=\"width:148px ;height: 99px\">\n        </div>\n\n    </div>\n\n       \n         \n         <!-- <app-mothernev></app-mothernev>-->\n                \n    </div>\n</div>\n<div class=\"col-md-12 col-xs-12 col-sm-12\" style=\"min-height: 1500px; top:50px \" >\n     <router-outlet></router-outlet>\n\n </div>\n      \n  <footer class=\"section section-primary col-md-12 col-xs-12 col-sm-12\" style=\"position: relative; bottom:10px;  background-color:#f93636 \">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-sm-4\">\n            <h1>HealO+</h1>\n            <p>copyrights 2017</p>\n          </div>\n          <div class=\"col-sm-6\">\n            <p class=\"text-info text-right\">\n              <br>\n              <br>\n            </p>\n            <div class=\"row\">\n              <div class=\"col-md-12 hidden-lg hidden-md hidden-sm text-left\">\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-instagram text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-twitter text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-facebook text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-github text-inverse\"></i></a>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-md-12 hidden-xs text-right\">\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-instagram text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-twitter text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-facebook text-inverse\"></i></a>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </footer>\n\n</body>  "
 
 /***/ }),
 
 /***/ 1104:
 /***/ (function(module, exports) {
 
-module.exports = "<p-growl [value]=\"msgs\"></p-growl>\n\n<p-chart type=\"line\" [data]=\"data\" (onDataSelect)=\"selectData($event)\"></p-chart>"
+module.exports = "\n    <div style=\"width:75%;\">\n        <canvas id=\"canvas\"></canvas>\n    </div>\n    <br>\n    <br>\n    <button id=\"randomizeData\">Randomize Data</button>\n    <button id=\"addDataset\">Add Dataset</button>\n    <button id=\"removeDataset\">Remove Dataset</button>\n    <button id=\"addData\">Add Data</button>\n    <button id=\"removeData\">Remove Data</button>\n    <script>\n\t    var dataset1 = [12, 15, 24, 36,48, 54, 63]\n        var MONTHS = [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\", \"August\", \"September\", \"October\", \"November\", \"December\"];\n        var config = {\n            type: 'line',\n            data: {\n                labels: [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\",\"August\", \"September\", \"October\", \"November\", \"December\"],\n                datasets: [{\n                    label: \"My First dataset\",\n                    backgroundColor: window.chartColors.red,\n                    borderColor: window.chartColors.red,\n                    data: dataset1,\n                    fill: false,\n                }]\n            },\n            options: {\n                responsive: true,\n                title:{\n                    display:true,\n                    text:'Child height grapgh'\n                },\n                tooltips: {\n                    mode: 'index',\n                    intersect: false,\n                },\n                hover: {\n                    mode: 'nearest',\n                    intersect: true\n                },\n                scales: {\n                    xAxes: [{\n                        display: true,\n                        scaleLabel: {\n                            display: true,\n                            labelString: 'Month'\n                        }\n                    }],\n                    yAxes: [{\n                        display: true,\n                        scaleLabel: {\n                            display: true,\n                            labelString: 'height'\n                        }\n                    }]\n                }\n            }\n        };\n\n        window.onload = function() {\n            var ctx = document.getElementById(\"canvas\").getContext(\"2d\");\n            window.myLine = new Chart(ctx, config);\n        };\n\n        document.getElementById('randomizeData').addEventListener('click', function() {\n            config.data.datasets.forEach(function(dataset) {\n                dataset.data = dataset.data.map(function() {\n                    return randomScalingFactor();\n                });\n\n            });\n\n            window.myLine.update();\n        });\n\n        var colorNames = Object.keys(window.chartColors);\n        document.getElementById('addDataset').addEventListener('click', function() {\n            var colorName = colorNames[config.data.datasets.length % colorNames.length];\n            var newColor = window.chartColors[colorName];\n            var newDataset = {\n                label: 'Dataset ' + config.data.datasets.length,\n                backgroundColor: newColor,\n                borderColor: newColor,\n                data: [],\n                fill: false\n            };\n\n            for (var index = 0; index < config.data.labels.length; ++index) {\n                newDataset.data.push(randomScalingFactor());\n            }\n\n            config.data.datasets.push(newDataset);\n            window.myLine.update();\n        });\n\n        document.getElementById('addData').addEventListener('click', function() {\n            if (config.data.datasets.length > 0) {\n                var month = MONTHS[config.data.labels.length % MONTHS.length];\n                config.data.labels.push(month);\n\n                config.data.datasets.forEach(function(dataset) {\n                    dataset.data.push(randomScalingFactor());\n                });\n\n                window.myLine.update();\n            }\n        });\n\n        document.getElementById('removeDataset').addEventListener('click', function() {\n            config.data.datasets.splice(0, 1);\n            window.myLine.update();\n        });\n\n        document.getElementById('removeData').addEventListener('click', function() {\n            config.data.labels.splice(-1, 1); // remove the label first\n\n            config.data.datasets.forEach(function(dataset, datasetIndex) {\n                dataset.data.pop();\n            });\n\n            window.myLine.update();\n        });\n    </script>\n\n"
 
 /***/ }),
 
 /***/ 1105:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-8\">\n                        <form class=\"form-horizontal\" role=\"form\">\n                            <div class=\"form-group\">\n                                <div class=\"col-sm-2\">\n                                    <label for=\"inputEmail3\" class=\"control-label\">Allergies</label>\n                                </div>\n                                <div class=\"col-sm-9\">\n                                    <input type=\"text\" placeholder=\"Type..\" class=\"form-control\">\n                                    <button type=\"Add\" class=\"btn btn-success\">Add</button>\n                                </div>\n                            </div>\n                            <div class=\"col-sm-12\">\n                                <div class=\"col-sm-8\" style=\"float:right;\">\n                                    <ul class=\"list-group\">\n                                        <li class=\"list-group-item\">Allergies 1\n                                            <a class=\"btn btn-danger btn-xs\" style=\"float:right;\">Remove</a>\n                                        </li>\n                                        <li class=\"list-group-item\">Allergies 2\n                                            <a class=\"btn btn-danger btn-xs\" style=\"float:right;\">Remove</a>\n                                        </li>\n                                    </ul>\n                                </div>\n                            </div>\n                            <div>\n                                <div class=\"form-group\">\n                                    <div class=\"col-sm-2\">\n                                        <label for=\"inputEmail3\" class=\"control-label\">Previously Used Medicines</label>\n                                    </div>\n                                    <div class=\"col-sm-9\">\n                                        <input type=\"text\" class=\"form-control\" placeholder=\"Type..\">\n                                        <button type=\"Add\" class=\"btn btn-success\">Add</button>\n                                    </div>\n                                </div>\n                                <div class=\"col-sm-12\">\n                                    <div class=\"col-sm-8\" style=\"float:right;\">\n                                        <ul class=\"list-group\">\n                                            <li class=\"list-group-item\">Allergies 1\n                                                <a class=\"btn btn-danger btn-xs\" style=\"float:right;\">Remove</a>\n                                            </li>\n                                            <li class=\"list-group-item\">Allergies 2\n                                                <a class=\"btn btn-danger btn-xs\" style=\"float:right;\">Remove</a>\n                                            </li>\n                                        </ul>\n                                    </div>\n                                </div>\n                                <div class=\"form-group\">\n                                    <div class=\"col-sm-2\">\n                                        <label for=\"inputEmail3\" class=\"control-label\">Prescribe Medicines</label>\n                                    </div>\n                                    <div class=\"col-sm-9\">\n                                        <input type=\"text\" class=\"form-control\" placeholder=\"Type..\">\n                                        <button type=\"Add\" class=\"btn btn-success\">Add</button>\n                                    </div>\n                                </div>\n                                <div class=\"col-sm-12\">\n                                    <div class=\"col-sm-8\" style=\"float:right;\">\n                                        <ul class=\"list-group\">\n                                            <li class=\"list-group-item\">Allergies 1\n                                                <a class=\"btn btn-danger btn-xs\" style=\"float:right;\">Remove</a>\n                                            </li>\n                                            <li class=\"list-group-item\">Allergies 2\n                                                <a class=\"btn btn-danger btn-xs\" style=\"float:right;\">Remove</a>\n                                            </li>\n                                        </ul>\n                                    </div>\n                                </div>\n                                <div class=\"col-sm-12\">\n                                    <div class=\"form-group\">\n                                        <div class=\"col-sm-2\">\n                                            <label for=\"inputEmail3\" class=\"control-label\">Special Notes for Mother</label>\n                                        </div>\n                                        <div class=\"col-sm-10\">\n                                            <input type=\"text\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"Type..\" style=\"height:100px\">\n                                        </div>\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <div class=\"col-sm-2\">\n                                            <label for=\"inputEmail3\" class=\"control-label\">Special Notes for Midwife</label>\n                                        </div>\n                                        <div class=\"col-sm-10\">\n                                            <input type=\"text\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"Type..\" style=\"height:100px\">\n                                        </div>\n                                    </div>\n                                    <div class=\"form-group\" draggable=\"true\">\n                                        <div class=\"col-sm-2\">\n                                            <label for=\"inputEmail3\" class=\"control-label\">Special Notes for Vaccination</label>\n                                        </div>\n                                        <div class=\"col-sm-10\">\n                                            <input type=\"text\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"Type..\" style=\"height:100px\">\n                                        </div>\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <div class=\"col-sm-offset-2 col-sm-10\">\n                                            <button type=\"submit\" class=\"btn btn-success\">Send</button>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </form>\n                    </div>"
+module.exports = "<p-growl [value]=\"msgs\"></p-growl>\n\n<p-chart type=\"line\" [data]=\"data\" (onDataSelect)=\"selectData($event)\"></p-chart>"
 
 /***/ }),
 
 /***/ 1106:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section\">\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-4\">\n            <div class=\"thumbnail\">\n              <img src=\"..\\..\\images\\profile_pic\\child\\child1.jpg\" class=\"img-responsive\">\n              <div class=\"caption\">\n                <h2 *ngIf=\"child\">{{child.firstName}}</h2>\n                Showing product details for product: {{childId}}\n                 <div>\n                <a href=\"#\"><h3>\n                      <b>Health Status</b>\n                  </h3></a>\n                  <div class=\"progress\">\n                    <div class=\"progress-bar progress-bar-success\" role=\"progressbar\" style=\"width: 60%;\">60% Healthy</div>\n                  </div>\n                  <h3>\n                    <b>Weight</b>\n                  </h3>\n                  <h4 *ngIf=\"child\" >{{child.weight}} kg</h4>\n                  <h3>\n                    <b>Height</b>\n                  </h3>\n                  <h4 *ngIf=\"child\" >{{child.height}} cm</h4>\n              \n              </div>\n              </div>\n            </div>\n           \n          \n          </div>\n         \n          <div class=\"col-md-8\">\n         \n            <table class=\"table table-hover\">\n              <tbody>\n                <tr>\n                  <td>\n                    <b>Full name :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.firstName}} {{child.surname}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Age :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.dateOfBirth}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Blood Group :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.blood_group}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Speacial Reason to Care :</b>\n                  </td>\n                  <td *ngIf='child'>{{child.SRC}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Mother's Name' :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.user.firstName}} </td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Last Clinic visit :</b>\n                  </td>\n                  <td *ngIf='child'>{{child.last_clinic_date}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Last Midwife visit :</b>\n                  </td>\n                  <td *ngIf='child'>{{child.last_midwife_visit_date}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Last Vacinated date:</b>\n                  </td>\n                  <td *ngIf='child'>{{child.last_doctor_check_date}}</td>\n                </tr>\n              </tbody>\n\n                  \n            </table>\n                <a data-toggle=\"modal\" *ngIf=checVaccineEnabled class=\"btn btn-block btn-lg btn-primary\" (click)=\" RoleAction()\">{{checkORVaccin}}</a>\n            <div>\n              \n              <div class=\"col-md-12\">\n                \n                <h1>Doctor's Speacial Notes</h1>\n                <p *ngIf='child'>{{child.doctor_notes}}</p>\n               \n                <a class=\"btn btn-default\">More Notes</a>\n              </div>\n              <div class=\"col-md-12\">\n                <h1>Midwife's Speacial Notes</h1>\n                <p *ngIf='child'>{{child.midwife_notes}}</p>\n                <a class=\"btn btn-default\">More Notes</a>\n\n                <div class=\"row\"><br><br></div>\n                  <div class=\"row\">\n                  <div class=\"col-md-12\">\n                    <a class=\"btn btn-primary\" [routerLink]=\"['immu']\">Immulization Table</a>\n                    <a class=\"btn btn-primary\" [routerLink]=\"['weight']\">weight Charts</a>\n                  </div>\n                </div> \n\n              </div>\n            </div>\n\n           \n\n\n          </div>\n\n          \n          <router-outlet></router-outlet>\n          \n\n        </div>\n      </div>\n \n </div>\n\n\n"
+module.exports = "<div class=\"col-md-8\">\n                        <form class=\"form-horizontal\" role=\"form\">\n                            <div class=\"form-group\">\n                                <div class=\"col-sm-2\">\n                                    <label for=\"inputEmail3\" class=\"control-label\">Allergies</label>\n                                </div>\n                                <div class=\"col-sm-9\">\n                                    <input type=\"text\" placeholder=\"Type..\" class=\"form-control\">\n                                    <button type=\"Add\" class=\"btn btn-success\">Add</button>\n                                </div>\n                            </div>\n                            <div class=\"col-sm-12\">\n                                <div class=\"col-sm-8\" style=\"float:right;\">\n                                    <ul class=\"list-group\">\n                                        <li class=\"list-group-item\">Allergies 1\n                                            <a class=\"btn btn-danger btn-xs\" style=\"float:right;\">Remove</a>\n                                        </li>\n                                        <li class=\"list-group-item\">Allergies 2\n                                            <a class=\"btn btn-danger btn-xs\" style=\"float:right;\">Remove</a>\n                                        </li>\n                                    </ul>\n                                </div>\n                            </div>\n                            <div>\n                                <div class=\"form-group\">\n                                    <div class=\"col-sm-2\">\n                                        <label for=\"inputEmail3\" class=\"control-label\">Previously Used Medicines</label>\n                                    </div>\n                                    <div class=\"col-sm-9\">\n                                        <input type=\"text\" class=\"form-control\" placeholder=\"Type..\">\n                                        <button type=\"Add\" class=\"btn btn-success\">Add</button>\n                                    </div>\n                                </div>\n                                <div class=\"col-sm-12\">\n                                    <div class=\"col-sm-8\" style=\"float:right;\">\n                                        <ul class=\"list-group\">\n                                            <li class=\"list-group-item\">Allergies 1\n                                                <a class=\"btn btn-danger btn-xs\" style=\"float:right;\">Remove</a>\n                                            </li>\n                                            <li class=\"list-group-item\">Allergies 2\n                                                <a class=\"btn btn-danger btn-xs\" style=\"float:right;\">Remove</a>\n                                            </li>\n                                        </ul>\n                                    </div>\n                                </div>\n                                <div class=\"form-group\">\n                                    <div class=\"col-sm-2\">\n                                        <label for=\"inputEmail3\" class=\"control-label\">Prescribe Medicines</label>\n                                    </div>\n                                    <div class=\"col-sm-9\">\n                                        <input type=\"text\" class=\"form-control\" placeholder=\"Type..\">\n                                        <button type=\"Add\" class=\"btn btn-success\">Add</button>\n                                    </div>\n                                </div>\n                                <div class=\"col-sm-12\">\n                                    <div class=\"col-sm-8\" style=\"float:right;\">\n                                        <ul class=\"list-group\">\n                                            <li class=\"list-group-item\">Allergies 1\n                                                <a class=\"btn btn-danger btn-xs\" style=\"float:right;\">Remove</a>\n                                            </li>\n                                            <li class=\"list-group-item\">Allergies 2\n                                                <a class=\"btn btn-danger btn-xs\" style=\"float:right;\">Remove</a>\n                                            </li>\n                                        </ul>\n                                    </div>\n                                </div>\n                                <div class=\"col-sm-12\">\n                                    <div class=\"form-group\">\n                                        <div class=\"col-sm-2\">\n                                            <label for=\"inputEmail3\" class=\"control-label\">Special Notes for Mother</label>\n                                        </div>\n                                        <div class=\"col-sm-10\">\n                                            <input type=\"text\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"Type..\" style=\"height:100px\">\n                                        </div>\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <div class=\"col-sm-2\">\n                                            <label for=\"inputEmail3\" class=\"control-label\">Special Notes for Midwife</label>\n                                        </div>\n                                        <div class=\"col-sm-10\">\n                                            <input type=\"text\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"Type..\" style=\"height:100px\">\n                                        </div>\n                                    </div>\n                                    <div class=\"form-group\" draggable=\"true\">\n                                        <div class=\"col-sm-2\">\n                                            <label for=\"inputEmail3\" class=\"control-label\">Special Notes for Vaccination</label>\n                                        </div>\n                                        <div class=\"col-sm-10\">\n                                            <input type=\"text\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"Type..\" style=\"height:100px\">\n                                        </div>\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <div class=\"col-sm-offset-2 col-sm-10\">\n                                            <button type=\"submit\" class=\"btn btn-success\">Send</button>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </form>\n                    </div>"
 
 /***/ }),
 
 /***/ 1107:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"row\"></div>\n<div class=\"section\">\n      <div class=\"container\">\n        <h2>Immunization table</h2>\n        <div class=\"row\">\n          <div class=\"col-md-12\">\n            <table class=\"table\">\n              <thead>\n                <tr>\n                  <th>Age</th>\n                  <th>Type of Vaccine</th>\n                  <th>Date</th>\n                  <th>Batch No</th>\n                  <th>Adverse effects</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr>\n                  <td>Birth</td>\n                  <td>B.C.G</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>B.C.G. dosage</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>2 months</td>\n                  <td>Pentavalent 1</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>OPV 1</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>4 months</td>\n                  <td>Pentavalent 2</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>OPV 2</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>6 months</td>\n                  <td>Pentavalent 3</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>OPV 3</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>9 months</td>\n                  <td>Live JE</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>12 months</td>\n                  <td>Measles,\n                    <br>Mumps,\n                    <br>Rubella 1(MMR1)</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>18 months</td>\n                  <td>DPT</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>OPV 4</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>3 years</td>\n                  <td>Measles,\n                    <br>Mumps,\n                    <br>Rubella 2(MMR2)</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>5 years</td>\n                  <td>D.T</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>Measles,\n                    <br>Mumps,\n                    <br>Rubella 1(MMR1)</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>12 years</td>\n                  <td>Adult Teanus &amp; diphtheria</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </div>\n    </div>\n    <router-outlet></router-outlet>"
+module.exports = "<div class=\"section\">\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-4\">\n            <div class=\"thumbnail\">\n              <img src=\"..\\..\\images\\profile_pic\\child\\child1.jpg\" class=\"img-responsive\">\n              <div class=\"caption\">\n                <h2 *ngIf=\"child\">{{child.firstName}}</h2>\n                Showing product details for product: {{childId}}\n                 <div>\n                <a href=\"#\"><h3>\n                      <b>Health Status</b>\n                  </h3></a>\n                  <div class=\"progress\">\n                    <div class=\"progress-bar progress-bar-success\" role=\"progressbar\" style=\"width: 60%;\">60% Healthy</div>\n                  </div>\n                  <h3>\n                    <b>Weight</b>\n                  </h3>\n                  <h4 *ngIf=\"child\" >{{child.weight}} kg</h4>\n                  <h3>\n                    <b>Height</b>\n                  </h3>\n                  <h4 *ngIf=\"child\" >{{child.height}} cm</h4>\n              \n              </div>\n              </div>\n            </div>\n           \n          \n          </div>\n         \n          <div class=\"col-md-8\">\n         \n            <table class=\"table table-hover\">\n              <tbody>\n                <tr>\n                  <td>\n                    <b>Full name :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.firstName}} {{child.surname}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Age :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.dateOfBirth}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Blood Group :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.blood_group}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Speacial Reason to Care :</b>\n                  </td>\n                  <td *ngIf='child'>{{child.SRC}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Mother's Name' :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.user.firstName}} </td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Last Clinic visit :</b>\n                  </td>\n                  <td *ngIf='child'>{{child.last_clinic_date}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Last Midwife visit :</b>\n                  </td>\n                  <td *ngIf='child'>{{child.last_midwife_visit_date}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Last Vacinated date:</b>\n                  </td>\n                  <td *ngIf='child'>{{child.last_doctor_check_date}}</td>\n                </tr>\n              </tbody>\n\n                  \n            </table>\n                <a data-toggle=\"modal\" *ngIf=checVaccineEnabled class=\"btn btn-block btn-lg btn-primary\" (click)=\" RoleAction()\">{{checkORVaccin}}</a>\n            <div>\n              \n              <div class=\"col-md-12\">\n                \n                <h1>Doctor's Speacial Notes</h1>\n                <p *ngIf='child'>{{child.doctor_notes}}</p>\n               \n                <a class=\"btn btn-default\">More Notes</a>\n              </div>\n              <div class=\"col-md-12\">\n                <h1>Midwife's Speacial Notes</h1>\n                <p *ngIf='child'>{{child.midwife_notes}}</p>\n                <a class=\"btn btn-default\">More Notes</a>\n\n                <div class=\"row\"><br><br></div>\n                  <div class=\"row\">\n                  <div class=\"col-md-12\">\n                    <a class=\"btn btn-primary\" [routerLink]=\"['immu']\">Immulization Table</a>\n                    <a class=\"btn btn-primary\" [routerLink]=\"['weight']\">weight Charts</a>\n                  </div>\n                </div> \n\n              </div>\n            </div>\n\n           \n\n\n          </div>\n\n          \n          <router-outlet></router-outlet>\n          \n\n        </div>\n      </div>\n \n </div>\n\n\n"
 
 /***/ }),
 
 /***/ 1108:
 /***/ (function(module, exports) {
 
-module.exports = "<p-schedule [events]=\"events\" [header]=\"header\" defaultDate=\"2017-02-01\" [eventLimit]=\"4\" [editable]=\"true\"\n            (onDayClick)=\"handleDayClick($event)\" (onEventClick)=\"handleEventClick($event)\"></p-schedule>\n\n<p-dialog header=\"Event Details\" [(visible)]=\"dialogVisible\" [responsive]=\"true\" showEffect=\"fade\" [modal]=\"false\" [contentStyle]=\"{'overflow':'visible'}\"\n    [style]=\"{'overflow':'visible'}\" [resizable]=\"false\">\n    <div class=\"ui-grid ui-grid-responsive ui-fluid\" *ngIf=\"event\">\n        <div class=\"ui-grid-row\">\n            <div class=\"ui-grid-col-4\"><label for=\"vin\">Title</label></div>\n            <div class=\"ui-grid-col-8\"><input pInputText id=\"title\" [(ngModel)]=\"event.title\" /></div>\n        </div>\n        <div class=\"ui-grid-row\">\n            <div class=\"ui-grid-col-4\"><label for=\"start\">Start</label></div>\n            <div class=\"ui-grid-col-8\"><p-calendar [(ngModel)]=\"event.start\" dateFormat=\"yy-mm-dd\" dataType=\"string\"></p-calendar></div>\n        </div>\n        <div class=\"ui-grid-row\">\n            <div class=\"ui-grid-col-4\"><label for=\"end\">End</label></div>\n            <div class=\"ui-grid-col-8\"><p-calendar [(ngModel)]=\"event.end\" dateFormat=\"yy-mm-dd\" dataType=\"string\"></p-calendar></div>\n        </div>\n        <div class=\"ui-grid-row\">\n            <div class=\"ui-grid-col-4\"><label for=\"allday\">All Day</label></div>\n            <div class=\"ui-grid-col-8\"><p-checkbox [(ngModel)]=\"event.allDay\" binary=\"checkbox\"></p-checkbox></div>\n        </div>\n    </div>\n    <p-footer>\n        <div class=\"ui-dialog-buttonpane ui-widget-content ui-helper-clearfix\">\n            <button type=\"button\" pButton icon=\"fa-close\" (click)=\"deleteEvent()\" label=\"Delete\" [disabled]=\"!event?.id\"></button>\n            <button type=\"button\" pButton icon=\"fa-check\" (click)=\"saveEvent()\" label=\"Save\" [disabled]=\"!event?.start\"></button>\n        </div>\n    </p-footer>\n</p-dialog>\n"
+module.exports = "\n<div class=\"row\"></div>\n<div class=\"section\">\n      <div class=\"container\">\n        <h2>Immunization table</h2>\n        <div class=\"row\">\n          <div class=\"col-md-12\">\n            <table class=\"table\">\n              <thead>\n                <tr>\n                  <th>Age</th>\n                  <th>Type of Vaccine</th>\n                  <th>Date</th>\n                  <th>Batch No</th>\n                  <th>Adverse effects</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr>\n                  <td>Birth</td>\n                  <td>B.C.G</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>B.C.G. dosage</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>2 months</td>\n                  <td>Pentavalent 1</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>OPV 1</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>4 months</td>\n                  <td>Pentavalent 2</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>OPV 2</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>6 months</td>\n                  <td>Pentavalent 3</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>OPV 3</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>9 months</td>\n                  <td>Live JE</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>12 months</td>\n                  <td>Measles,\n                    <br>Mumps,\n                    <br>Rubella 1(MMR1)</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>18 months</td>\n                  <td>DPT</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>OPV 4</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>3 years</td>\n                  <td>Measles,\n                    <br>Mumps,\n                    <br>Rubella 2(MMR2)</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>5 years</td>\n                  <td>D.T</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td></td>\n                  <td>Measles,\n                    <br>Mumps,\n                    <br>Rubella 1(MMR1)</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n                <tr>\n                  <td>12 years</td>\n                  <td>Adult Teanus &amp; diphtheria</td>\n                  <td></td>\n                  <td></td>\n                  <td></td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </div>\n    </div>\n    <router-outlet></router-outlet>"
 
 /***/ }),
 
 /***/ 1109:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-12\">\n            <ul class=\"list-group\">\n              <li class=\"list-group-item\">\n                <h3>Subject</h3>\n                <h4>From:</h4>\n                <p>message</p>\n              </li>\n              <li class=\"list-group-item\">\n              <h3>Subject</h3>\n                <h4>From:</h4>\n                <p>message</p>\n              </li>\n            </ul>\n          </div>"
+module.exports = "<p-schedule [events]=\"events\" [header]=\"header\" defaultDate=\"2017-02-01\" [eventLimit]=\"4\" [editable]=\"true\"\n            (onDayClick)=\"handleDayClick($event)\" (onEventClick)=\"handleEventClick($event)\"></p-schedule>\n\n<p-dialog header=\"Event Details\" [(visible)]=\"dialogVisible\" [responsive]=\"true\" showEffect=\"fade\" [modal]=\"false\" [contentStyle]=\"{'overflow':'visible'}\"\n    [style]=\"{'overflow':'visible'}\" [resizable]=\"false\">\n    <div class=\"ui-grid ui-grid-responsive ui-fluid\" *ngIf=\"event\">\n        <div class=\"ui-grid-row\">\n            <div class=\"ui-grid-col-4\"><label for=\"vin\">Title</label></div>\n            <div class=\"ui-grid-col-8\"><input pInputText id=\"title\" [(ngModel)]=\"event.title\" /></div>\n        </div>\n        <div class=\"ui-grid-row\">\n            <div class=\"ui-grid-col-4\"><label for=\"start\">Start</label></div>\n            <div class=\"ui-grid-col-8\"><p-calendar [(ngModel)]=\"event.start\" dateFormat=\"yy-mm-dd\" dataType=\"string\"></p-calendar></div>\n        </div>\n        <div class=\"ui-grid-row\">\n            <div class=\"ui-grid-col-4\"><label for=\"end\">End</label></div>\n            <div class=\"ui-grid-col-8\"><p-calendar [(ngModel)]=\"event.end\" dateFormat=\"yy-mm-dd\" dataType=\"string\"></p-calendar></div>\n        </div>\n        <div class=\"ui-grid-row\">\n            <div class=\"ui-grid-col-4\"><label for=\"allday\">All Day</label></div>\n            <div class=\"ui-grid-col-8\"><p-checkbox [(ngModel)]=\"event.allDay\" binary=\"checkbox\"></p-checkbox></div>\n        </div>\n    </div>\n    <p-footer>\n        <div class=\"ui-dialog-buttonpane ui-widget-content ui-helper-clearfix\">\n            <button type=\"button\" pButton icon=\"fa-close\" (click)=\"deleteEvent()\" label=\"Delete\" [disabled]=\"!event?.id\"></button>\n            <button type=\"button\" pButton icon=\"fa-check\" (click)=\"saveEvent()\" label=\"Save\" [disabled]=\"!event?.start\"></button>\n        </div>\n    </p-footer>\n</p-dialog>\n"
 
 /***/ }),
 
 /***/ 1110:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-12\">\n            <form class=\"form-horizontal\" role=\"form\">\n              <div class=\"form-group has-feedback\">\n                <div class=\"col-sm-2\">\n                  <label class=\"control-label\">Subject</label>\n                </div>\n                <div class=\"col-sm-10\">\n                  <input id=\"subject\" type=\"text\" class=\"form-control input-lg\" placeholder=\"Subject\">\n                  <span class=\"fa fa-check form-control-feedback\"></span>\n                </div>\n              </div>\n              <div class=\"form-group has-feedback\">\n                <div class=\"col-sm-2\">\n                  <label class=\"control-label\">To:</label>\n                </div>\n                <div class=\"col-sm-10\">\n                  <input id=\"to\" type=\"text\" class=\"form-control input-lg\" placeholder=\"Email/search name\">\n                  <span class=\"fa fa-check form-control-feedback\"></span>\n                </div>\n              </div>\n              <div class=\"form-group has-feedback\">\n                <div class=\"col-sm-2\">\n                  <label class=\"control-label\">Message</label>\n                </div>\n                <div class=\"col-sm-10\">\n                  <input id=\"content\" type=\"text\" class=\"form-control input-lg\" placeholder=\"Message\" style=\"height:100px\">\n                </div>\n              </div>\n              <div class=\"form-group\">\n                <div class=\"col-sm-offset-2 col-sm-10\">\n                  <button id=\"send_email\" type=\"submit\" class=\"btn btn-default\">Send</button>\n                </div>\n              </div>\n            </form>\n          </div>\n\n          <h1>Inbox</h1>\n          <app-inbox></app-inbox>"
+module.exports = "<div class=\"col-md-12\">\n            <ul class=\"list-group\">\n              <li class=\"list-group-item\">\n                <h3>Subject</h3>\n                <h4>From:</h4>\n                <p>message</p>\n              </li>\n              <li class=\"list-group-item\">\n              <h3>Subject</h3>\n                <h4>From:</h4>\n                <p>message</p>\n              </li>\n            </ul>\n          </div>"
 
 /***/ }),
 
 /***/ 1111:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  doctor-contacts works!\n</p>\n"
+module.exports = "<div class=\"col-md-12\">\n            <form class=\"form-horizontal\" role=\"form\">\n              <div class=\"form-group has-feedback\">\n                <div class=\"col-sm-2\">\n                  <label class=\"control-label\">Subject</label>\n                </div>\n                <div class=\"col-sm-10\">\n                  <input id=\"subject\" type=\"text\" class=\"form-control input-lg\" placeholder=\"Subject\">\n                  <span class=\"fa fa-check form-control-feedback\"></span>\n                </div>\n              </div>\n              <div class=\"form-group has-feedback\">\n                <div class=\"col-sm-2\">\n                  <label class=\"control-label\">To:</label>\n                </div>\n                <div class=\"col-sm-10\">\n                  <input id=\"to\" type=\"text\" class=\"form-control input-lg\" placeholder=\"Email/search name\">\n                  <span class=\"fa fa-check form-control-feedback\"></span>\n                </div>\n              </div>\n              <div class=\"form-group has-feedback\">\n                <div class=\"col-sm-2\">\n                  <label class=\"control-label\">Message</label>\n                </div>\n                <div class=\"col-sm-10\">\n                  <input id=\"content\" type=\"text\" class=\"form-control input-lg\" placeholder=\"Message\" style=\"height:100px\">\n                </div>\n              </div>\n              <div class=\"form-group\">\n                <div class=\"col-sm-offset-2 col-sm-10\">\n                  <button id=\"send_email\" type=\"submit\" class=\"btn btn-default\">Send</button>\n                </div>\n              </div>\n            </form>\n          </div>\n\n          <h1>Inbox</h1>\n          <app-inbox></app-inbox>"
 
 /***/ }),
 
 /***/ 1112:
 /***/ (function(module, exports) {
 
-module.exports = "\n          <h1>Dashboard</h1>\n          <div class=\"col-md-4\">\n            <h3>Health Status</h3>\n            <img src=\"https://unsplash.imgix.net/photo-1421986527537-888d998adb74?w=1024&amp;q=50&amp;fm=jpg&amp;s=e633562a1da53293c4dc391fd41ce41d\"\n            class=\"img-responsive img-rounded\">\n          </div>\n          <div class=\"col-md-8\">\n            <ul class=\"list-group\">\n              <li class=\"list-group-item\" >Name:{{profile.firstName}} {{profile.lastName}}</li>\n              <li class=\"list-group-item\">Last Child Checkup :</li>\n              <li class=\"list-group-item\">Last &nbsp;Mother Checkup :</li>\n              <li class=\"list-group-item\">Number of Unread Messages</li>\n              <li class=\"list-group-item\">Number Messages to reply</li>\n            </ul>\n          </div>\n"
+module.exports = "<p>\n  doctor-contacts works!\n</p>\n"
 
 /***/ }),
 
 /***/ 1113:
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n  \n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   \n  </head>\n  \n   <body>\n  \n      <div class=\"section\">\n        <div class=\"container-fluid\">\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <ul class=\"nav nav-pills\">\n                <h1>Doctor</h1>\n                <div *ngIf=\"profile.firstName\">\n                   <h3>{{profile.firstName}} {{profile.lastName}}</h3>\n                </div>\n                 \n                <li class=\"active\">\n                  <a href=\"#\">Home</a>\n                </li>\n                <li>\n                  <a (click)=\"logout()\">logout</a>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n   \n \n      <br>\n    <div class=\"section\" >\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <div class=\"col-md-12\">\n                  <ul class=\"list-group\">\n                      <a [routerLink]=\"['dashboard']\" ><li class=\"list-group-item\"><h4>Dashboard</h4> </li></a>\n                      <a [routerLink]=\"['stat']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Statistics</h4></li></a>\n                     \n                      <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Scedule</h4></li></a>\n                      <a [routerLink]=\"['messages']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Send a Message</h4></li></a>\n                      <a [routerLink]=\"['searchchild']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Search Children</h4></li></a>\n           <!--           <a [routerLink]=\"['contacts']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Contacts</h4></li></a>\n               -->       \n                   </ul>\n\n            </div>\n          </div>\n        \n         \n         \n      \n              <div class=\"container-fluid\" > \n                  <div class=\"col-md-8\" style=\"background-color:white;\">\n                     <router-outlet></router-outlet>\n                  \n                      \n                    \n\n                </div>\n            </div>\n         </div>  \n      </div>\n    </div>     \n   \n        <div class=\"section\" >\n          <!--child component-->\n        \n\n        </div>\n \n    \n  </body>\n\n</html>"
+module.exports = "\n          <h1>Dashboard</h1>\n          <div class=\"col-md-4\">\n            <h3>Health Status</h3>\n            <img src=\"https://unsplash.imgix.net/photo-1421986527537-888d998adb74?w=1024&amp;q=50&amp;fm=jpg&amp;s=e633562a1da53293c4dc391fd41ce41d\"\n            class=\"img-responsive img-rounded\">\n          </div>\n          <div class=\"col-md-8\">\n            <ul class=\"list-group\">\n              <li class=\"list-group-item\" >Name:{{profile.firstName}} {{profile.lastName}}</li>\n              <li class=\"list-group-item\">Last Child Checkup :</li>\n              <li class=\"list-group-item\">Last &nbsp;Mother Checkup :</li>\n              <li class=\"list-group-item\">Number of Unread Messages</li>\n              <li class=\"list-group-item\">Number Messages to reply</li>\n            </ul>\n          </div>\n"
 
 /***/ }),
 
 /***/ 1114:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  doctor-notifications works!\n</p>\n"
+module.exports = "<html>\n  \n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   \n  </head>\n  \n   <body>\n  \n      <div class=\"section\">\n        <div class=\"container-fluid\">\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <ul class=\"nav nav-pills\">\n                <h1>Doctor</h1>\n                <div *ngIf=\"profile.firstName\">\n                   <h3>{{profile.firstName}} {{profile.lastName}}</h3>\n                </div>\n                 \n                <li class=\"active\">\n                  <a href=\"#\">Home</a>\n                </li>\n                <li>\n                  <a (click)=\"logout()\">logout</a>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n   \n \n      <br>\n    <div class=\"section\" >\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <div class=\"col-md-12\">\n                  <ul class=\"list-group\">\n                      <a [routerLink]=\"['dashboard']\" ><li class=\"list-group-item\"><h4>Dashboard</h4> </li></a>\n                      <a [routerLink]=\"['stat']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Statistics</h4></li></a>\n                     \n                      <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Scedule</h4></li></a>\n                      <a [routerLink]=\"['messages']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Send a Message</h4></li></a>\n                      <a [routerLink]=\"['searchchild']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Search Children</h4></li></a>\n           <!--           <a [routerLink]=\"['contacts']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Contacts</h4></li></a>\n               -->       \n                   </ul>\n\n            </div>\n          </div>\n        \n         \n         \n      \n              <div class=\"container-fluid\" > \n                  <div class=\"col-md-8\" style=\"background-color:white;\">\n                     <router-outlet></router-outlet>\n                  \n                      \n                    \n\n                </div>\n            </div>\n         </div>  \n      </div>\n    </div>     \n   \n        <div class=\"section\" >\n          <!--child component-->\n        \n\n        </div>\n \n    \n  </body>\n\n</html>"
 
 /***/ }),
 
 /***/ 1115:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  doctor-schedule works!\n</p>\n"
+module.exports = "<p>\n  doctor-notifications works!\n</p>\n"
 
 /***/ }),
 
 /***/ 1116:
 /***/ (function(module, exports) {
 
-module.exports = "\n  <app-child-search>search loading..</app-child-search>\n\n"
+module.exports = "<p>\n  doctor-schedule works!\n</p>\n"
 
 /***/ }),
 
 /***/ 1117:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  doctor-statistics works!\n</p>\n"
+module.exports = "\n  <app-child-search>search loading..</app-child-search>\n\n"
 
 /***/ }),
 
 /***/ 1118:
 /***/ (function(module, exports) {
 
-module.exports = "\n  <html>\n  \n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   \n  </head>\n  \n   <body>\n\n    <div class=\"section\">\n      <div class=\"container\">\n        <div class=\"row\"  >\n          <div class=\"col-md-6\">\n            <form role=\"form\" [formGroup]=\"loginForm\" (ngSubmit)=\"loginUser($event)\">\n              <div class=\"form-group\">\n                <label class=\"control-label\" for=\"exampleInputEmail1\">Email address</label>\n                <input class=\"form-control\" formControlName=\"loginemail\" name=\"loginEmail\" id=\"exampleInputEmail1\" placeholder=\"Enter email\" type=\"email\">\n              </div>\n              <div class=\"form-group\">\n                <label class=\"control-label\" for=\"exampleInputPassword1\">Password</label>\n                <input class=\"form-control\"formControlName=\"loginpassword\"  name=\"loginPassword\" id=\"exampleInputPassword1\" placeholder=\"Password\" type=\"password\">\n              </div>\n              <button type=\"submit\" class=\"btn btn-success\">SignIn</button>\n              <a [routerLink]=\"['../../users/signup']\" class=\"btn btn-default\">Sign Up</a>\n            </form>\n          </div>\n         </div>\n        </div>\n      </div>       \n         \n      </body>      \n      \n\n\n\n      \n   \n  \n\n"
+module.exports = "<p>\n  doctor-statistics works!\n</p>\n"
 
 /***/ }),
 
 /***/ 1119:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  midwife-assigned-childs works!\n</p>\n"
+module.exports = "\n  <html>\n  \n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   \n  </head>\n  \n   <body>\n\n    <div class=\"section\">\n      <div class=\"container\">\n        <div class=\"row\"  >\n          <div class=\"col-md-6\">\n            <form role=\"form\" [formGroup]=\"loginForm\" (ngSubmit)=\"loginUser($event)\">\n              <div class=\"form-group\">\n                <label class=\"control-label\" for=\"exampleInputEmail1\">Email address</label>\n                <input class=\"form-control\" formControlName=\"loginemail\" name=\"loginEmail\" id=\"exampleInputEmail1\" placeholder=\"Enter email\" type=\"email\">\n              </div>\n              <div class=\"form-group\">\n                <label class=\"control-label\" for=\"exampleInputPassword1\">Password</label>\n                <input class=\"form-control\"formControlName=\"loginpassword\"  name=\"loginPassword\" id=\"exampleInputPassword1\" placeholder=\"Password\" type=\"password\">\n              </div>\n              <button type=\"submit\" class=\"btn btn-success\">SignIn</button>\n              <a [routerLink]=\"['../../users/signup']\" class=\"btn btn-default\">Sign Up</a>\n            </form>\n          </div>\n         </div>\n        </div>\n      </div>       \n         \n      </body>      \n      \n\n\n\n      \n   \n  \n\n"
 
 /***/ }),
 
 /***/ 1120:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-6\">\n            <a class=\"btn  btn-success btn-md\" [routerLink]=\"['add_child']\">Add Child</a>\n </div>\n  <div class=\"col-md-12\">\n  <app-child-search>search loading..</app-child-search>\n   </div>\n<br>\n<div class=\"col-md-12\" style=\"background-color:#EEEEEE; top:40px; bottom:40px; height:800px\">\n\n  <h2>Child Register Form</h2>\n     <router-outlet></router-outlet>\n </div>    "
+module.exports = "<p>\n  midwife-assigned-childs works!\n</p>\n"
 
 /***/ }),
 
 /***/ 1121:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  midwife-contacts works!\n</p>\n"
+module.exports = "<div class=\"col-md-6\">\n            <a class=\"btn  btn-success btn-md\" [routerLink]=\"['add_child']\">Add Child</a>\n </div>\n  <div class=\"col-md-12\">\n  <app-child-search>search loading..</app-child-search>\n   </div>\n<br>\n<div class=\"col-md-12\" style=\"background-color:#EEEEEE; top:40px; bottom:40px; height:800px\">\n\n  <h2>Child Register Form</h2>\n     <router-outlet></router-outlet>\n </div>    "
 
 /***/ }),
 
 /***/ 1122:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section\">\r\n      <div class=\"container\">\r\n        <div class=\"row\">\r\n          <div class=\"col-md-4\">\r\n            <div class=\"thumbnail\">\r\n              <img src=\"https://unsplash.imgix.net/photo-1421986527537-888d998adb74?w=1024&amp;q=50&amp;fm=jpg&amp;s=e633562a1da53293c4dc391fd41ce41d\" class=\"img-responsive\">\r\n            </div>\r\n            <div></div>\r\n          </div>\r\n          <div class=\"col-md-8\">\r\n            <table class=\"table table-hover\">\r\n              <tbody draggable=\"true\">\r\n                <tr>\r\n                  <td>\r\n                    <b>Full name :</b>\r\n                  </td>\r\n                  <td>Otto</td>\r\n                </tr>\r\n                 <tr>\r\n                  <td>\r\n                    <b>Last Visited Child:</b>\r\n                  </td>\r\n                  <td>the Bird</td>\r\n                </tr>\r\n                <tr>\r\n                  <td>\r\n                    <b>Last visited Home :</b>\r\n                  </td>\r\n                  <td>the Bird</td>\r\n                </tr>\r\n                <tr>\r\n                  <td>\r\n                    <b>Next Home Visit :</b>\r\n                  </td>\r\n                  <td>the Bird</td>\r\n                </tr>\r\n                <tr>\r\n                  <td>\r\n                    <b>Next Clinic Date :</b>\r\n                  </td>\r\n                  <td>the Bird</td>\r\n                </tr>\r\n              </tbody>\r\n            </table>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>"
+module.exports = "<p>\n  midwife-contacts works!\n</p>\n"
 
 /***/ }),
 
 /***/ 1123:
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"background-color: white;\">\n  \n      <div class=\"section\">\n        <div class=\"container-fluid\">\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <ul class=\"nav nav-pills\">\n                <h1>Midwife</h1>\n                <h3>Full Name</h3>\n                <li class=\"active\">\n                  <a href=\"#\">Home</a>\n                </li>\n                <li>\n                  <a href=\"#\">change role</a>\n                </li>\n                <li>\n                  <a href=\"#\">logout</a>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n   \n \n      <br>\n    <div class=\"section\" >\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <div class=\"col-md-12\">\n                   <ul class=\"list-group\">\n                      <a [routerLink]=\"['dashboard']\" ><li class=\"list-group-item\"><h4>Dashboard</h4> </li></a>\n                      <a [routerLink]=\"['stat']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Statistics</h4></li></a>\n                     \n                      <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Scedule</h4></li></a>\n                      <a [routerLink]=\"['messages']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Send a Message</h4></li></a>\n                      <a [routerLink]=\"['searchchild']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Search Children</h4></li></a>\n                   <!--   <a [routerLink]=\"['contacts']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Contacts</h4></li></a>\n                      -->\n                   </ul>\n\n            </div>\n          </div>\n        \n         \n         \n      \n              <div class=\"container-fluid\" > \n                  <div class=\"col-md-8\" style=\"background-color:white;\">\n                     <router-outlet></router-outlet>\n                  \n                      \n                    \n\n                </div>\n            </div>\n         </div>  \n      </div>\n    </div>     \n   \n        <div class=\"section\" >\n          <!--child component-->\n        \n\n        </div>\n \n    \n</div>"
+module.exports = "<div class=\"section\">\r\n      <div class=\"container\">\r\n        <div class=\"row\">\r\n          <div class=\"col-md-4\">\r\n            <div class=\"thumbnail\">\r\n              <img src=\"https://unsplash.imgix.net/photo-1421986527537-888d998adb74?w=1024&amp;q=50&amp;fm=jpg&amp;s=e633562a1da53293c4dc391fd41ce41d\" class=\"img-responsive\">\r\n            </div>\r\n            <div></div>\r\n          </div>\r\n          <div class=\"col-md-8\">\r\n            <table class=\"table table-hover\">\r\n              <tbody draggable=\"true\">\r\n                <tr>\r\n                  <td>\r\n                    <b>Full name :</b>\r\n                  </td>\r\n                  <td>Otto</td>\r\n                </tr>\r\n                 <tr>\r\n                  <td>\r\n                    <b>Last Visited Child:</b>\r\n                  </td>\r\n                  <td>the Bird</td>\r\n                </tr>\r\n                <tr>\r\n                  <td>\r\n                    <b>Last visited Home :</b>\r\n                  </td>\r\n                  <td>the Bird</td>\r\n                </tr>\r\n                <tr>\r\n                  <td>\r\n                    <b>Next Home Visit :</b>\r\n                  </td>\r\n                  <td>the Bird</td>\r\n                </tr>\r\n                <tr>\r\n                  <td>\r\n                    <b>Next Clinic Date :</b>\r\n                  </td>\r\n                  <td>the Bird</td>\r\n                </tr>\r\n              </tbody>\r\n            </table>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>"
 
 /***/ }),
 
 /***/ 1124:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  midwife-notifications works!\n</p>\n"
+module.exports = "<div style=\"background-color: white;\">\n  \n      <div class=\"section\">\n        <div class=\"container-fluid\">\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <ul class=\"nav nav-pills\">\n                <h1>Midwife</h1>\n                <h3>Full Name</h3>\n                <li class=\"active\">\n                  <a href=\"#\">Home</a>\n                </li>\n                <li>\n                  <a href=\"#\">change role</a>\n                </li>\n                <li>\n                  <a href=\"#\">logout</a>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n   \n \n      <br>\n    <div class=\"section\" >\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <div class=\"col-md-12\">\n                   <ul class=\"list-group\">\n                      <a [routerLink]=\"['dashboard']\" ><li class=\"list-group-item\"><h4>Dashboard</h4> </li></a>\n                      <a [routerLink]=\"['stat']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Statistics</h4></li></a>\n                     \n                      <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Scedule</h4></li></a>\n                      <a [routerLink]=\"['messages']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Send a Message</h4></li></a>\n                      <a [routerLink]=\"['searchchild']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Search Children</h4></li></a>\n                   <!--   <a [routerLink]=\"['contacts']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Contacts</h4></li></a>\n                      -->\n                   </ul>\n\n            </div>\n          </div>\n        \n         \n         \n      \n              <div class=\"container-fluid\" > \n                  <div class=\"col-md-8\" style=\"background-color:white;\">\n                     <router-outlet></router-outlet>\n                  \n                      \n                    \n\n                </div>\n            </div>\n         </div>  \n      </div>\n    </div>     \n   \n        <div class=\"section\" >\n          <!--child component-->\n        \n\n        </div>\n \n    \n</div>"
 
 /***/ }),
 
 /***/ 1125:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  midwife-schedule works!\n</p>\n"
+module.exports = "<p>\n  midwife-notifications works!\n</p>\n"
 
 /***/ }),
 
 /***/ 1126:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  midwife-stat works!\n</p>\n"
+module.exports = "<p>\n  midwife-schedule works!\n</p>\n"
 
 /***/ }),
 
 /***/ 1127:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  404 Page Not Found\n</p>\n"
+module.exports = "<p>\n  midwife-stat works!\n</p>\n"
 
 /***/ }),
 
 /***/ 1128:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-md-4\">\n            <div class=\"thumbnail\">\n              <img src=\"https://unsplash.imgix.net/photo-1421986527537-888d998adb74?w=1024&amp;q=50&amp;fm=jpg&amp;s=e633562a1da53293c4dc391fd41ce41d\" class=\"img-responsive\">\n              \n            </div>\n            <div></div>\n          </div>\n          <div class=\"col-md-8\">\n            <table class=\"table table-hover\">\n              <tbody>\n                <tr>\n                  <td>\n                    <b>Full name :</b>\n                  </td>\n                  <td>Otto</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Next Clinic visit :</b>\n                  </td>\n                  <td>the Bird</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Last Vacinated Patient:</b>\n                  </td>\n                  <td>the Bird</td>\n                </tr>\n              </tbody>\n            </table>\n            \n          </div>\n        </div>\n      </div>\n    </div>"
+module.exports = "<p>\n  404 Page Not Found\n</p>\n"
 
 /***/ }),
 
 /***/ 1129:
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n  \n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   \n  </head>\n  \n   <body>\n  \n      <div class=\"section\">\n        <div class=\"container-fluid\">\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <ul class=\"nav nav-pills\">\n                <h1>Nurse</h1>\n                <div *ngIf=\"profile.firstName\">\n                   <h3>{{profile.firstName}} {{profile.lastName}}</h3>\n                </div>\n                 \n                <li class=\"active\">\n                  <a href=\"#\">Home</a>\n                </li>\n                <li>\n                  <a (click)=\"logout()\">logout</a>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n   \n \n      <br>\n    <div class=\"section\" >\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <div class=\"col-md-12\">\n                  <ul class=\"list-group\">\n                      <a [routerLink]=\"['dashboard']\" ><li class=\"list-group-item\"><h4>Dashboard</h4> </li></a>\n                      \n                      <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Schedule</h4></li></a>\n                      <a [routerLink]=\"['messages']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Send a Message</h4></li></a>\n                      <a [routerLink]=\"['searchchild']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Search Children</h4></li></a>\n                      <a [routerLink]=\"['vaccination']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Vaccination</h4></li></a>\n                      \n                   </ul>\n\n            </div>\n          </div>\n        \n         \n         \n      \n              <div class=\"container-fluid\" > \n                  <div class=\"col-md-8\" style=\"background-color:white;\">\n                     <router-outlet></router-outlet>\n                  \n                      \n                    \n\n                </div>\n            </div>\n         </div>  \n      </div>\n    </div>     \n   \n        <div class=\"section\" >\n          <!--child component-->\n        \n\n        </div>\n \n    \n  </body>\n\n</html>"
+module.exports = "<div class=\"section\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-md-4\">\n            <div class=\"thumbnail\">\n              <img src=\"https://unsplash.imgix.net/photo-1421986527537-888d998adb74?w=1024&amp;q=50&amp;fm=jpg&amp;s=e633562a1da53293c4dc391fd41ce41d\" class=\"img-responsive\">\n              \n            </div>\n            <div></div>\n          </div>\n          <div class=\"col-md-8\">\n            <table class=\"table table-hover\">\n              <tbody>\n                <tr>\n                  <td>\n                    <b>Full name :</b>\n                  </td>\n                  <td>Otto</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Next Clinic visit :</b>\n                  </td>\n                  <td>the Bird</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Last Vacinated Patient:</b>\n                  </td>\n                  <td>the Bird</td>\n                </tr>\n              </tbody>\n            </table>\n            \n          </div>\n        </div>\n      </div>\n    </div>"
 
 /***/ }),
 
 /***/ 1130:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  nurse-notification works!\n</p>\n"
+module.exports = "<html>\n  \n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   \n  </head>\n  \n   <body>\n  \n      <div class=\"section\">\n        <div class=\"container-fluid\">\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <ul class=\"nav nav-pills\">\n                <h1>Nurse</h1>\n                <div *ngIf=\"profile.firstName\">\n                   <h3>{{profile.firstName}} {{profile.lastName}}</h3>\n                </div>\n                 \n                <li class=\"active\">\n                  <a href=\"#\">Home</a>\n                </li>\n                <li>\n                  <a (click)=\"logout()\">logout</a>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n   \n \n      <br>\n    <div class=\"section\" >\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <div class=\"col-md-12\">\n                  <ul class=\"list-group\">\n                      <a [routerLink]=\"['dashboard']\" ><li class=\"list-group-item\"><h4>Dashboard</h4> </li></a>\n                      \n                      <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Schedule</h4></li></a>\n                      <a [routerLink]=\"['messages']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Send a Message</h4></li></a>\n                      <a [routerLink]=\"['searchchild']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Search Children</h4></li></a>\n                      <a [routerLink]=\"['vaccination']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Vaccination</h4></li></a>\n                      \n                   </ul>\n\n            </div>\n          </div>\n        \n         \n         \n      \n              <div class=\"container-fluid\" > \n                  <div class=\"col-md-8\" style=\"background-color:white;\">\n                     <router-outlet></router-outlet>\n                  \n                      \n                    \n\n                </div>\n            </div>\n         </div>  \n      </div>\n    </div>     \n   \n        <div class=\"section\" >\n          <!--child component-->\n        \n\n        </div>\n \n    \n  </body>\n\n</html>"
 
 /***/ }),
 
 /***/ 1131:
 /***/ (function(module, exports) {
 
-module.exports = "  <app-child-search>search loading..</app-child-search>\n"
+module.exports = "<p>\n  nurse-notification works!\n</p>\n"
 
 /***/ }),
 
 /***/ 1132:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-12\">\n              <form class=\"form-horizontal\" role=\"form\">\n                <div class=\"form-group\">\n                  <div class=\"col-sm-2\">\n                    <label for=\"inputEmail3\" class=\"control-label\">Vaccine Name</label>\n                  </div>\n                  <div class=\"col-sm-9\">\n                    <input type=\"text\" placeholder=\"Type..\" class=\"form-control\">\n                    <button type=\"Add\" class=\"btn btn-success\">Add</button>\n                  </div>\n                </div>\n                <div class=\"col-sm-12\">\n                  <div class=\"col-sm-8\" style=\"float:right;\">\n                    <ul class=\"list-group\">\n                      <li class=\"list-group-item\">Vaccine Name\n                        <a class=\"btn btn-danger btn-xs\" style=\"float:right;\">Remove</a>\n                      </li>\n                    </ul>\n                  </div>\n                </div>\n                <div>\n                  <div class=\"col-sm-12\">\n                    <div class=\"col-sm-12\" style=\"float:right;\">\n                      <ul class=\"list-group\">\n                        <li class=\"list-group-item\">Cautious for Vaccine</li>\n                      </ul>\n                    </div>\n                  </div>\n                </div>\n              </form>\n              <a class=\"btn btn-primary\" style=\"float:right;\">Given</a>\n            </div>"
+module.exports = "  <app-child-search>search loading..</app-child-search>\n"
 
 /***/ }),
 
 /***/ 1133:
 /***/ (function(module, exports) {
 
+module.exports = "<div class=\"col-md-12\">\n               <form role=\"form\" [formGroup]=\"vaccination\" >\n                <div class=\"form-group\">\n                  <div class=\"col-sm-2\">\n                    <label for=\"inputEmail3\" class=\"control-label\">Vaccine Name</label>\n                  </div>\n                  <div class=\"col-sm-9\">\n                    <input type=\"text\" formControlName=\"injectType\" name=\"injectType\"  placeholder=\"Type..\" class=\"form-control\">\n                    <a type=\"Add\" class=\"btn btn-success\" (click)=\"assign()\">Add</a>\n                  </div>\n                </div>\n                <div class=\"col-sm-12\">\n                  <div class=\"col-sm-8\" style=\"float:right;\">\n                    <ul *ngIf='injection' class=\"list-group\">\n                      <li class=\"list-group-item\">{{injection}}\n                        <a class=\"btn btn-danger btn-xs\" style=\"float:right;\" (click)=\"remove()\">Remove</a>\n                      </li>\n                    </ul>\n                  </div>\n                </div>\n                <div>\n                  <div class=\"col-sm-12\">\n                    <div class=\"col-sm-12\" style=\"float:right;\">\n                      <ul class=\"list-group\">\n                        <li class=\"list-group-item\">Cautious for Vaccine</li>\n                      </ul>\n                    </div>\n                  </div>\n                </div>\n                    <div class=\"col-sm-12\">\n                    <div class=\"col-sm-12\" style=\"float:right;\">\n                      <ul class=\"list-group\">\n                        <input type=\"text\" formControlName=\"remarks\" name=\"remarks\"  placeholder=\"Remarks..\" class=\"form-control\">\n                      </ul>\n                    </div>\n                  </div>\n                <div>\n\n                </div>\n\n\n              </form>\n              <button class=\"btn btn-primary\" type=\"submit\" (click)=\"given()\" style=\"float:right;\" >Given</button>\n            </div>"
+
+/***/ }),
+
+/***/ 1134:
+/***/ (function(module, exports) {
+
 module.exports = "    \n    <div class=\"section\">\n    \n          <div class=\"col-md-6\">\n                  <form role=\"form\" [formGroup]=\"signupForm\" (ngSubmit)=\"addUser($event)\">\n                    <div class=\"form-group\">\n                      <label class=\"control-label\" >First Name</label>\n                      <input class=\"form-control\" formControlName=\"firstName\" name=\"firstName\" placeholder=\"First Name\" type=\"text\">\n                    </div>\n                    <div class=\"form-group\">\n                      <label class=\"control-label\" >Last Name</label>\n                      <input class=\"form-control\" formControlName=\"lastName\" name=\"lastName\"  placeholder=\"Last Name\" type=\"text\">\n                    </div>\n                    <div class=\"form-group\">\n                      <label class=\"control-label\" for=\"exampleInputEmail1\">Email address</label>\n                      <input class=\"form-control\" formControlName=\"email\" name=\"email\" id=\"exampleInputEmail1\" placeholder=\"Enter email\" type=\"email\">\n                    </div>\n                    <div class=\"form-group\">\n                      <label class=\"control-label\" >NIC</label>\n                      <input class=\"form-control\" formControlName=\"nic\" name=\"nic\" placeholder=\"your nic number\" type=\"text\">\n                    </div>\n                     <div class=\"form-group\">\n                      <label class=\"control-label\" >Address</label>\n                      <input class=\"form-control\" formControlName=\"address\" name=\"address\" placeholder=\"Address\" type=\"text\">\n                    </div>\n                    <div class=\"form-group\">\n                      <label class=\"control-label\" >Phone Number</label>\n                      <input class=\"form-control\" formControlName=\"phoneNo\" name=\"phoneNo\" placeholder=\"Phone Number\" type=\"text\">\n                    </div>\n                    <div class=\"form-group\">\n                      <label class=\"control-label\" for=\"exampleInputPassword1\">Password</label>\n                      <input class=\"form-control\" formControlName=\"password\" name=\"password\" id=\"exampleInputPassword1\" placeholder=\"Password\" type=\"password\">\n                    </div>\n                    <div class=\"form-group\">\n                      <label class=\"control-label\">Confirm Password</label>\n                      <input class=\"form-control\" formControlName=\"password2\" name=\"password2\" type=\"password\" placeholder=\"Confirm Password\">\n                    </div>\n                    <div class=\"form-group\">\n                      <label for=\"sel1\">Select Your Role:</label>\n                        <select class=\"form-control\" formControlName=\"role\" name=\"role\">\n                          <option value=1>Admin</option>\n                          <option value=2>Doctor</option>\n                          <option value=3>Mother</option>\n                          <option value=4>Midwife</option>\n                          <option value=5>Nurse</option>\n                        </select>\n                      </div>\n\n\n\n\n                    <button type=\"submit\" class=\"btn btn-primary\">SignUp</button>\n\n                   <a [routerLink]=\"['../../users/login']\" class=\"btn btn-default\">login</a>\n                  </form>\n                </div>\n\n</div>   \n      \n   "
 
 /***/ }),
 
-/***/ 1175:
+/***/ 1176:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(650);
+module.exports = __webpack_require__(651);
 
 
 /***/ }),
 
-/***/ 123:
+/***/ 124:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap__ = __webpack_require__(1142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap__ = __webpack_require__(1143);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__child_service__ = __webpack_require__(395);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__child_service__ = __webpack_require__(396);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildWindowComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -366,8 +620,8 @@ var ChildWindowComponent = (function () {
     ChildWindowComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-child-window',
-            template: __webpack_require__(1106),
-            styles: [__webpack_require__(969)],
+            template: __webpack_require__(1107),
+            styles: [__webpack_require__(970)],
             providers: [__WEBPACK_IMPORTED_MODULE_3__child_service__["a" /* ChildService */]],
             inputs: ['child']
         }), 
@@ -380,12 +634,12 @@ var ChildWindowComponent = (function () {
 
 /***/ }),
 
-/***/ 124:
+/***/ 125:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__schedule_service__ = __webpack_require__(396);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__schedule_service__ = __webpack_require__(397);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScheduleComponent; });
 /* unused harmony export MyEvent */
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -473,8 +727,8 @@ var ScheduleComponent = (function () {
     ScheduleComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-schedule',
-            template: __webpack_require__(1108),
-            styles: [__webpack_require__(971)]
+            template: __webpack_require__(1109),
+            styles: [__webpack_require__(972)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__schedule_service__["a" /* ScheduleService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__schedule_service__["a" /* ScheduleService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"]) === 'function' && _b) || Object])
     ], ScheduleComponent);
@@ -491,7 +745,7 @@ var MyEvent = (function () {
 
 /***/ }),
 
-/***/ 125:
+/***/ 126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -515,8 +769,8 @@ var SendMessageComponent = (function () {
     SendMessageComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-send-message',
-            template: __webpack_require__(1110),
-            styles: [__webpack_require__(973)]
+            template: __webpack_require__(1111),
+            styles: [__webpack_require__(974)]
         }), 
         __metadata('design:paramtypes', [])
     ], SendMessageComponent);
@@ -526,20 +780,20 @@ var SendMessageComponent = (function () {
 
 /***/ }),
 
-/***/ 126:
+/***/ 127:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(629);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(294);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -601,7 +855,7 @@ var UserService = (function () {
     UserService.prototype.extractData = function (res) {
         var body = res.json();
         console.log(this.route());
-        return body || {};
+        //return body || { };
     };
     UserService.prototype.handleError = function (error) {
         // In a real world app, you might use a remote logging infrastructure
@@ -656,8 +910,8 @@ var ChildCheckupComponent = (function () {
     ChildCheckupComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-child-checkup',
-            template: __webpack_require__(1105),
-            styles: [__webpack_require__(968)]
+            template: __webpack_require__(1106),
+            styles: [__webpack_require__(969)]
         }), 
         __metadata('design:paramtypes', [])
     ], ChildCheckupComponent);
@@ -673,14 +927,14 @@ var ChildCheckupComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__send_message_send_message_component__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__send_message_inbox_inbox_component__ = __webpack_require__(788);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__schedule_schedule_component__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_primeng_primeng__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__send_message_send_message_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__send_message_inbox_inbox_component__ = __webpack_require__(789);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__schedule_schedule_component__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_primeng_primeng__ = __webpack_require__(292);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_primeng_primeng___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_primeng_primeng__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__schedule_schedule_service__ = __webpack_require__(396);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__schedule_schedule_service__ = __webpack_require__(397);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppCommonModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -723,25 +977,25 @@ var AppCommonModule = (function () {
 
 /***/ }),
 
-/***/ 250:
+/***/ 251:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doctor_routing_module__ = __webpack_require__(789);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__doctor_nav_doctor_nav_component__ = __webpack_require__(399);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__doctor_dashboard_doctor_dashboard_component__ = __webpack_require__(398);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__doctor_search_child_doctor_search_child_component__ = __webpack_require__(401);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__doctor_contacts_doctor_contacts_component__ = __webpack_require__(397);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__doctor_statistics_doctor_statistics_component__ = __webpack_require__(402);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__doctor_notifications_doctor_notifications_component__ = __webpack_require__(400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__doctor_schedule_doctor_schedule_component__ = __webpack_require__(790);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__SearchChild_child_display_child_display_component__ = __webpack_require__(778);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ng2_filter_pipe__ = __webpack_require__(1023);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doctor_routing_module__ = __webpack_require__(790);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__doctor_nav_doctor_nav_component__ = __webpack_require__(400);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__doctor_dashboard_doctor_dashboard_component__ = __webpack_require__(399);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__doctor_search_child_doctor_search_child_component__ = __webpack_require__(402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__doctor_contacts_doctor_contacts_component__ = __webpack_require__(398);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__doctor_statistics_doctor_statistics_component__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__doctor_notifications_doctor_notifications_component__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__doctor_schedule_doctor_schedule_component__ = __webpack_require__(791);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__SearchChild_child_display_child_display_component__ = __webpack_require__(779);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ng2_filter_pipe__ = __webpack_require__(1024);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ng2_filter_pipe___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_ng2_filter_pipe__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__SearchChild_child_search_child_search_component__ = __webpack_require__(779);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__SearchChild_child_search_child_search_component__ = __webpack_require__(780);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__common_app_common_module__ = __webpack_require__(175);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -800,13 +1054,13 @@ var DoctorModule = (function () {
 
 /***/ }),
 
-/***/ 386:
+/***/ 387:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__child_window_child_service__ = __webpack_require__(395);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__child_window_child_service__ = __webpack_require__(396);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MotherChildListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -848,8 +1102,8 @@ var MotherChildListComponent = (function () {
     MotherChildListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-mother-child-list',
-            template: __webpack_require__(1092),
-            styles: [__webpack_require__(956)],
+            template: __webpack_require__(1093),
+            styles: [__webpack_require__(957)],
             providers: [__WEBPACK_IMPORTED_MODULE_2__child_window_child_service__["a" /* ChildService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__child_window_child_service__["a" /* ChildService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__child_window_child_service__["a" /* ChildService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"]) === 'function' && _c) || Object])
@@ -861,7 +1115,7 @@ var MotherChildListComponent = (function () {
 
 /***/ }),
 
-/***/ 387:
+/***/ 388:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -885,8 +1139,8 @@ var MotherContactsComponent = (function () {
     MotherContactsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-mother-contacts',
-            template: __webpack_require__(1093),
-            styles: [__webpack_require__(957)]
+            template: __webpack_require__(1094),
+            styles: [__webpack_require__(958)]
         }), 
         __metadata('design:paramtypes', [])
     ], MotherContactsComponent);
@@ -896,7 +1150,7 @@ var MotherContactsComponent = (function () {
 
 /***/ }),
 
-/***/ 388:
+/***/ 389:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -959,8 +1213,8 @@ var MotherDashboardComponent = (function () {
     MotherDashboardComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-mother-dashboard',
-            template: __webpack_require__(1094),
-            styles: [__webpack_require__(958)]
+            template: __webpack_require__(1095),
+            styles: [__webpack_require__(959)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"]) === 'function' && _b) || Object])
     ], MotherDashboardComponent);
@@ -971,7 +1225,7 @@ var MotherDashboardComponent = (function () {
 
 /***/ }),
 
-/***/ 389:
+/***/ 390:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -995,8 +1249,8 @@ var MotherNotificationsComponent = (function () {
     MotherNotificationsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-mother-notifications',
-            template: __webpack_require__(1095),
-            styles: [__webpack_require__(959)]
+            template: __webpack_require__(1096),
+            styles: [__webpack_require__(960)]
         }), 
         __metadata('design:paramtypes', [])
     ], MotherNotificationsComponent);
@@ -1006,7 +1260,7 @@ var MotherNotificationsComponent = (function () {
 
 /***/ }),
 
-/***/ 390:
+/***/ 391:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1089,8 +1343,8 @@ var MothernevComponent = (function () {
     MothernevComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-mothernev',
-            template: __webpack_require__(1096),
-            styles: [__webpack_require__(960)]
+            template: __webpack_require__(1097),
+            styles: [__webpack_require__(961)]
         }), 
         __metadata('design:paramtypes', [])
     ], MothernevComponent);
@@ -1100,13 +1354,13 @@ var MothernevComponent = (function () {
 
 /***/ }),
 
-/***/ 391:
+/***/ 392:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildSearchService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1141,13 +1395,13 @@ var ChildSearchService = (function () {
 
 /***/ }),
 
-/***/ 392:
+/***/ 393:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_child_service__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_child_service__ = __webpack_require__(394);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddChildComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1198,8 +1452,8 @@ var AddChildComponent = (function () {
     AddChildComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-add-child',
-            template: __webpack_require__(1099),
-            styles: [__webpack_require__(963)]
+            template: __webpack_require__(1100),
+            styles: [__webpack_require__(964)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__add_child_service__["a" /* AddChildService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__add_child_service__["a" /* AddChildService */]) === 'function' && _b) || Object])
     ], AddChildComponent);
@@ -1210,20 +1464,20 @@ var AddChildComponent = (function () {
 
 /***/ }),
 
-/***/ 393:
+/***/ 394:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(629);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(294);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddChildService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1266,8 +1520,6 @@ var AddChildService = (function () {
     AddChildService.prototype.handleError = function (error) {
         // In a real world app, you might use a remote logging infrastructure
         var errMsg;
-        if (__WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* Response */]) {
-        }
         if (error instanceof __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* Response */]) {
             var body = error.json() || '';
             var err = body.error || JSON.stringify(body || null);
@@ -1290,7 +1542,7 @@ var AddChildService = (function () {
 
 /***/ }),
 
-/***/ 394:
+/***/ 395:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1314,8 +1566,8 @@ var ApiComponent = (function () {
     ApiComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-api',
-            template: __webpack_require__(1101),
-            styles: [__webpack_require__(964)]
+            template: __webpack_require__(1102),
+            styles: [__webpack_require__(965)]
         }), 
         __metadata('design:paramtypes', [])
     ], ApiComponent);
@@ -1325,13 +1577,13 @@ var ApiComponent = (function () {
 
 /***/ }),
 
-/***/ 395:
+/***/ 396:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1366,12 +1618,12 @@ var ChildService = (function () {
 
 /***/ }),
 
-/***/ 396:
+/***/ 397:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(45);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScheduleService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1405,7 +1657,7 @@ var ScheduleService = (function () {
 
 /***/ }),
 
-/***/ 397:
+/***/ 398:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1429,8 +1681,8 @@ var DoctorContactsComponent = (function () {
     DoctorContactsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-doctor-contacts',
-            template: __webpack_require__(1111),
-            styles: [__webpack_require__(974)]
+            template: __webpack_require__(1112),
+            styles: [__webpack_require__(975)]
         }), 
         __metadata('design:paramtypes', [])
     ], DoctorContactsComponent);
@@ -1440,7 +1692,7 @@ var DoctorContactsComponent = (function () {
 
 /***/ }),
 
-/***/ 398:
+/***/ 399:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1469,8 +1721,8 @@ var DoctorDashboardComponent = (function () {
     DoctorDashboardComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-doctor-dashboard',
-            template: __webpack_require__(1112),
-            styles: [__webpack_require__(975)]
+            template: __webpack_require__(1113),
+            styles: [__webpack_require__(976)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"]) === 'function' && _a) || Object])
     ], DoctorDashboardComponent);
@@ -1481,12 +1733,12 @@ var DoctorDashboardComponent = (function () {
 
 /***/ }),
 
-/***/ 399:
+/***/ 400:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(11);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorNavComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1519,8 +1771,8 @@ var DoctorNavComponent = (function () {
     DoctorNavComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-doctor-nav',
-            template: __webpack_require__(1113),
-            styles: [__webpack_require__(976)]
+            template: __webpack_require__(1114),
+            styles: [__webpack_require__(977)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"]) === 'function' && _b) || Object])
     ], DoctorNavComponent);
@@ -1531,7 +1783,7 @@ var DoctorNavComponent = (function () {
 
 /***/ }),
 
-/***/ 400:
+/***/ 401:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1555,8 +1807,8 @@ var DoctorNotificationsComponent = (function () {
     DoctorNotificationsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-doctor-notifications',
-            template: __webpack_require__(1114),
-            styles: [__webpack_require__(977)]
+            template: __webpack_require__(1115),
+            styles: [__webpack_require__(978)]
         }), 
         __metadata('design:paramtypes', [])
     ], DoctorNotificationsComponent);
@@ -1566,7 +1818,7 @@ var DoctorNotificationsComponent = (function () {
 
 /***/ }),
 
-/***/ 401:
+/***/ 402:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1590,8 +1842,8 @@ var DoctorSearchChildComponent = (function () {
     DoctorSearchChildComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-doctor-search-child',
-            template: __webpack_require__(1116),
-            styles: [__webpack_require__(979)]
+            template: __webpack_require__(1117),
+            styles: [__webpack_require__(980)]
         }), 
         __metadata('design:paramtypes', [])
     ], DoctorSearchChildComponent);
@@ -1601,7 +1853,7 @@ var DoctorSearchChildComponent = (function () {
 
 /***/ }),
 
-/***/ 402:
+/***/ 403:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1625,8 +1877,8 @@ var DoctorStatisticsComponent = (function () {
     DoctorStatisticsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-doctor-statistics',
-            template: __webpack_require__(1117),
-            styles: [__webpack_require__(980)]
+            template: __webpack_require__(1118),
+            styles: [__webpack_require__(981)]
         }), 
         __metadata('design:paramtypes', [])
     ], DoctorStatisticsComponent);
@@ -1636,13 +1888,13 @@ var DoctorStatisticsComponent = (function () {
 
 /***/ }),
 
-/***/ 403:
+/***/ 404:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_service__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_service__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(11);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1713,8 +1965,8 @@ var LoginComponent = (function () {
     LoginComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-login',
-            template: __webpack_require__(1118),
-            styles: [__webpack_require__(981)]
+            template: __webpack_require__(1119),
+            styles: [__webpack_require__(982)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__user_service__["a" /* UserService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["Router"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_router__["Router"]) === 'function' && _c) || Object])
     ], LoginComponent);
@@ -1725,7 +1977,7 @@ var LoginComponent = (function () {
 
 /***/ }),
 
-/***/ 404:
+/***/ 405:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1749,8 +2001,8 @@ var MidwifeAssignedChildsComponent = (function () {
     MidwifeAssignedChildsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-midwife-assigned-childs',
-            template: __webpack_require__(1119),
-            styles: [__webpack_require__(982)]
+            template: __webpack_require__(1120),
+            styles: [__webpack_require__(983)]
         }), 
         __metadata('design:paramtypes', [])
     ], MidwifeAssignedChildsComponent);
@@ -1760,7 +2012,7 @@ var MidwifeAssignedChildsComponent = (function () {
 
 /***/ }),
 
-/***/ 405:
+/***/ 406:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1787,8 +2039,8 @@ var MidwifeChildSearchComponent = (function () {
     MidwifeChildSearchComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-midwife-child-search',
-            template: __webpack_require__(1120),
-            styles: [__webpack_require__(983)]
+            template: __webpack_require__(1121),
+            styles: [__webpack_require__(984)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"]) === 'function' && _a) || Object])
     ], MidwifeChildSearchComponent);
@@ -1799,7 +2051,7 @@ var MidwifeChildSearchComponent = (function () {
 
 /***/ }),
 
-/***/ 406:
+/***/ 407:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1823,8 +2075,8 @@ var MidwifeContactsComponent = (function () {
     MidwifeContactsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-midwife-contacts',
-            template: __webpack_require__(1121),
-            styles: [__webpack_require__(984)]
+            template: __webpack_require__(1122),
+            styles: [__webpack_require__(985)]
         }), 
         __metadata('design:paramtypes', [])
     ], MidwifeContactsComponent);
@@ -1834,7 +2086,7 @@ var MidwifeContactsComponent = (function () {
 
 /***/ }),
 
-/***/ 407:
+/***/ 408:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1858,8 +2110,8 @@ var MidwifeDashboardComponent = (function () {
     MidwifeDashboardComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-midwife-dashboard',
-            template: __webpack_require__(1122),
-            styles: [__webpack_require__(985)]
+            template: __webpack_require__(1123),
+            styles: [__webpack_require__(986)]
         }), 
         __metadata('design:paramtypes', [])
     ], MidwifeDashboardComponent);
@@ -1869,7 +2121,7 @@ var MidwifeDashboardComponent = (function () {
 
 /***/ }),
 
-/***/ 408:
+/***/ 409:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1893,8 +2145,8 @@ var MidwifeNavComponent = (function () {
     MidwifeNavComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-midwife-nav',
-            template: __webpack_require__(1123),
-            styles: [__webpack_require__(986)]
+            template: __webpack_require__(1124),
+            styles: [__webpack_require__(987)]
         }), 
         __metadata('design:paramtypes', [])
     ], MidwifeNavComponent);
@@ -1904,7 +2156,7 @@ var MidwifeNavComponent = (function () {
 
 /***/ }),
 
-/***/ 409:
+/***/ 410:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1928,8 +2180,8 @@ var MidwifeNotificationsComponent = (function () {
     MidwifeNotificationsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-midwife-notifications',
-            template: __webpack_require__(1124),
-            styles: [__webpack_require__(987)]
+            template: __webpack_require__(1125),
+            styles: [__webpack_require__(988)]
         }), 
         __metadata('design:paramtypes', [])
     ], MidwifeNotificationsComponent);
@@ -1939,7 +2191,7 @@ var MidwifeNotificationsComponent = (function () {
 
 /***/ }),
 
-/***/ 410:
+/***/ 411:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1963,8 +2215,8 @@ var MidwifeStatComponent = (function () {
     MidwifeStatComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-midwife-stat',
-            template: __webpack_require__(1126),
-            styles: [__webpack_require__(989)]
+            template: __webpack_require__(1127),
+            styles: [__webpack_require__(990)]
         }), 
         __metadata('design:paramtypes', [])
     ], MidwifeStatComponent);
@@ -1974,7 +2226,7 @@ var MidwifeStatComponent = (function () {
 
 /***/ }),
 
-/***/ 411:
+/***/ 412:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1998,8 +2250,8 @@ var NurseDashboardComponent = (function () {
     NurseDashboardComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-nurse-dashboard',
-            template: __webpack_require__(1128),
-            styles: [__webpack_require__(991)]
+            template: __webpack_require__(1129),
+            styles: [__webpack_require__(992)]
         }), 
         __metadata('design:paramtypes', [])
     ], NurseDashboardComponent);
@@ -2009,12 +2261,12 @@ var NurseDashboardComponent = (function () {
 
 /***/ }),
 
-/***/ 412:
+/***/ 413:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(11);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NurseNavComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2047,8 +2299,8 @@ var NurseNavComponent = (function () {
     NurseNavComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-nurse-nav',
-            template: __webpack_require__(1129),
-            styles: [__webpack_require__(992)]
+            template: __webpack_require__(1130),
+            styles: [__webpack_require__(993)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"]) === 'function' && _b) || Object])
     ], NurseNavComponent);
@@ -2059,7 +2311,7 @@ var NurseNavComponent = (function () {
 
 /***/ }),
 
-/***/ 413:
+/***/ 414:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2083,8 +2335,8 @@ var NurseNotificationComponent = (function () {
     NurseNotificationComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-nurse-notification',
-            template: __webpack_require__(1130),
-            styles: [__webpack_require__(993)]
+            template: __webpack_require__(1131),
+            styles: [__webpack_require__(994)]
         }), 
         __metadata('design:paramtypes', [])
     ], NurseNotificationComponent);
@@ -2094,7 +2346,7 @@ var NurseNotificationComponent = (function () {
 
 /***/ }),
 
-/***/ 414:
+/***/ 415:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2118,8 +2370,8 @@ var NurseSearchChildComponent = (function () {
     NurseSearchChildComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-nurse-search-child',
-            template: __webpack_require__(1131),
-            styles: [__webpack_require__(994)]
+            template: __webpack_require__(1132),
+            styles: [__webpack_require__(995)]
         }), 
         __metadata('design:paramtypes', [])
     ], NurseSearchChildComponent);
@@ -2129,11 +2381,13 @@ var NurseSearchChildComponent = (function () {
 
 /***/ }),
 
-/***/ 415:
+/***/ 416:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vaccine_service__ = __webpack_require__(417);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NurseVaccinationComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2145,32 +2399,137 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var NurseVaccinationComponent = (function () {
-    function NurseVaccinationComponent() {
+    function NurseVaccinationComponent(fb, vaccineService) {
+        this.fb = fb;
+        this.vaccineService = vaccineService;
+        this.vaccination = this.fb.group({
+            injectType: [""],
+            remarks: [""]
+        });
     }
     NurseVaccinationComponent.prototype.ngOnInit = function () {
+    };
+    NurseVaccinationComponent.prototype.assign = function () {
+        this.injection = this.vaccination.value.injectType;
+        this.vaccination.value.injectType = "";
+    };
+    NurseVaccinationComponent.prototype.remove = function () {
+        this.injection = "";
+    };
+    NurseVaccinationComponent.prototype.given = function () {
+        var _this = this;
+        var newVaccine = {
+            injection: this.injection,
+            remarks: this.vaccination.value.remarks,
+        };
+        this.vaccineService.immunization(newVaccine)
+            .subscribe(function (user) {
+            _this.vaccine.push(user);
+        });
     };
     NurseVaccinationComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-nurse-vaccination',
-            template: __webpack_require__(1132),
-            styles: [__webpack_require__(995)]
+            template: __webpack_require__(1133),
+            styles: [__webpack_require__(996)]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__vaccine_service__["a" /* VaccineService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__vaccine_service__["a" /* VaccineService */]) === 'function' && _b) || Object])
     ], NurseVaccinationComponent);
     return NurseVaccinationComponent;
+    var _a, _b;
 }());
 //# sourceMappingURL=D:/2nd Year Project/healo/Healo/src/nurse-vaccination.component.js.map
 
 /***/ }),
 
-/***/ 416:
+/***/ 417:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VaccineService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+var VaccineService = (function () {
+    function VaccineService(http, router) {
+        this.http = http;
+        this.router = router;
+        this.vaccineURL = 'clinic/vaccination';
+    }
+    VaccineService.prototype.immunization = function (injection) {
+        console.log(injection);
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Headers */]({ 'Content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        return this.http.post(this.vaccineURL, JSON.stringify(injection), options)
+            .map(this.extractData)
+            .catch(this.handleError);
+    };
+    VaccineService.prototype.extractData = function (res) {
+        var body = res.json();
+        console.log(body.data);
+        return body.data || {};
+    };
+    VaccineService.prototype.handleError = function (error) {
+        // In a real world app, you might use a remote logging infrastructure
+        var errMsg;
+        if (error instanceof __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* Response */]) {
+            var body = error.json() || '';
+            var err = body.error || JSON.stringify(body || null);
+            errMsg = error.status + " - " + (error.statusText || '') + " " + err;
+        }
+        else {
+            errMsg = error.message ? error.message : error.toString();
+        }
+        //console.error(errMsg);
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(errMsg);
+    };
+    VaccineService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["f" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["f" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["Router"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_router__["Router"]) === 'function' && _b) || Object])
+    ], VaccineService);
+    return VaccineService;
+    var _a, _b;
+}());
+//# sourceMappingURL=D:/2nd Year Project/healo/Healo/src/vaccine.service.js.map
+
+/***/ }),
+
+/***/ 418:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_service__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_service__ = __webpack_require__(127);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2229,8 +2588,8 @@ var SignupComponent = (function () {
     SignupComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-signup',
-            template: __webpack_require__(1133),
-            styles: [__webpack_require__(996)]
+            template: __webpack_require__(1134),
+            styles: [__webpack_require__(997)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__user_service__["a" /* UserService */]) === 'function' && _b) || Object])
     ], SignupComponent);
@@ -2241,7 +2600,7 @@ var SignupComponent = (function () {
 
 /***/ }),
 
-/***/ 649:
+/***/ 650:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -2250,21 +2609,21 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 649;
+webpackEmptyContext.id = 650;
 
 
 /***/ }),
 
-/***/ 650:
+/***/ 651:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(798);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(746);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(799);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(747);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(797);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_app_module__ = __webpack_require__(784);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(798);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_app_module__ = __webpack_require__(785);
 
 
 
@@ -2278,21 +2637,21 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 776:
+/***/ 777:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mothernev_mothernev_component__ = __webpack_require__(390);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mother_dashboard_mother_dashboard_component__ = __webpack_require__(388);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mother_child_list_mother_child_list_component__ = __webpack_require__(386);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mothernev_mothernev_component__ = __webpack_require__(391);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mother_dashboard_mother_dashboard_component__ = __webpack_require__(389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mother_child_list_mother_child_list_component__ = __webpack_require__(387);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__child_window_immunization_table_immunization_table_component__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mother_contacts_mother_contacts_component__ = __webpack_require__(387);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mother_notifications_mother_notifications_component__ = __webpack_require__(389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mother_contacts_mother_contacts_component__ = __webpack_require__(388);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mother_notifications_mother_notifications_component__ = __webpack_require__(390);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__charts_weight_weight_component__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__common_send_message_send_message_component__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_schedule_schedule_component__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__common_send_message_send_message_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_schedule_schedule_component__ = __webpack_require__(125);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MotherModuleRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2386,22 +2745,22 @@ var MotherModuleRoutingModule = (function () {
 
 /***/ }),
 
-/***/ 777:
+/***/ 778:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mothernev_mothernev_component__ = __webpack_require__(390);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mother_dashboard_mother_dashboard_component__ = __webpack_require__(388);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mother_child_list_mother_child_list_component__ = __webpack_require__(386);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mother_module_routing_module__ = __webpack_require__(776);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mother_contacts_mother_contacts_component__ = __webpack_require__(387);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__mother_notifications_mother_notifications_component__ = __webpack_require__(389);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_primeng_primeng__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mothernev_mothernev_component__ = __webpack_require__(391);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mother_dashboard_mother_dashboard_component__ = __webpack_require__(389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mother_child_list_mother_child_list_component__ = __webpack_require__(387);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mother_module_routing_module__ = __webpack_require__(777);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mother_contacts_mother_contacts_component__ = __webpack_require__(388);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__mother_notifications_mother_notifications_component__ = __webpack_require__(390);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_primeng_primeng__ = __webpack_require__(292);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_primeng_primeng___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_primeng_primeng__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__charts_height_height_component__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__charts_height_height_component__ = __webpack_require__(786);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__charts_weight_weight_component__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__common_app_common_module__ = __webpack_require__(175);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MotherModuleModule; });
@@ -2458,7 +2817,7 @@ var MotherModuleModule = (function () {
 
 /***/ }),
 
-/***/ 778:
+/***/ 779:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2482,8 +2841,8 @@ var ChildDisplayComponent = (function () {
     ChildDisplayComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-child-display',
-            template: __webpack_require__(1097),
-            styles: [__webpack_require__(961)]
+            template: __webpack_require__(1098),
+            styles: [__webpack_require__(962)]
         }), 
         __metadata('design:paramtypes', [])
     ], ChildDisplayComponent);
@@ -2493,7 +2852,7 @@ var ChildDisplayComponent = (function () {
 
 /***/ }),
 
-/***/ 779:
+/***/ 780:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2503,15 +2862,15 @@ var ChildDisplayComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_of__ = __webpack_require__(1139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_of__ = __webpack_require__(1140);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_debounceTime__ = __webpack_require__(630);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_debounceTime__ = __webpack_require__(631);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_debounceTime__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__(1140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__(1141);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_distinctUntilChanged___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_distinctUntilChanged__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__search_service__ = __webpack_require__(391);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__search_service__ = __webpack_require__(392);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildSearchComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2571,8 +2930,8 @@ var ChildSearchComponent = (function () {
     ChildSearchComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-child-search',
-            template: __webpack_require__(1098),
-            styles: [__webpack_require__(962)],
+            template: __webpack_require__(1099),
+            styles: [__webpack_require__(963)],
             providers: [__WEBPACK_IMPORTED_MODULE_8__search_service__["a" /* ChildSearchService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_8__search_service__["a" /* ChildSearchService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__search_service__["a" /* ChildSearchService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"]) === 'function' && _b) || Object])
@@ -2584,7 +2943,7 @@ var ChildSearchComponent = (function () {
 
 /***/ }),
 
-/***/ 780:
+/***/ 781:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2649,12 +3008,12 @@ var AlertService = (function () {
 
 /***/ }),
 
-/***/ 781:
+/***/ 782:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__alert_service__ = __webpack_require__(780);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__alert_service__ = __webpack_require__(781);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlertComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2678,7 +3037,7 @@ var AlertComponent = (function () {
     AlertComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'alert',
-            template: __webpack_require__(1100)
+            template: __webpack_require__(1101)
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__alert_service__["a" /* AlertService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__alert_service__["a" /* AlertService */]) === 'function' && _a) || Object])
     ], AlertComponent);
@@ -2689,15 +3048,15 @@ var AlertComponent = (function () {
 
 /***/ }),
 
-/***/ 782:
+/***/ 783:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login_component__ = __webpack_require__(403);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup_component__ = __webpack_require__(416);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__api_api_component__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login_component__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup_component__ = __webpack_require__(418);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__api_api_component__ = __webpack_require__(395);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2739,7 +3098,7 @@ var AppRoutingModule = (function () {
 
 /***/ }),
 
-/***/ 783:
+/***/ 784:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2762,8 +3121,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(1102),
-            styles: [__webpack_require__(965)]
+            template: __webpack_require__(1103),
+            styles: [__webpack_require__(966)]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
@@ -2773,32 +3132,32 @@ var AppComponent = (function () {
 
 /***/ }),
 
-/***/ 784:
+/***/ 785:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login_component__ = __webpack_require__(403);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(783);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__user_service__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__SearchChild_search_service__ = __webpack_require__(391);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__add_child_add_child_service__ = __webpack_require__(393);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ng2_bootstrap_ng2_bootstrap__ = __webpack_require__(1009);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__not_found_not_found_component__ = __webpack_require__(794);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_routing_module__ = __webpack_require__(782);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__MotherPage_mother_module_module__ = __webpack_require__(777);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__child_window_child_module__ = __webpack_require__(787);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__doctor_doctor_module__ = __webpack_require__(250);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__midwife_midwife_module__ = __webpack_require__(793);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__nurse_nurse_module__ = __webpack_require__(796);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__signup_signup_component__ = __webpack_require__(416);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__api_api_component__ = __webpack_require__(394);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__alert_alert_component__ = __webpack_require__(781);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__add_child_add_child_component__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login_component__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(784);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__user_service__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__SearchChild_search_service__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__add_child_add_child_service__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ng2_bootstrap_ng2_bootstrap__ = __webpack_require__(1010);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__not_found_not_found_component__ = __webpack_require__(795);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_routing_module__ = __webpack_require__(783);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__MotherPage_mother_module_module__ = __webpack_require__(778);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__child_window_child_module__ = __webpack_require__(788);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__doctor_doctor_module__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__midwife_midwife_module__ = __webpack_require__(794);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__nurse_nurse_module__ = __webpack_require__(797);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__signup_signup_component__ = __webpack_require__(418);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__api_api_component__ = __webpack_require__(395);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__alert_alert_component__ = __webpack_require__(782);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__add_child_add_child_component__ = __webpack_require__(393);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2884,7 +3243,7 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 785:
+/***/ 786:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2908,8 +3267,8 @@ var HeightComponent = (function () {
     HeightComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-height',
-            template: __webpack_require__(1103),
-            styles: [__webpack_require__(966)]
+            template: __webpack_require__(1104),
+            styles: [__webpack_require__(967)]
         }), 
         __metadata('design:paramtypes', [])
     ], HeightComponent);
@@ -2919,13 +3278,13 @@ var HeightComponent = (function () {
 
 /***/ }),
 
-/***/ 786:
+/***/ 787:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__child_window_component__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__child_window_component__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__child_window_immunization_table_immunization_table_component__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__charts_weight_weight_component__ = __webpack_require__(94);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildRoutingModule; });
@@ -2979,7 +3338,7 @@ var ChildRoutingModule = (function () {
 
 /***/ }),
 
-/***/ 787:
+/***/ 788:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2987,8 +3346,8 @@ var ChildRoutingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__immunization_table_immunization_table_component__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__child_routing_module__ = __webpack_require__(786);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__child_window_component__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__child_routing_module__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__child_window_component__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__child_checkup_child_checkup_component__ = __webpack_require__(174);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3034,7 +3393,7 @@ var ChildModule = (function () {
 
 /***/ }),
 
-/***/ 788:
+/***/ 789:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3058,8 +3417,8 @@ var InboxComponent = (function () {
     InboxComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-inbox',
-            template: __webpack_require__(1109),
-            styles: [__webpack_require__(972)]
+            template: __webpack_require__(1110),
+            styles: [__webpack_require__(973)]
         }), 
         __metadata('design:paramtypes', [])
     ], InboxComponent);
@@ -3069,24 +3428,24 @@ var InboxComponent = (function () {
 
 /***/ }),
 
-/***/ 789:
+/***/ 790:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doctor_nav_doctor_nav_component__ = __webpack_require__(399);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__doctor_dashboard_doctor_dashboard_component__ = __webpack_require__(398);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__doctor_search_child_doctor_search_child_component__ = __webpack_require__(401);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__doctor_contacts_doctor_contacts_component__ = __webpack_require__(397);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__doctor_statistics_doctor_statistics_component__ = __webpack_require__(402);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__doctor_notifications_doctor_notifications_component__ = __webpack_require__(400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__child_window_child_window_component__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doctor_nav_doctor_nav_component__ = __webpack_require__(400);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__doctor_dashboard_doctor_dashboard_component__ = __webpack_require__(399);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__doctor_search_child_doctor_search_child_component__ = __webpack_require__(402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__doctor_contacts_doctor_contacts_component__ = __webpack_require__(398);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__doctor_statistics_doctor_statistics_component__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__doctor_notifications_doctor_notifications_component__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__child_window_child_window_component__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__child_window_immunization_table_immunization_table_component__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__charts_weight_weight_component__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__child_window_child_checkup_child_checkup_component__ = __webpack_require__(174);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__common_send_message_send_message_component__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_schedule_schedule_component__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__common_send_message_send_message_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_schedule_schedule_component__ = __webpack_require__(125);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3191,7 +3550,7 @@ var DoctorRoutingModule = (function () {
 
 /***/ }),
 
-/***/ 790:
+/***/ 791:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3215,8 +3574,8 @@ var DoctorScheduleComponent = (function () {
     DoctorScheduleComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-doctor-schedule',
-            template: __webpack_require__(1115),
-            styles: [__webpack_require__(978)]
+            template: __webpack_require__(1116),
+            styles: [__webpack_require__(979)]
         }), 
         __metadata('design:paramtypes', [])
     ], DoctorScheduleComponent);
@@ -3226,27 +3585,27 @@ var DoctorScheduleComponent = (function () {
 
 /***/ }),
 
-/***/ 791:
+/***/ 792:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__midwife_nav_midwife_nav_component__ = __webpack_require__(408);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__midwife_dashboard_midwife_dashboard_component__ = __webpack_require__(407);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__midwife_notifications_midwife_notifications_component__ = __webpack_require__(409);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__midwife_assigned_childs_midwife_assigned_childs_component__ = __webpack_require__(404);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__midwife_child_search_midwife_child_search_component__ = __webpack_require__(405);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__midwife_contacts_midwife_contacts_component__ = __webpack_require__(406);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__midwife_stat_midwife_stat_component__ = __webpack_require__(410);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__child_window_child_window_component__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__midwife_nav_midwife_nav_component__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__midwife_dashboard_midwife_dashboard_component__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__midwife_notifications_midwife_notifications_component__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__midwife_assigned_childs_midwife_assigned_childs_component__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__midwife_child_search_midwife_child_search_component__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__midwife_contacts_midwife_contacts_component__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__midwife_stat_midwife_stat_component__ = __webpack_require__(411);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__child_window_child_window_component__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__child_window_immunization_table_immunization_table_component__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__charts_weight_weight_component__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__child_window_child_checkup_child_checkup_component__ = __webpack_require__(174);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__add_child_add_child_component__ = __webpack_require__(392);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_send_message_send_message_component__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__common_schedule_schedule_component__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__add_child_add_child_component__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_send_message_send_message_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__common_schedule_schedule_component__ = __webpack_require__(125);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MidwifeRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3364,7 +3723,7 @@ var MidwifeRoutingModule = (function () {
 
 /***/ }),
 
-/***/ 792:
+/***/ 793:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3388,8 +3747,8 @@ var MidwifeScheduleComponent = (function () {
     MidwifeScheduleComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-midwife-schedule',
-            template: __webpack_require__(1125),
-            styles: [__webpack_require__(988)]
+            template: __webpack_require__(1126),
+            styles: [__webpack_require__(989)]
         }), 
         __metadata('design:paramtypes', [])
     ], MidwifeScheduleComponent);
@@ -3399,22 +3758,22 @@ var MidwifeScheduleComponent = (function () {
 
 /***/ }),
 
-/***/ 793:
+/***/ 794:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__midwife_routing_module__ = __webpack_require__(791);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__midwife_nav_midwife_nav_component__ = __webpack_require__(408);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__midwife_dashboard_midwife_dashboard_component__ = __webpack_require__(407);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__midwife_notifications_midwife_notifications_component__ = __webpack_require__(409);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__midwife_assigned_childs_midwife_assigned_childs_component__ = __webpack_require__(404);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__midwife_child_search_midwife_child_search_component__ = __webpack_require__(405);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__midwife_contacts_midwife_contacts_component__ = __webpack_require__(406);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__midwife_schedule_midwife_schedule_component__ = __webpack_require__(792);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__midwife_stat_midwife_stat_component__ = __webpack_require__(410);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__doctor_doctor_module__ = __webpack_require__(250);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__midwife_routing_module__ = __webpack_require__(792);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__midwife_nav_midwife_nav_component__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__midwife_dashboard_midwife_dashboard_component__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__midwife_notifications_midwife_notifications_component__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__midwife_assigned_childs_midwife_assigned_childs_component__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__midwife_child_search_midwife_child_search_component__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__midwife_contacts_midwife_contacts_component__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__midwife_schedule_midwife_schedule_component__ = __webpack_require__(793);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__midwife_stat_midwife_stat_component__ = __webpack_require__(411);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__doctor_doctor_module__ = __webpack_require__(251);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__common_app_common_module__ = __webpack_require__(175);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MidwifeModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3468,7 +3827,7 @@ var MidwifeModule = (function () {
 
 /***/ }),
 
-/***/ 794:
+/***/ 795:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3492,8 +3851,8 @@ var NotFoundComponent = (function () {
     NotFoundComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-not-found',
-            template: __webpack_require__(1127),
-            styles: [__webpack_require__(990)]
+            template: __webpack_require__(1128),
+            styles: [__webpack_require__(991)]
         }), 
         __metadata('design:paramtypes', [])
     ], NotFoundComponent);
@@ -3503,23 +3862,23 @@ var NotFoundComponent = (function () {
 
 /***/ }),
 
-/***/ 795:
+/***/ 796:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nurse_nav_nurse_nav_component__ = __webpack_require__(412);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__nurse_notification_nurse_notification_component__ = __webpack_require__(413);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nurse_search_child_nurse_search_child_component__ = __webpack_require__(414);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__nurse_vaccination_nurse_vaccination_component__ = __webpack_require__(415);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nurse_dashboard_nurse_dashboard_component__ = __webpack_require__(411);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__child_window_child_window_component__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nurse_nav_nurse_nav_component__ = __webpack_require__(413);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__nurse_notification_nurse_notification_component__ = __webpack_require__(414);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nurse_search_child_nurse_search_child_component__ = __webpack_require__(415);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__nurse_vaccination_nurse_vaccination_component__ = __webpack_require__(416);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nurse_dashboard_nurse_dashboard_component__ = __webpack_require__(412);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__child_window_child_window_component__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__child_window_immunization_table_immunization_table_component__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__charts_weight_weight_component__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__child_window_child_checkup_child_checkup_component__ = __webpack_require__(174);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__common_send_message_send_message_component__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__common_schedule_schedule_component__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__common_send_message_send_message_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__common_schedule_schedule_component__ = __webpack_require__(125);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NurseRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3619,20 +3978,22 @@ var NurseRoutingModule = (function () {
 
 /***/ }),
 
-/***/ 796:
+/***/ 797:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nurse_nav_nurse_nav_component__ = __webpack_require__(412);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__nurse_notification_nurse_notification_component__ = __webpack_require__(413);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nurse_search_child_nurse_search_child_component__ = __webpack_require__(414);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__nurse_vaccination_nurse_vaccination_component__ = __webpack_require__(415);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nurse_routing_module__ = __webpack_require__(795);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__nurse_dashboard_nurse_dashboard_component__ = __webpack_require__(411);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__doctor_doctor_module__ = __webpack_require__(250);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nurse_nav_nurse_nav_component__ = __webpack_require__(413);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__nurse_notification_nurse_notification_component__ = __webpack_require__(414);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nurse_search_child_nurse_search_child_component__ = __webpack_require__(415);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__nurse_vaccination_nurse_vaccination_component__ = __webpack_require__(416);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nurse_routing_module__ = __webpack_require__(796);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__nurse_dashboard_nurse_dashboard_component__ = __webpack_require__(412);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__doctor_doctor_module__ = __webpack_require__(251);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__common_app_common_module__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__nurse_vaccination_vaccine_service__ = __webpack_require__(417);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_forms__ = __webpack_require__(5);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NurseModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3653,6 +4014,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var NurseModule = (function () {
     function NurseModule() {
     }
@@ -3662,7 +4025,8 @@ var NurseModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
                 __WEBPACK_IMPORTED_MODULE_8__doctor_doctor_module__["a" /* DoctorModule */],
                 __WEBPACK_IMPORTED_MODULE_6__nurse_routing_module__["a" /* NurseRoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_9__common_app_common_module__["a" /* AppCommonModule */]
+                __WEBPACK_IMPORTED_MODULE_9__common_app_common_module__["a" /* AppCommonModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_forms__["FormsModule"], __WEBPACK_IMPORTED_MODULE_11__angular_forms__["ReactiveFormsModule"]
             ],
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_3__nurse_notification_nurse_notification_component__["a" /* NurseNotificationComponent */],
@@ -3670,7 +4034,8 @@ var NurseModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__nurse_vaccination_nurse_vaccination_component__["a" /* NurseVaccinationComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__nurse_dashboard_nurse_dashboard_component__["a" /* NurseDashboardComponent */],
                 __WEBPACK_IMPORTED_MODULE_2__nurse_nav_nurse_nav_component__["a" /* NurseNavComponent */],
-            ]
+            ],
+            providers: [__WEBPACK_IMPORTED_MODULE_10__nurse_vaccination_vaccine_service__["a" /* VaccineService */]]
         }), 
         __metadata('design:paramtypes', [])
     ], NurseModule);
@@ -3680,7 +4045,7 @@ var NurseModule = (function () {
 
 /***/ }),
 
-/***/ 797:
+/***/ 798:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3696,41 +4061,41 @@ var environment = {
 
 /***/ }),
 
-/***/ 798:
+/***/ 799:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__ = __webpack_require__(812);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__ = __webpack_require__(813);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__ = __webpack_require__(805);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__ = __webpack_require__(806);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__ = __webpack_require__(801);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__ = __webpack_require__(802);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__ = __webpack_require__(807);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__ = __webpack_require__(808);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__ = __webpack_require__(806);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__ = __webpack_require__(807);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__ = __webpack_require__(804);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__ = __webpack_require__(805);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__ = __webpack_require__(803);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__ = __webpack_require__(804);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__ = __webpack_require__(811);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__ = __webpack_require__(812);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__ = __webpack_require__(800);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__ = __webpack_require__(801);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__ = __webpack_require__(799);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__ = __webpack_require__(800);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__ = __webpack_require__(809);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__ = __webpack_require__(810);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__ = __webpack_require__(802);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__ = __webpack_require__(803);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__ = __webpack_require__(810);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__ = __webpack_require__(811);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__ = __webpack_require__(808);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__ = __webpack_require__(809);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(813);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(814);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(1174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(1175);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__);
 
 
@@ -3789,8 +4154,8 @@ var WeightComponent = (function () {
     WeightComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-weight',
-            template: __webpack_require__(1104),
-            styles: [__webpack_require__(967)]
+            template: __webpack_require__(1105),
+            styles: [__webpack_require__(968)]
         }), 
         __metadata('design:paramtypes', [])
     ], WeightComponent);
@@ -3824,32 +4189,14 @@ var ImmunizationTableComponent = (function () {
     ImmunizationTableComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-immunization-table',
-            template: __webpack_require__(1107),
-            styles: [__webpack_require__(970)]
+            template: __webpack_require__(1108),
+            styles: [__webpack_require__(971)]
         }), 
         __metadata('design:paramtypes', [])
     ], ImmunizationTableComponent);
     return ImmunizationTableComponent;
 }());
 //# sourceMappingURL=D:/2nd Year Project/healo/Healo/src/immunization-table.component.js.map
-
-/***/ }),
-
-/***/ 956:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
 
 /***/ }),
 
@@ -4005,7 +4352,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, ".footer {\n  position: fixed;\n  bottom: 0px;\n  width: 100%;\n  /* Set the fixed height of the footer here */\n  height: 60px;\n  background-color: #d9d9d9;\n}\n\n.container .text-muted {\n  margin: 20px 0;\n}\n\nbody{\n     \n}\n\n.page-header\n{\n  \n  background-color:#ff3f3f;\n   height: 99px;\n}\n\n.headFont\n{\n  font-family: 'Fjalla One', sans-serif;\n\n  font-size: 58px;\n  color:white;\n  \n\n}\n\n.headFSmal{\n  font-size: 20px;\n  color:white;\n}\n\n\n.cross\n{\n  color: white;\n  font-size:100px;\n  \n}\n\n.btn-danger2 {\n  color: #fff;\n  background-color: #77ff33;\n  border-color: #77ff33;\n}\n\n.nav-default\n{\n  border-width: 100px;\n  padding: 15px;\n}\n\n\n.signinbtn {\nposition: absolute;\ntop: 75px;\nright : 10px;\n}\n\n.Header-name\n{\n  position: absolute;\n  right:150px;\n  left:180px;\n  top:40px;\n  -webkit-text-fill-color:white; \n}", ""]);
+exports.push([module.i, "", ""]);
 
 // exports
 
@@ -4023,7 +4370,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "  canvas{\n        -moz-user-select: none;\n        -webkit-user-select: none;\n        -ms-user-select: none;\n    }", ""]);
+exports.push([module.i, ".footer {\n  position: fixed;\n  bottom: 0px;\n  width: 100%;\n  /* Set the fixed height of the footer here */\n  height: 60px;\n  background-color: #d9d9d9;\n}\n\n.container .text-muted {\n  margin: 20px 0;\n}\n\nbody{\n     \n}\n\n.page-header\n{\n  \n  background-color:#ff3f3f;\n   height: 99px;\n}\n\n.headFont\n{\n  font-family: 'Fjalla One', sans-serif;\n\n  font-size: 58px;\n  color:white;\n  \n\n}\n\n.headFSmal{\n  font-size: 20px;\n  color:white;\n}\n\n\n.cross\n{\n  color: white;\n  font-size:100px;\n  \n}\n\n.btn-danger2 {\n  color: #fff;\n  background-color: #77ff33;\n  border-color: #77ff33;\n}\n\n.nav-default\n{\n  border-width: 100px;\n  padding: 15px;\n}\n\n\n.signinbtn {\nposition: absolute;\ntop: 75px;\nright : 10px;\n}\n\n.Header-name\n{\n  position: absolute;\n  right:150px;\n  left:180px;\n  top:40px;\n  -webkit-text-fill-color:white; \n}", ""]);
 
 // exports
 
@@ -4041,7 +4388,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "  canvas{\n        -moz-user-select: none;\n        -webkit-user-select: none;\n        -ms-user-select: none;\n    }", ""]);
 
 // exports
 
@@ -4573,259 +4920,23 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 999:
+/***/ 997:
 /***/ (function(module, exports, __webpack_require__) {
 
-var map = {
-	"./af": 456,
-	"./af.js": 456,
-	"./ar": 463,
-	"./ar-dz": 457,
-	"./ar-dz.js": 457,
-	"./ar-kw": 458,
-	"./ar-kw.js": 458,
-	"./ar-ly": 459,
-	"./ar-ly.js": 459,
-	"./ar-ma": 460,
-	"./ar-ma.js": 460,
-	"./ar-sa": 461,
-	"./ar-sa.js": 461,
-	"./ar-tn": 462,
-	"./ar-tn.js": 462,
-	"./ar.js": 463,
-	"./az": 464,
-	"./az.js": 464,
-	"./be": 465,
-	"./be.js": 465,
-	"./bg": 466,
-	"./bg.js": 466,
-	"./bn": 467,
-	"./bn.js": 467,
-	"./bo": 468,
-	"./bo.js": 468,
-	"./br": 469,
-	"./br.js": 469,
-	"./bs": 470,
-	"./bs.js": 470,
-	"./ca": 471,
-	"./ca.js": 471,
-	"./cs": 472,
-	"./cs.js": 472,
-	"./cv": 473,
-	"./cv.js": 473,
-	"./cy": 474,
-	"./cy.js": 474,
-	"./da": 475,
-	"./da.js": 475,
-	"./de": 478,
-	"./de-at": 476,
-	"./de-at.js": 476,
-	"./de-ch": 477,
-	"./de-ch.js": 477,
-	"./de.js": 478,
-	"./dv": 479,
-	"./dv.js": 479,
-	"./el": 480,
-	"./el.js": 480,
-	"./en-au": 481,
-	"./en-au.js": 481,
-	"./en-ca": 482,
-	"./en-ca.js": 482,
-	"./en-gb": 483,
-	"./en-gb.js": 483,
-	"./en-ie": 484,
-	"./en-ie.js": 484,
-	"./en-nz": 485,
-	"./en-nz.js": 485,
-	"./eo": 486,
-	"./eo.js": 486,
-	"./es": 488,
-	"./es-do": 487,
-	"./es-do.js": 487,
-	"./es.js": 488,
-	"./et": 489,
-	"./et.js": 489,
-	"./eu": 490,
-	"./eu.js": 490,
-	"./fa": 491,
-	"./fa.js": 491,
-	"./fi": 492,
-	"./fi.js": 492,
-	"./fo": 493,
-	"./fo.js": 493,
-	"./fr": 496,
-	"./fr-ca": 494,
-	"./fr-ca.js": 494,
-	"./fr-ch": 495,
-	"./fr-ch.js": 495,
-	"./fr.js": 496,
-	"./fy": 497,
-	"./fy.js": 497,
-	"./gd": 498,
-	"./gd.js": 498,
-	"./gl": 499,
-	"./gl.js": 499,
-	"./gom-latn": 500,
-	"./gom-latn.js": 500,
-	"./he": 501,
-	"./he.js": 501,
-	"./hi": 502,
-	"./hi.js": 502,
-	"./hr": 503,
-	"./hr.js": 503,
-	"./hu": 504,
-	"./hu.js": 504,
-	"./hy-am": 505,
-	"./hy-am.js": 505,
-	"./id": 506,
-	"./id.js": 506,
-	"./is": 507,
-	"./is.js": 507,
-	"./it": 508,
-	"./it.js": 508,
-	"./ja": 509,
-	"./ja.js": 509,
-	"./jv": 510,
-	"./jv.js": 510,
-	"./ka": 511,
-	"./ka.js": 511,
-	"./kk": 512,
-	"./kk.js": 512,
-	"./km": 513,
-	"./km.js": 513,
-	"./kn": 514,
-	"./kn.js": 514,
-	"./ko": 515,
-	"./ko.js": 515,
-	"./ky": 516,
-	"./ky.js": 516,
-	"./lb": 517,
-	"./lb.js": 517,
-	"./lo": 518,
-	"./lo.js": 518,
-	"./lt": 519,
-	"./lt.js": 519,
-	"./lv": 520,
-	"./lv.js": 520,
-	"./me": 521,
-	"./me.js": 521,
-	"./mi": 522,
-	"./mi.js": 522,
-	"./mk": 523,
-	"./mk.js": 523,
-	"./ml": 524,
-	"./ml.js": 524,
-	"./mr": 525,
-	"./mr.js": 525,
-	"./ms": 527,
-	"./ms-my": 526,
-	"./ms-my.js": 526,
-	"./ms.js": 527,
-	"./my": 528,
-	"./my.js": 528,
-	"./nb": 529,
-	"./nb.js": 529,
-	"./ne": 530,
-	"./ne.js": 530,
-	"./nl": 532,
-	"./nl-be": 531,
-	"./nl-be.js": 531,
-	"./nl.js": 532,
-	"./nn": 533,
-	"./nn.js": 533,
-	"./pa-in": 534,
-	"./pa-in.js": 534,
-	"./pl": 535,
-	"./pl.js": 535,
-	"./pt": 537,
-	"./pt-br": 536,
-	"./pt-br.js": 536,
-	"./pt.js": 537,
-	"./ro": 538,
-	"./ro.js": 538,
-	"./ru": 539,
-	"./ru.js": 539,
-	"./sd": 540,
-	"./sd.js": 540,
-	"./se": 541,
-	"./se.js": 541,
-	"./si": 542,
-	"./si.js": 542,
-	"./sk": 543,
-	"./sk.js": 543,
-	"./sl": 544,
-	"./sl.js": 544,
-	"./sq": 545,
-	"./sq.js": 545,
-	"./sr": 547,
-	"./sr-cyrl": 546,
-	"./sr-cyrl.js": 546,
-	"./sr.js": 547,
-	"./ss": 548,
-	"./ss.js": 548,
-	"./sv": 549,
-	"./sv.js": 549,
-	"./sw": 550,
-	"./sw.js": 550,
-	"./ta": 551,
-	"./ta.js": 551,
-	"./te": 552,
-	"./te.js": 552,
-	"./tet": 553,
-	"./tet.js": 553,
-	"./th": 554,
-	"./th.js": 554,
-	"./tl-ph": 555,
-	"./tl-ph.js": 555,
-	"./tlh": 556,
-	"./tlh.js": 556,
-	"./tr": 557,
-	"./tr.js": 557,
-	"./tzl": 558,
-	"./tzl.js": 558,
-	"./tzm": 560,
-	"./tzm-latn": 559,
-	"./tzm-latn.js": 559,
-	"./tzm.js": 560,
-	"./uk": 561,
-	"./uk.js": 561,
-	"./ur": 562,
-	"./ur.js": 562,
-	"./uz": 564,
-	"./uz-latn": 563,
-	"./uz-latn.js": 563,
-	"./uz.js": 564,
-	"./vi": 565,
-	"./vi.js": 565,
-	"./x-pseudo": 566,
-	"./x-pseudo.js": 566,
-	"./yo": 567,
-	"./yo.js": 567,
-	"./zh-cn": 568,
-	"./zh-cn.js": 568,
-	"./zh-hk": 569,
-	"./zh-hk.js": 569,
-	"./zh-tw": 570,
-	"./zh-tw.js": 570
-};
-function webpackContext(req) {
-	return __webpack_require__(webpackContextResolve(req));
-};
-function webpackContextResolve(req) {
-	var id = map[req];
-	if(!(id + 1)) // check for number
-		throw new Error("Cannot find module '" + req + "'.");
-	return id;
-};
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = 999;
+exports = module.exports = __webpack_require__(4)(false);
+// imports
 
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
 
 /***/ })
 
-},[1175]);
+},[1176]);
 //# sourceMappingURL=main.bundle.js.map

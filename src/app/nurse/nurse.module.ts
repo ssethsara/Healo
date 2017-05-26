@@ -11,13 +11,17 @@ import { NurseDashboardComponent } from './nurse-dashboard/nurse-dashboard.compo
 import { DoctorModule }        from '../doctor/doctor.module';
 import { AppCommonModule }        from '../common/app-common.module';
 
+import { VaccineService }        from './nurse-vaccination/vaccine.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   imports: [
     CommonModule,
     DoctorModule,
     NurseRoutingModule,
-    AppCommonModule
+    AppCommonModule,
+    FormsModule, ReactiveFormsModule
   ],
   declarations: [
     NurseNotificationComponent,
@@ -27,6 +31,7 @@ import { AppCommonModule }        from '../common/app-common.module';
   NurseDashboardComponent,
   NurseNavComponent,
  
-  ]
+  ],
+  providers:[VaccineService]
 })
 export class NurseModule { }
