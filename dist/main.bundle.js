@@ -355,7 +355,7 @@ module.exports = "<div class=\"col-md-8\">\n                        <form class=
 /***/ 1107:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section\">\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-4\">\n            <div class=\"thumbnail\">\n              <img src=\"..\\..\\images\\profile_pic\\child\\child1.jpg\" class=\"img-responsive\">\n              <div class=\"caption\">\n                <h2 *ngIf=\"child\">{{child.firstName}}</h2>\n                Showing product details for product: {{childId}}\n                 <div>\n                <a href=\"#\"><h3>\n                      <b>Health Status</b>\n                  </h3></a>\n                  <div class=\"progress\">\n                    <div class=\"progress-bar progress-bar-success\" role=\"progressbar\" style=\"width: 60%;\">60% Healthy</div>\n                  </div>\n                  <h3>\n                    <b>Weight</b>\n                  </h3>\n                  <h4 *ngIf=\"child\" >{{child.weight}} kg</h4>\n                  <h3>\n                    <b>Height</b>\n                  </h3>\n                  <h4 *ngIf=\"child\" >{{child.height}} cm</h4>\n              \n              </div>\n              </div>\n            </div>\n           \n          \n          </div>\n         \n          <div class=\"col-md-8\">\n         \n            <table class=\"table table-hover\">\n              <tbody>\n                <tr>\n                  <td>\n                    <b>Full name :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.firstName}} {{child.surname}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Age :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.dateOfBirth}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Blood Group :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.blood_group}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Speacial Reason to Care :</b>\n                  </td>\n                  <td *ngIf='child'>{{child.SRC}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Mother's Name' :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.user.firstName}} </td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Last Clinic visit :</b>\n                  </td>\n                  <td *ngIf='child'>{{child.last_clinic_date}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Last Midwife visit :</b>\n                  </td>\n                  <td *ngIf='child'>{{child.last_midwife_visit_date}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Last Vacinated date:</b>\n                  </td>\n                  <td *ngIf='child'>{{child.last_doctor_check_date}}</td>\n                </tr>\n              </tbody>\n\n                  \n            </table>\n                <a data-toggle=\"modal\" *ngIf=checVaccineEnabled class=\"btn btn-block btn-lg btn-primary\" (click)=\" RoleAction()\">{{checkORVaccin}}</a>\n            <div>\n              \n              <div class=\"col-md-12\">\n                \n                <h1>Doctor's Speacial Notes</h1>\n                <p *ngIf='child'>{{child.doctor_notes}}</p>\n               \n                <a class=\"btn btn-default\">More Notes</a>\n              </div>\n              <div class=\"col-md-12\">\n                <h1>Midwife's Speacial Notes</h1>\n                <p *ngIf='child'>{{child.midwife_notes}}</p>\n                <a class=\"btn btn-default\">More Notes</a>\n\n                <div class=\"row\"><br><br></div>\n                  <div class=\"row\">\n                  <div class=\"col-md-12\">\n                    <a class=\"btn btn-primary\" [routerLink]=\"['immu']\">Immulization Table</a>\n                    <a class=\"btn btn-primary\" [routerLink]=\"['weight']\">weight Charts</a>\n                  </div>\n                </div> \n\n              </div>\n            </div>\n\n           \n\n\n          </div>\n\n          \n          <router-outlet></router-outlet>\n          \n\n        </div>\n      </div>\n \n </div>\n\n\n"
+module.exports = "<div class=\"section\">\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-4\">\n            <div class=\"thumbnail\">\n              <img src=\"..\\..\\images\\profile_pic\\child\\child1.jpg\" class=\"img-responsive\">\n              <div class=\"caption\">\n                <h2 *ngIf=\"child\">{{child.firstName}}</h2>\n                child id: {{childId}}\n                 <div>\n                <a href=\"#\"><h3>\n                      <b>Health Status</b>\n                  </h3></a>\n                  <div class=\"progress\">\n                    <div class=\"progress-bar progress-bar-success\" role=\"progressbar\" style=\"width: 60%;\">60% Healthy</div>\n                  </div>\n                  <h3>\n                    <b>Weight</b>\n                  </h3>\n                  <h4 *ngIf=\"child\" >{{child.weight}} kg</h4>\n                  <h3>\n                    <b>Height</b>\n                  </h3>\n                  <h4 *ngIf=\"child\" >{{child.height}} cm</h4>\n              \n              </div>\n              </div>\n            </div>\n           \n          \n          </div>\n         \n          <div class=\"col-md-8\">\n         \n            <table class=\"table table-hover\">\n              <tbody>\n                <tr>\n                  <td>\n                    <b>Full name :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.firstName}} {{child.surname}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Age :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.dateOfBirth}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Blood Group :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.blood_group}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Speacial Reason to Care :</b>\n                  </td>\n                  <td *ngIf='child'>{{child.SRC}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Mother's Name' :</b>\n                  </td>\n                  <td *ngIf='child' >{{child.user.firstName}} </td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Last Clinic visit :</b>\n                  </td>\n                  <td *ngIf='child'>{{child.last_clinic_date}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Last Midwife visit :</b>\n                  </td>\n                  <td *ngIf='child'>{{child.last_midwife_visit_date}}</td>\n                </tr>\n                <tr>\n                  <td>\n                    <b>Last Vacinated date:</b>\n                  </td>\n                  <td *ngIf='child'>{{child.last_doctor_check_date}}</td>\n                </tr>\n              </tbody>\n\n                  \n            </table>\n                <a data-toggle=\"modal\" *ngIf=checVaccineEnabled class=\"btn btn-block btn-lg btn-primary\" (click)=\" RoleAction()\">{{checkORVaccin}}</a>\n            <div>\n              \n              <div class=\"col-md-12\">\n                \n                <h1>Doctor's Speacial Notes</h1>\n                <p *ngIf='child'>{{child.doctor_notes}}</p>\n               \n                <a class=\"btn btn-default\">More Notes</a>\n              </div>\n              <div class=\"col-md-12\">\n                <h1>Midwife's Speacial Notes</h1>\n                <p *ngIf='child'>{{child.midwife_notes}}</p>\n                <a class=\"btn btn-default\">More Notes</a>\n\n                <div class=\"row\"><br><br></div>\n                  <div class=\"row\">\n                  <div class=\"col-md-12\">\n                    <a class=\"btn btn-primary\" [routerLink]=\"['immu']\">Immulization Table</a>\n                    <a class=\"btn btn-primary\" [routerLink]=\"['weight']\">weight Charts</a>\n                  </div>\n                </div> \n\n              </div>\n            </div>\n\n           \n\n\n          </div>\n\n          \n          <router-outlet></router-outlet>\n          \n\n        </div>\n      </div>\n \n </div>\n\n\n"
 
 /***/ }),
 
@@ -516,7 +516,7 @@ module.exports = "<div class=\"section\">\n      <div class=\"container\">\n    
 /***/ 1130:
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n  \n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   \n  </head>\n  \n   <body>\n  \n      <div class=\"section\">\n        <div class=\"container-fluid\">\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <ul class=\"nav nav-pills\">\n                <h1>Nurse</h1>\n                <div *ngIf=\"profile.firstName\">\n                   <h3>{{profile.firstName}} {{profile.lastName}}</h3>\n                </div>\n                 \n                <li class=\"active\">\n                  <a href=\"#\">Home</a>\n                </li>\n                <li>\n                  <a (click)=\"logout()\">logout</a>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n   \n \n      <br>\n    <div class=\"section\" >\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <div class=\"col-md-12\">\n                  <ul class=\"list-group\">\n                      <a [routerLink]=\"['dashboard']\" ><li class=\"list-group-item\"><h4>Dashboard</h4> </li></a>\n                      \n                      <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Schedule</h4></li></a>\n                      <a [routerLink]=\"['messages']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Send a Message</h4></li></a>\n                      <a [routerLink]=\"['searchchild']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Search Children</h4></li></a>\n                      <a [routerLink]=\"['vaccination']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Vaccination</h4></li></a>\n                      \n                   </ul>\n\n            </div>\n          </div>\n        \n         \n         \n      \n              <div class=\"container-fluid\" > \n                  <div class=\"col-md-8\" style=\"background-color:white;\">\n                     <router-outlet></router-outlet>\n                  \n                      \n                    \n\n                </div>\n            </div>\n         </div>  \n      </div>\n    </div>     \n   \n        <div class=\"section\" >\n          <!--child component-->\n        \n\n        </div>\n \n    \n  </body>\n\n</html>"
+module.exports = "<html>\n  \n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   \n  </head>\n  \n   <body>\n  \n      <div class=\"section\">\n        <div class=\"container-fluid\">\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <ul class=\"nav nav-pills\">\n                <h1>Nurse</h1>\n                <div *ngIf=\"profile.firstName\">\n                   <h3>{{profile.firstName}} {{profile.lastName}}</h3>\n                </div>\n                 \n                <li class=\"active\">\n                  <a href=\"#\">Home</a>\n                </li>\n                <li>\n                  <a (click)=\"logout()\">logout</a>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n   \n \n      <br>\n    <div class=\"section\" >\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <div class=\"col-md-12\">\n                  <ul class=\"list-group\">\n                      <a [routerLink]=\"['dashboard']\" ><li class=\"list-group-item\"><h4>Dashboard</h4> </li></a>\n                      \n                      <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Schedule</h4></li></a>\n                      <a [routerLink]=\"['messages']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Send a Message</h4></li></a>\n                      <a [routerLink]=\"['searchchild']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Search Children</h4></li></a>\n                    \n                      \n                   </ul>\n\n            </div>\n          </div>\n        \n         \n         \n      \n              <div class=\"container-fluid\" > \n                  <div class=\"col-md-8\" style=\"background-color:white;\">\n                     <router-outlet></router-outlet>\n                  \n                      \n                    \n\n                </div>\n            </div>\n         </div>  \n      </div>\n    </div>     \n   \n        <div class=\"section\" >\n          <!--child component-->\n        \n\n        </div>\n \n    \n  </body>\n\n</html>"
 
 /***/ }),
 
@@ -564,7 +564,7 @@ module.exports = __webpack_require__(651);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__child_service__ = __webpack_require__(396);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__child_service__ = __webpack_require__(397);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildWindowComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -585,11 +585,13 @@ var ChildWindowComponent = (function () {
         this.childService = childService;
         this.route = route;
         this.router = router;
+        this.routeCheck = false;
         this.checkORVaccin = 'Disabled';
         this.checVaccineEnabled = false;
     }
     ChildWindowComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.routeStore = this.router.url;
         this.profile = JSON.parse(localStorage.getItem('currentUser'));
         switch (this.profile.role) {
             case 2:
@@ -606,14 +608,34 @@ var ChildWindowComponent = (function () {
             _this.childId = +params['id']; // (+) converts string 'id' to a number
             // In a real app: dispatch action to load the details here.
             _this.childService.getChild(_this.childId)
-                .subscribe(function (child) { _this.child = child; });
+                .subscribe(function (child) {
+                _this.child = child;
+                localStorage.setItem('SelectedChild', JSON.stringify(_this.child));
+            });
         });
     };
     ChildWindowComponent.prototype.RoleAction = function () {
-        this.link = [this.router.url, this.checkORVaccin];
+        /*
+             if(this.routeCheck==false){
+              this.routeStore=this.router.url;
+              this.link = [this.routeStore,this.checkORVaccin];
+              
+              this.routeCheck=true;
+            }
+            else{
+              this.link = [this.routeStore,this.checkORVaccin];
+            }
+            
+            this.router.navigate(this.link);
+        
+        
+        */
+        // localStorage.removeItem('SelectedChild');
+        this.link = [this.routeStore, this.checkORVaccin];
         this.router.navigate(this.link);
     };
     ChildWindowComponent.prototype.ngOnDestroy = function () {
+        localStorage.removeItem('SelectedChild');
         this.sub.unsubscribe();
         this.childId = null;
     };
@@ -639,7 +661,7 @@ var ChildWindowComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__schedule_service__ = __webpack_require__(397);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__schedule_service__ = __webpack_require__(398);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScheduleComponent; });
 /* unused harmony export MyEvent */
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -793,7 +815,7 @@ var SendMessageComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(295);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -930,11 +952,11 @@ var ChildCheckupComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__send_message_send_message_component__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__send_message_inbox_inbox_component__ = __webpack_require__(789);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__schedule_schedule_component__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_primeng_primeng__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_primeng_primeng__ = __webpack_require__(293);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_primeng_primeng___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_primeng_primeng__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__schedule_schedule_service__ = __webpack_require__(397);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__schedule_schedule_service__ = __webpack_require__(398);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppCommonModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -984,12 +1006,12 @@ var AppCommonModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doctor_routing_module__ = __webpack_require__(790);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__doctor_nav_doctor_nav_component__ = __webpack_require__(400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__doctor_dashboard_doctor_dashboard_component__ = __webpack_require__(399);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__doctor_search_child_doctor_search_child_component__ = __webpack_require__(402);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__doctor_contacts_doctor_contacts_component__ = __webpack_require__(398);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__doctor_statistics_doctor_statistics_component__ = __webpack_require__(403);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__doctor_notifications_doctor_notifications_component__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__doctor_nav_doctor_nav_component__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__doctor_dashboard_doctor_dashboard_component__ = __webpack_require__(400);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__doctor_search_child_doctor_search_child_component__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__doctor_contacts_doctor_contacts_component__ = __webpack_require__(399);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__doctor_statistics_doctor_statistics_component__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__doctor_notifications_doctor_notifications_component__ = __webpack_require__(402);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__doctor_schedule_doctor_schedule_component__ = __webpack_require__(791);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__SearchChild_child_display_child_display_component__ = __webpack_require__(779);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ng2_filter_pipe__ = __webpack_require__(1024);
@@ -1054,13 +1076,80 @@ var DoctorModule = (function () {
 
 /***/ }),
 
-/***/ 387:
+/***/ 252:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vaccine_service__ = __webpack_require__(417);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NurseVaccinationComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var NurseVaccinationComponent = (function () {
+    function NurseVaccinationComponent(fb, vaccineService) {
+        this.fb = fb;
+        this.vaccineService = vaccineService;
+        this.vaccination = this.fb.group({
+            injectType: [""],
+            remarks: [""]
+        });
+    }
+    NurseVaccinationComponent.prototype.ngOnInit = function () {
+        this.childDetails = JSON.parse(localStorage.getItem('SelectedChild'));
+        console.log('childDetails:', this.childDetails);
+    };
+    NurseVaccinationComponent.prototype.assign = function () {
+        this.injection = this.vaccination.value.injectType;
+        // this.vaccination.value.injectType="";
+    };
+    NurseVaccinationComponent.prototype.remove = function () {
+        this.injection = "";
+    };
+    NurseVaccinationComponent.prototype.given = function () {
+        var _this = this;
+        var newVaccine = {
+            injection: this.injection,
+            remarks: this.vaccination.value.remarks,
+        };
+        console.log(newVaccine);
+        this.vaccineService.immunization(newVaccine)
+            .subscribe(function (user) {
+            _this.vaccine.push(user);
+        });
+    };
+    NurseVaccinationComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-nurse-vaccination',
+            template: __webpack_require__(1133),
+            styles: [__webpack_require__(996)]
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__vaccine_service__["a" /* VaccineService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__vaccine_service__["a" /* VaccineService */]) === 'function' && _b) || Object])
+    ], NurseVaccinationComponent);
+    return NurseVaccinationComponent;
+    var _a, _b;
+}());
+//# sourceMappingURL=D:/2nd Year Project/healo/Healo/src/nurse-vaccination.component.js.map
+
+/***/ }),
+
+/***/ 388:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__child_window_child_service__ = __webpack_require__(396);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__child_window_child_service__ = __webpack_require__(397);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MotherChildListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1115,7 +1204,7 @@ var MotherChildListComponent = (function () {
 
 /***/ }),
 
-/***/ 388:
+/***/ 389:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1150,7 +1239,7 @@ var MotherContactsComponent = (function () {
 
 /***/ }),
 
-/***/ 389:
+/***/ 390:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1225,7 +1314,7 @@ var MotherDashboardComponent = (function () {
 
 /***/ }),
 
-/***/ 390:
+/***/ 391:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1260,7 +1349,7 @@ var MotherNotificationsComponent = (function () {
 
 /***/ }),
 
-/***/ 391:
+/***/ 392:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1354,7 +1443,7 @@ var MothernevComponent = (function () {
 
 /***/ }),
 
-/***/ 392:
+/***/ 393:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1395,13 +1484,13 @@ var ChildSearchService = (function () {
 
 /***/ }),
 
-/***/ 393:
+/***/ 394:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_child_service__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_child_service__ = __webpack_require__(395);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddChildComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1464,7 +1553,7 @@ var AddChildComponent = (function () {
 
 /***/ }),
 
-/***/ 394:
+/***/ 395:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1477,7 +1566,7 @@ var AddChildComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(295);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddChildService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1542,7 +1631,7 @@ var AddChildService = (function () {
 
 /***/ }),
 
-/***/ 395:
+/***/ 396:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1577,7 +1666,7 @@ var ApiComponent = (function () {
 
 /***/ }),
 
-/***/ 396:
+/***/ 397:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1618,7 +1707,7 @@ var ChildService = (function () {
 
 /***/ }),
 
-/***/ 397:
+/***/ 398:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1657,7 +1746,7 @@ var ScheduleService = (function () {
 
 /***/ }),
 
-/***/ 398:
+/***/ 399:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1692,7 +1781,7 @@ var DoctorContactsComponent = (function () {
 
 /***/ }),
 
-/***/ 399:
+/***/ 400:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1733,7 +1822,7 @@ var DoctorDashboardComponent = (function () {
 
 /***/ }),
 
-/***/ 400:
+/***/ 401:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1783,7 +1872,7 @@ var DoctorNavComponent = (function () {
 
 /***/ }),
 
-/***/ 401:
+/***/ 402:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1818,7 +1907,7 @@ var DoctorNotificationsComponent = (function () {
 
 /***/ }),
 
-/***/ 402:
+/***/ 403:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1853,7 +1942,7 @@ var DoctorSearchChildComponent = (function () {
 
 /***/ }),
 
-/***/ 403:
+/***/ 404:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1888,7 +1977,7 @@ var DoctorStatisticsComponent = (function () {
 
 /***/ }),
 
-/***/ 404:
+/***/ 405:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1946,6 +2035,9 @@ var LoginComponent = (function () {
                     case 4:
                         _this.router.navigate(['midwife']);
                         break;
+                    case 5:
+                        _this.router.navigate(['nurse']);
+                        break;
                     default: console.log('Error');
                 }
             }
@@ -1977,7 +2069,7 @@ var LoginComponent = (function () {
 
 /***/ }),
 
-/***/ 405:
+/***/ 406:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2012,7 +2104,7 @@ var MidwifeAssignedChildsComponent = (function () {
 
 /***/ }),
 
-/***/ 406:
+/***/ 407:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2051,7 +2143,7 @@ var MidwifeChildSearchComponent = (function () {
 
 /***/ }),
 
-/***/ 407:
+/***/ 408:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2086,7 +2178,7 @@ var MidwifeContactsComponent = (function () {
 
 /***/ }),
 
-/***/ 408:
+/***/ 409:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2121,7 +2213,7 @@ var MidwifeDashboardComponent = (function () {
 
 /***/ }),
 
-/***/ 409:
+/***/ 410:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2156,7 +2248,7 @@ var MidwifeNavComponent = (function () {
 
 /***/ }),
 
-/***/ 410:
+/***/ 411:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2191,7 +2283,7 @@ var MidwifeNotificationsComponent = (function () {
 
 /***/ }),
 
-/***/ 411:
+/***/ 412:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2226,7 +2318,7 @@ var MidwifeStatComponent = (function () {
 
 /***/ }),
 
-/***/ 412:
+/***/ 413:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2261,7 +2353,7 @@ var NurseDashboardComponent = (function () {
 
 /***/ }),
 
-/***/ 413:
+/***/ 414:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2311,7 +2403,7 @@ var NurseNavComponent = (function () {
 
 /***/ }),
 
-/***/ 414:
+/***/ 415:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2346,7 +2438,7 @@ var NurseNotificationComponent = (function () {
 
 /***/ }),
 
-/***/ 415:
+/***/ 416:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2381,70 +2473,6 @@ var NurseSearchChildComponent = (function () {
 
 /***/ }),
 
-/***/ 416:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vaccine_service__ = __webpack_require__(417);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NurseVaccinationComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var NurseVaccinationComponent = (function () {
-    function NurseVaccinationComponent(fb, vaccineService) {
-        this.fb = fb;
-        this.vaccineService = vaccineService;
-        this.vaccination = this.fb.group({
-            injectType: [""],
-            remarks: [""]
-        });
-    }
-    NurseVaccinationComponent.prototype.ngOnInit = function () {
-    };
-    NurseVaccinationComponent.prototype.assign = function () {
-        this.injection = this.vaccination.value.injectType;
-        this.vaccination.value.injectType = "";
-    };
-    NurseVaccinationComponent.prototype.remove = function () {
-        this.injection = "";
-    };
-    NurseVaccinationComponent.prototype.given = function () {
-        var _this = this;
-        var newVaccine = {
-            injection: this.injection,
-            remarks: this.vaccination.value.remarks,
-        };
-        this.vaccineService.immunization(newVaccine)
-            .subscribe(function (user) {
-            _this.vaccine.push(user);
-        });
-    };
-    NurseVaccinationComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-nurse-vaccination',
-            template: __webpack_require__(1133),
-            styles: [__webpack_require__(996)]
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__vaccine_service__["a" /* VaccineService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__vaccine_service__["a" /* VaccineService */]) === 'function' && _b) || Object])
-    ], NurseVaccinationComponent);
-    return NurseVaccinationComponent;
-    var _a, _b;
-}());
-//# sourceMappingURL=D:/2nd Year Project/healo/Healo/src/nurse-vaccination.component.js.map
-
-/***/ }),
-
 /***/ 417:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2458,7 +2486,7 @@ var NurseVaccinationComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(295);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VaccineService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2643,12 +2671,12 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mothernev_mothernev_component__ = __webpack_require__(391);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mother_dashboard_mother_dashboard_component__ = __webpack_require__(389);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mother_child_list_mother_child_list_component__ = __webpack_require__(387);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mothernev_mothernev_component__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mother_dashboard_mother_dashboard_component__ = __webpack_require__(390);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mother_child_list_mother_child_list_component__ = __webpack_require__(388);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__child_window_immunization_table_immunization_table_component__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mother_contacts_mother_contacts_component__ = __webpack_require__(388);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mother_notifications_mother_notifications_component__ = __webpack_require__(390);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mother_contacts_mother_contacts_component__ = __webpack_require__(389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mother_notifications_mother_notifications_component__ = __webpack_require__(391);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__charts_weight_weight_component__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__common_send_message_send_message_component__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_schedule_schedule_component__ = __webpack_require__(125);
@@ -2752,13 +2780,13 @@ var MotherModuleRoutingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mothernev_mothernev_component__ = __webpack_require__(391);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mother_dashboard_mother_dashboard_component__ = __webpack_require__(389);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mother_child_list_mother_child_list_component__ = __webpack_require__(387);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mothernev_mothernev_component__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mother_dashboard_mother_dashboard_component__ = __webpack_require__(390);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mother_child_list_mother_child_list_component__ = __webpack_require__(388);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mother_module_routing_module__ = __webpack_require__(777);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mother_contacts_mother_contacts_component__ = __webpack_require__(388);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__mother_notifications_mother_notifications_component__ = __webpack_require__(390);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_primeng_primeng__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mother_contacts_mother_contacts_component__ = __webpack_require__(389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__mother_notifications_mother_notifications_component__ = __webpack_require__(391);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_primeng_primeng__ = __webpack_require__(293);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_primeng_primeng___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_primeng_primeng__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__charts_height_height_component__ = __webpack_require__(786);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__charts_weight_weight_component__ = __webpack_require__(94);
@@ -2870,7 +2898,7 @@ var ChildDisplayComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_debounceTime__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__(1141);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_distinctUntilChanged___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_distinctUntilChanged__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__search_service__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__search_service__ = __webpack_require__(393);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildSearchComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2894,7 +2922,7 @@ var ChildSearchComponent = (function () {
     function ChildSearchComponent(childSearchService, router) {
         this.childSearchService = childSearchService;
         this.router = router;
-        this.routhCheck = false;
+        this.routeCheck = false;
         this.searchTerms = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__["Subject"]();
     }
     // Push a search term into the observable stream.
@@ -2917,13 +2945,13 @@ var ChildSearchComponent = (function () {
         });
     };
     ChildSearchComponent.prototype.gotoDetail = function (child) {
-        if (this.routhCheck == false) {
-            this.RouteStore = this.router.url;
-            this.link = [this.RouteStore, 'child', child.childId];
-            this.routhCheck = true;
+        if (this.routeCheck == false) {
+            this.routeStore = this.router.url;
+            this.link = [this.routeStore, 'child', child.childId];
+            this.routeCheck = true;
         }
         else {
-            this.link = [this.RouteStore, 'child', child.childId];
+            this.link = [this.routeStore, 'child', child.childId];
         }
         this.router.navigate(this.link);
     };
@@ -3054,9 +3082,9 @@ var AlertComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login_component__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login_component__ = __webpack_require__(405);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup_component__ = __webpack_require__(418);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__api_api_component__ = __webpack_require__(395);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__api_api_component__ = __webpack_require__(396);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3141,11 +3169,11 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login_component__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login_component__ = __webpack_require__(405);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(784);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__user_service__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__SearchChild_search_service__ = __webpack_require__(392);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__add_child_add_child_service__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__SearchChild_search_service__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__add_child_add_child_service__ = __webpack_require__(395);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ng2_bootstrap_ng2_bootstrap__ = __webpack_require__(1010);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__not_found_not_found_component__ = __webpack_require__(795);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_routing_module__ = __webpack_require__(783);
@@ -3155,9 +3183,9 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__midwife_midwife_module__ = __webpack_require__(794);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__nurse_nurse_module__ = __webpack_require__(797);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__signup_signup_component__ = __webpack_require__(418);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__api_api_component__ = __webpack_require__(395);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__api_api_component__ = __webpack_require__(396);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__alert_alert_component__ = __webpack_require__(782);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__add_child_add_child_component__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__add_child_add_child_component__ = __webpack_require__(394);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3287,6 +3315,8 @@ var HeightComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__child_window_component__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__child_window_immunization_table_immunization_table_component__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__charts_weight_weight_component__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__child_window_child_checkup_child_checkup_component__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nurse_nurse_vaccination_nurse_vaccination_component__ = __webpack_require__(252);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3297,6 +3327,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 
@@ -3314,6 +3346,14 @@ var childRoute = [
             {
                 path: 'weight',
                 component: __WEBPACK_IMPORTED_MODULE_4__charts_weight_weight_component__["a" /* WeightComponent */]
+            },
+            {
+                path: 'checkup',
+                component: __WEBPACK_IMPORTED_MODULE_5__child_window_child_checkup_child_checkup_component__["a" /* ChildCheckupComponent */]
+            },
+            {
+                path: 'Vaccinate',
+                component: __WEBPACK_IMPORTED_MODULE_6__nurse_nurse_vaccination_nurse_vaccination_component__["a" /* NurseVaccinationComponent */]
             },
         ]
     }
@@ -3434,12 +3474,12 @@ var InboxComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doctor_nav_doctor_nav_component__ = __webpack_require__(400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__doctor_dashboard_doctor_dashboard_component__ = __webpack_require__(399);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__doctor_search_child_doctor_search_child_component__ = __webpack_require__(402);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__doctor_contacts_doctor_contacts_component__ = __webpack_require__(398);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__doctor_statistics_doctor_statistics_component__ = __webpack_require__(403);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__doctor_notifications_doctor_notifications_component__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doctor_nav_doctor_nav_component__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__doctor_dashboard_doctor_dashboard_component__ = __webpack_require__(400);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__doctor_search_child_doctor_search_child_component__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__doctor_contacts_doctor_contacts_component__ = __webpack_require__(399);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__doctor_statistics_doctor_statistics_component__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__doctor_notifications_doctor_notifications_component__ = __webpack_require__(402);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__child_window_child_window_component__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__child_window_immunization_table_immunization_table_component__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__charts_weight_weight_component__ = __webpack_require__(94);
@@ -3592,18 +3632,18 @@ var DoctorScheduleComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__midwife_nav_midwife_nav_component__ = __webpack_require__(409);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__midwife_dashboard_midwife_dashboard_component__ = __webpack_require__(408);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__midwife_notifications_midwife_notifications_component__ = __webpack_require__(410);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__midwife_assigned_childs_midwife_assigned_childs_component__ = __webpack_require__(405);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__midwife_child_search_midwife_child_search_component__ = __webpack_require__(406);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__midwife_contacts_midwife_contacts_component__ = __webpack_require__(407);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__midwife_stat_midwife_stat_component__ = __webpack_require__(411);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__midwife_nav_midwife_nav_component__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__midwife_dashboard_midwife_dashboard_component__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__midwife_notifications_midwife_notifications_component__ = __webpack_require__(411);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__midwife_assigned_childs_midwife_assigned_childs_component__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__midwife_child_search_midwife_child_search_component__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__midwife_contacts_midwife_contacts_component__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__midwife_stat_midwife_stat_component__ = __webpack_require__(412);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__child_window_child_window_component__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__child_window_immunization_table_immunization_table_component__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__charts_weight_weight_component__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__child_window_child_checkup_child_checkup_component__ = __webpack_require__(174);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__add_child_add_child_component__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__add_child_add_child_component__ = __webpack_require__(394);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_send_message_send_message_component__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__common_schedule_schedule_component__ = __webpack_require__(125);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MidwifeRoutingModule; });
@@ -3765,14 +3805,14 @@ var MidwifeScheduleComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__midwife_routing_module__ = __webpack_require__(792);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__midwife_nav_midwife_nav_component__ = __webpack_require__(409);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__midwife_dashboard_midwife_dashboard_component__ = __webpack_require__(408);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__midwife_notifications_midwife_notifications_component__ = __webpack_require__(410);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__midwife_assigned_childs_midwife_assigned_childs_component__ = __webpack_require__(405);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__midwife_child_search_midwife_child_search_component__ = __webpack_require__(406);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__midwife_contacts_midwife_contacts_component__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__midwife_nav_midwife_nav_component__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__midwife_dashboard_midwife_dashboard_component__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__midwife_notifications_midwife_notifications_component__ = __webpack_require__(411);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__midwife_assigned_childs_midwife_assigned_childs_component__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__midwife_child_search_midwife_child_search_component__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__midwife_contacts_midwife_contacts_component__ = __webpack_require__(408);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__midwife_schedule_midwife_schedule_component__ = __webpack_require__(793);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__midwife_stat_midwife_stat_component__ = __webpack_require__(411);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__midwife_stat_midwife_stat_component__ = __webpack_require__(412);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__doctor_doctor_module__ = __webpack_require__(251);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__common_app_common_module__ = __webpack_require__(175);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MidwifeModule; });
@@ -3868,17 +3908,16 @@ var NotFoundComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nurse_nav_nurse_nav_component__ = __webpack_require__(413);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__nurse_notification_nurse_notification_component__ = __webpack_require__(414);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nurse_search_child_nurse_search_child_component__ = __webpack_require__(415);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__nurse_vaccination_nurse_vaccination_component__ = __webpack_require__(416);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nurse_dashboard_nurse_dashboard_component__ = __webpack_require__(412);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nurse_nav_nurse_nav_component__ = __webpack_require__(414);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__nurse_notification_nurse_notification_component__ = __webpack_require__(415);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nurse_search_child_nurse_search_child_component__ = __webpack_require__(416);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__nurse_vaccination_nurse_vaccination_component__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nurse_dashboard_nurse_dashboard_component__ = __webpack_require__(413);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__child_window_child_window_component__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__child_window_immunization_table_immunization_table_component__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__charts_weight_weight_component__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__child_window_child_checkup_child_checkup_component__ = __webpack_require__(174);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__common_send_message_send_message_component__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__common_schedule_schedule_component__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_send_message_send_message_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__common_schedule_schedule_component__ = __webpack_require__(125);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NurseRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3889,7 +3928,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -3917,11 +3955,11 @@ var nurseRoute = [
             },
             {
                 path: 'messages',
-                component: __WEBPACK_IMPORTED_MODULE_11__common_send_message_send_message_component__["a" /* SendMessageComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_10__common_send_message_send_message_component__["a" /* SendMessageComponent */]
             },
             {
                 path: 'schedule',
-                component: __WEBPACK_IMPORTED_MODULE_12__common_schedule_schedule_component__["a" /* ScheduleComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_11__common_schedule_schedule_component__["a" /* ScheduleComponent */]
             },
             {
                 path: 'searchchild',
@@ -3940,8 +3978,8 @@ var nurseRoute = [
                                 component: __WEBPACK_IMPORTED_MODULE_9__charts_weight_weight_component__["a" /* WeightComponent */]
                             },
                             {
-                                path: 'checkup',
-                                component: __WEBPACK_IMPORTED_MODULE_10__child_window_child_checkup_child_checkup_component__["a" /* ChildCheckupComponent */]
+                                path: 'Vaccinate',
+                                component: __WEBPACK_IMPORTED_MODULE_5__nurse_vaccination_nurse_vaccination_component__["a" /* NurseVaccinationComponent */]
                             },
                         ]
                     }
@@ -3950,10 +3988,6 @@ var nurseRoute = [
             {
                 path: 'notification',
                 component: __WEBPACK_IMPORTED_MODULE_3__nurse_notification_nurse_notification_component__["a" /* NurseNotificationComponent */]
-            },
-            {
-                path: 'vaccination',
-                component: __WEBPACK_IMPORTED_MODULE_5__nurse_vaccination_nurse_vaccination_component__["a" /* NurseVaccinationComponent */]
             },
         ]
     }
@@ -3984,12 +4018,12 @@ var NurseRoutingModule = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nurse_nav_nurse_nav_component__ = __webpack_require__(413);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__nurse_notification_nurse_notification_component__ = __webpack_require__(414);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nurse_search_child_nurse_search_child_component__ = __webpack_require__(415);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__nurse_vaccination_nurse_vaccination_component__ = __webpack_require__(416);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nurse_nav_nurse_nav_component__ = __webpack_require__(414);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__nurse_notification_nurse_notification_component__ = __webpack_require__(415);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nurse_search_child_nurse_search_child_component__ = __webpack_require__(416);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__nurse_vaccination_nurse_vaccination_component__ = __webpack_require__(252);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nurse_routing_module__ = __webpack_require__(796);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__nurse_dashboard_nurse_dashboard_component__ = __webpack_require__(412);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__nurse_dashboard_nurse_dashboard_component__ = __webpack_require__(413);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__doctor_doctor_module__ = __webpack_require__(251);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__common_app_common_module__ = __webpack_require__(175);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__nurse_vaccination_vaccine_service__ = __webpack_require__(417);

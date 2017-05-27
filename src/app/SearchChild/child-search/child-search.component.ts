@@ -28,8 +28,8 @@ import { Child } from '../../Classes/Child';
 export class ChildSearchComponent  {
 
 
-  routhCheck=false;
-  RouteStore;
+  routeCheck=false;
+  routeStore;
   link;
 
   children: Observable<Child[]>;
@@ -65,14 +65,14 @@ export class ChildSearchComponent  {
     
 
 
-    if(this.routhCheck==false){
-      this.RouteStore=this.router.url;
-      this.link = [this.RouteStore,'child', child.childId];
+    if(this.routeCheck==false){
+      this.routeStore=this.router.url;
+      this.link = [this.routeStore,'child', child.childId];
       
-      this.routhCheck=true;
+      this.routeCheck=true;
     }
     else{
-      this.link = [this.RouteStore,'child', child.childId];
+      this.link = [this.routeStore,'child', child.childId];
     }
     
     this.router.navigate(this.link);

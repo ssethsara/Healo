@@ -13,7 +13,14 @@ export class NurseVaccinationComponent implements OnInit {
 
   constructor(public fb: FormBuilder,public vaccineService:VaccineService) { }
 
+
+  childDetails;
+
   ngOnInit() {
+
+          this.childDetails = JSON.parse(localStorage.getItem('SelectedChild'));
+      console.log('childDetails:',this.childDetails);
+
   }
     vaccine:Vaccine[];
 
@@ -29,7 +36,7 @@ export class NurseVaccinationComponent implements OnInit {
 
     assign(){
         this.injection=this.vaccination.value.injectType;
-        this.vaccination.value.injectType="";
+       // this.vaccination.value.injectType="";
     }
 
     remove(){
@@ -51,7 +58,7 @@ export class NurseVaccinationComponent implements OnInit {
   }
    
   
-
+    console.log(newVaccine);
 
 
 

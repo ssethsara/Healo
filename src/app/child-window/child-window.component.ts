@@ -24,6 +24,10 @@ export class ChildWindowComponent implements OnInit, OnDestroy {
   childId: number;
   private sub: any;
   child: Child;
+ childDetails;
+
+  routeCheck=false;
+  routeStore;
 
   link;
 
@@ -39,6 +43,9 @@ export class ChildWindowComponent implements OnInit, OnDestroy {
   
 
   ngOnInit(): void {
+
+
+    this.routeStore=this.router.url;
 
      this.profile = JSON.parse(localStorage.getItem('currentUser'));
 
@@ -63,18 +70,55 @@ export class ChildWindowComponent implements OnInit, OnDestroy {
 
        // In a real app: dispatch action to load the details here.
       this.childService.getChild(this.childId)
-      .subscribe(child=>{this.child=child;});
+      .subscribe(child=>{this.child=child;
+      
+
+      localStorage.setItem('SelectedChild', JSON.stringify(this.child));
+  
+});
+
+
+      
+
+      
      });
 
-
-     
+      
 
     
   }
 
 
+  
+
+
   RoleAction(){
-    this.link = [this.router.url,this.checkORVaccin];
+
+
+
+/*
+     if(this.routeCheck==false){
+      this.routeStore=this.router.url;
+      this.link = [this.routeStore,this.checkORVaccin];
+      
+      this.routeCheck=true;
+    }
+    else{
+      this.link = [this.routeStore,this.checkORVaccin];
+    }
+    
+    this.router.navigate(this.link);
+
+
+*/
+
+   // localStorage.removeItem('SelectedChild');
+      
+      
+      
+
+
+    this.link = [this.routeStore,this.checkORVaccin];
    
     
     this.router.navigate(this.link);
@@ -82,6 +126,7 @@ export class ChildWindowComponent implements OnInit, OnDestroy {
 
 
   ngOnDestroy() {
+    localStorage.removeItem('SelectedChild');
     this.sub.unsubscribe();
     this.childId=null;
   }

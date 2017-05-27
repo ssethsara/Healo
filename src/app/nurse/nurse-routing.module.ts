@@ -13,7 +13,9 @@ import { NurseDashboardComponent } from './nurse-dashboard/nurse-dashboard.compo
 import { ChildWindowComponent } from '../child-window/child-window.component';
 import { ImmunizationTableComponent } from '../child-window/immunization-table/immunization-table.component';
 import { WeightComponent } from '../charts/weight/weight.component';
-import { ChildCheckupComponent } from '../child-window/child-checkup/child-checkup.component';
+
+
+
 import { SendMessageComponent } from '../common/send-message/send-message.component';
 
 import { ScheduleComponent } from '../common/schedule/schedule.component';
@@ -58,8 +60,8 @@ const nurseRoute: Routes = [
                                         component: WeightComponent
                                       },
                                       {
-                                        path: 'checkup',
-                                        component: ChildCheckupComponent
+                                        path: 'Vaccinate',
+                                        component: NurseVaccinationComponent
                                       },
                                       
                                 ] 
@@ -72,10 +74,7 @@ const nurseRoute: Routes = [
             path: 'notification',
             component: NurseNotificationComponent
           },
-           {
-            path: 'vaccination',
-            component: NurseVaccinationComponent
-          },
+           
        
         ]
       }

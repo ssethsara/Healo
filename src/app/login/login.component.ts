@@ -55,6 +55,9 @@ export class LoginComponent implements OnInit {
                           case 4 :
                             this.router.navigate(['midwife']);
                             break;
+                          case 5 :
+                            this.router.navigate(['nurse']);
+                            break;
                                 
                          default : console.log('Error');
                         }

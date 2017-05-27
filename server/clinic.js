@@ -20,7 +20,7 @@ else{
   
 
     
-    var date = date.getDate();
+    
     var injection= req.body.injection;
    // var childID= req.body.childID;
     //var nurseID= req.body.nurseID;
@@ -28,14 +28,18 @@ else{
 
 //TEMP
 
- 
-
+ console.log(injection);
+ console.log(remarks);
 
             
       
-              
+             models.vaccination.findOrCreate({
+                where: {//object containing fields to found
+                    injection_name:injection,
+                    chil_id:1
+                }, 
 
-            models.vaccination.Create({
+          
                 
                         date:date,
                         injection_name:injection,
