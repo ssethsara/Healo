@@ -8,6 +8,18 @@ var date = new Date();
 
 
 
+router.get('/injection/search/:name',function(req,res){
+  models.injection.findAll({where: ["name like ?", '%' + req.params.name + '%']}).then(function(injection) {
+      
+  
+        res.json(injection);
+       
+        
+  });
+});
+
+
+
 router.post('/vaccination',function(req,res,next){
 
 var found=false;
@@ -22,31 +34,33 @@ else{
     
     
     var injection= req.body.injection;
-   // var childID= req.body.childID;
-    //var nurseID= req.body.nurseID;
+    var childID= req.body.childID;
+    var nurseID= req.body.nurseID;
     var remarks= req.body.remarks;
 
 //TEMP
 
  console.log(injection);
  console.log(remarks);
+  console.log(nurseID);
+   console.log(childID);
 
             
       
              models.vaccination.findOrCreate({
                 where: {//object containing fields to found
-                    injection_name:injection,
+                  //  injection_name:injection,
                     chil_id:1
                 }, 
 
           
-                
-                        date:date,
-                        injection_name:injection,
-                        chil_id:1,
-                        nurse_id:1,
-                        remarks:remarks,
+                 defaults: { 
                         
+                        injectionName:injection,
+                        chilId:childID,
+                        nurseId:nurseID,
+                        remarks:remarks,
+                 }    
                 
             }).spread(function(user, created) {
                 console.log(user.get({

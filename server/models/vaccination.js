@@ -34,7 +34,7 @@ module.exports = function(sequelize, DataTypes) {
       field: 'chil_id'
     },
     nurseId: {
-      type: DataTypes.INTEGER(11),
+      type: DataTypes.STRING,
       allowNull: false,
       references: {
         model: 'nurse',
@@ -45,6 +45,7 @@ module.exports = function(sequelize, DataTypes) {
     remarks: {
       type: DataTypes.TEXT,
       allowNull: true,
+      defaultValue:'NO Remarks',
       field: 'remarks'
     }
   }, {

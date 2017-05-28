@@ -10,7 +10,7 @@ import 'rxjs/Observable';
 import 'rxjs/add/observable/throw';
 
 import{Vaccine}from'./vaccine'
-
+import{Injection}from './Injection';
 
 @Injectable()
 export class VaccineService {
@@ -20,6 +20,19 @@ export class VaccineService {
 
 
   constructor(private http: Http,private router:Router) { }
+
+
+
+
+
+  search(term: string): Observable<Injection[]> {
+    return this.http
+               .get(`clinic/injection/search/${term}`)
+               .map(res =>res.json());
+  }
+
+
+
 
 
 immunization(injection): Observable<Vaccine> {

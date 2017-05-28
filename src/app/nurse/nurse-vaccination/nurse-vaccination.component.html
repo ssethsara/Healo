@@ -1,18 +1,49 @@
+
+<section>
 <div class="col-md-12">
+
+    
+
                <form role="form" [formGroup]="vaccination" >
                 <div class="form-group">
                   <div class="col-sm-2">
                     <label for="inputEmail3" class="control-label">Vaccine Name</label>
                   </div>
                   <div class="col-sm-9">
-                    <input type="text" formControlName="injectType" name="injectType"  placeholder="Type.." class="form-control">
-                    <a type="Add" class="btn btn-success" (click)="assign()">Add</a>
+
+
+
+
+                        <form>
+                            <input class="form-control input-md"  #searchBox  (keyup)="search(searchBox.value)  " /></form>
+                            <div>
+                              <div class="col-md-12" >
+                                    <ul  class="list-group-item" *ngFor="let inject of injection | async" >
+                                        <div class="col-md-08" *ngIf="inject">
+                                              <li class="list-group-item" Style="position:relative; Z-index:2; " *ngIf="listopen" (click)=" assign(inject) ; searchBox.value='' ; ">
+                                                <a>{{inject.name}} </a>
+                                              </li>
+                                              </div>
+                                               </ul>
+
+                                             
+                              </div>
+                            </div>
+                          </div>
+
+
+
+
+
+
+
+                    
                   </div>
-                </div>
+                
                 <div class="col-sm-12">
                   <div class="col-sm-8" style="float:right;">
-                    <ul *ngIf='injection' class="list-group">
-                      <li class="list-group-item">{{injection}}
+                    <ul *ngIf='injection_name' class="list-group">
+                      <li class="list-group-item">{{injection_name}}
                         <a class="btn btn-danger btn-xs" style="float:right;" (click)="remove()">Remove</a>
                       </li>
                     </ul>
@@ -21,8 +52,10 @@
                 <div>
                   <div class="col-sm-12">
                     <div class="col-sm-12" style="float:right;">
-                      <ul class="list-group">
-                        <li class="list-group-item">Cautious for Vaccine</li>
+                      <ul class="list-group" *ngIf="injectionDetails">
+                        <li class="list-group-item">Age given : Month {{injectionDetails.ageGiven}}</li>
+                        <li class="list-group-item">Side Effects : {{injectionDetails.sideEffects}}</li>
+                        <li class="list-group-item">Remarks : {{injectionDetails.remarks}}</li>
                       </ul>
                     </div>
                   </div>
@@ -42,3 +75,7 @@
               </form>
               <button class="btn btn-primary" type="submit" (click)="given()" style="float:right;" >Given</button>
             </div>
+
+
+
+      </section>      
