@@ -19,6 +19,19 @@ router.get('/injection/search/:name',function(req,res){
 });
 
 
+router.get('/vaccine/details/:id',function(req,res){
+
+  console.log(parseInt(req.params.id,10))
+  models.vaccination.findAll({where: {chilId:parseInt(req.params.id,10)}}).then(function(immu) {
+      
+        
+        res.json(immu);
+       
+        
+  });
+});
+
+
 
 router.post('/vaccination',function(req,res,next){
 

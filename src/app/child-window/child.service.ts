@@ -14,5 +14,11 @@ export class ChildService {
                .map(res =>res.json());
   }
 
+
+    getImmu(id: Number) {
+    return this.http
+               .get(`clinic/vaccine/details/${id}`)
+               .map(res =>res.json());
+  }
  
 } 

@@ -8,136 +8,30 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>Age</th>
+                  <!--<th>Age</th> -->
                   <th>Type of Vaccine</th>
                   <th>Date</th>
                   <th>Batch No</th>
                   <th>Adverse effects</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>Birth</td>
-                  <td>B.C.G</td>
+              <tbody  >
+                <tr *ngFor="let vaccine of immunization" >
+                 <!-- <td *ngIf="vaccine">{{vaccine.ageGiven}}</td> -->
+                  <td *ngIf="vaccine">{{vaccine.injectionName}}</td>
+                  <td *ngIf="vaccine">{{vaccine.date}}</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td *ngIf="vaccine">{{vaccine.remarks}}</td>
                 </tr>
-                <tr>
-                  <td></td>
-                  <td>B.C.G. dosage</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>2 months</td>
-                  <td>Pentavalent 1</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>OPV 1</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>4 months</td>
-                  <td>Pentavalent 2</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>OPV 2</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>6 months</td>
-                  <td>Pentavalent 3</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>OPV 3</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>9 months</td>
-                  <td>Live JE</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>12 months</td>
-                  <td>Measles,
-                    <br>Mumps,
-                    <br>Rubella 1(MMR1)</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>18 months</td>
-                  <td>DPT</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>OPV 4</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>3 years</td>
-                  <td>Measles,
-                    <br>Mumps,
-                    <br>Rubella 2(MMR2)</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>5 years</td>
-                  <td>D.T</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Measles,
-                    <br>Mumps,
-                    <br>Rubella 1(MMR1)</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>12 years</td>
-                  <td>Adult Teanus &amp; diphtheria</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
+
               </tbody>
             </table>
           </div>
         </div>
       </div>
     </div>
+
+
+
+
     <router-outlet></router-outlet>
