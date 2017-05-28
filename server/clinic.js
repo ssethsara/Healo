@@ -49,8 +49,8 @@ else{
       
              models.vaccination.findOrCreate({
                 where: {//object containing fields to found
-                  //  injection_name:injection,
-                    chil_id:1
+                    injection_name:injection,
+                    chil_id:childID
                 }, 
 
           
