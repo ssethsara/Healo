@@ -51,9 +51,13 @@ export class ChildWindowComponent implements OnInit, OnDestroy {
 
            switch (this.profile.role)
                         {
-                          
                           case 2 :
                             this.checkORVaccin='checkup';
+                            this.checVaccineEnabled=true;
+                            break;
+                          
+                          case 4 :
+                            this.checkORVaccin='HomeVisit';
                             this.checVaccineEnabled=true;
                             break;
                           

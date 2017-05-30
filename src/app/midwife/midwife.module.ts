@@ -14,10 +14,15 @@ import { MidwifeScheduleComponent } from './midwife-schedule/midwife-schedule.co
 import { MidwifeStatComponent } from './midwife-stat/midwife-stat.component';
 import { DoctorModule }        from '../doctor/doctor.module';
 import { AppCommonModule } from '../common/app-common.module';
+import { MidewifeHomeVisitComponent } from './midewife-home-visit/midewife-home-visit.component';
+
+import { MidwifeService } from './midwife.service';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
-    CommonModule,MidwifeRoutingModule,DoctorModule,AppCommonModule
+    CommonModule,MidwifeRoutingModule,DoctorModule,AppCommonModule,FormsModule, ReactiveFormsModule
   ],
   declarations: [MidwifeNavComponent,
   MidwifeDashboardComponent,
@@ -34,7 +39,13 @@ import { AppCommonModule } from '../common/app-common.module';
            
               
                 MidwifeStatComponent,
+            
            
-                ]
+              
+                MidewifeHomeVisitComponent,
+           
+                ],
+
+                providers:[MidwifeService]
 })
 export class MidwifeModule { }

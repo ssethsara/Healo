@@ -21,6 +21,8 @@ import { SendMessageComponent } from '../common/send-message/send-message.compon
 
 import { ScheduleComponent } from '../common/schedule/schedule.component';
 
+import { MidewifeHomeVisitComponent } from './midewife-home-visit/midewife-home-visit.component';
+
 const midwifeRoute: Routes = [
   {
     path: 'midwife',
@@ -84,6 +86,10 @@ const midwifeRoute: Routes = [
                                       {
                                         path: 'checkup',
                                         component: ChildCheckupComponent
+                                      },
+                                      {
+                                        path: 'HomeVisit',
+                                        component: MidewifeHomeVisitComponent
                                       },
                                       
                                 ] 

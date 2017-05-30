@@ -7,7 +7,7 @@ import { WeightComponent } from '../charts/weight/weight.component';
 import { ChildCheckupComponent } from '../child-window/child-checkup/child-checkup.component';
 
 import { NurseVaccinationComponent } from '../nurse/nurse-vaccination/nurse-vaccination.component';
-
+import { MidewifeHomeVisitComponent } from '../midwife/midewife-home-visit/midewife-home-visit.component';
 
 const childRoute: Routes = [
   {
@@ -30,6 +30,11 @@ const childRoute: Routes = [
              path: 'Vaccinate',
              component: NurseVaccinationComponent
           },
+          {
+             path: 'HomeVisit',
+             component: MidewifeHomeVisitComponent
+          },
+          
         ]
       }
     

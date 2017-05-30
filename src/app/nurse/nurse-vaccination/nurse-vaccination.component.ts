@@ -33,7 +33,7 @@ export class NurseVaccinationComponent implements OnInit {
 
   childDetails;
   userdetails;
-  today: number = Date.now();
+
 
   listopen=false;
   injectionDetails;

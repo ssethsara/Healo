@@ -34,10 +34,15 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
       field: 'weight'
     },
-    remarks: {
+    Note_For_doctor: {
       type: DataTypes.TEXT,
       allowNull: true,
-      field: 'remarks'
+      field: 'Note_For_doctor'
+    },
+    Note_For_Mother: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      field: 'Note_For_Mother'
     },
     childId: {
       type: DataTypes.INTEGER(11),
@@ -47,7 +52,14 @@ module.exports = function(sequelize, DataTypes) {
         key: 'child_id'
       },
       field: 'child_id'
+    },
+    childId: {
+      type: DataTypes.INTEGER(11),
+      allowNull: true,
+      
+      field: 'child_id'
     }
+
   }, {
     tableName: 'clinic_visit'
   });
