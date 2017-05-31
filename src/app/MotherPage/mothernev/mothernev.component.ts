@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../user.service';
+import{LoginUser}from '../../Classes/LoginUser';
+import { Router }from '@angular/router';
 
 @Component({
   selector: 'app-mothernev',
@@ -7,108 +10,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MothernevComponent implements OnInit {
 
-//which button selected
-  navButtonSelected;
 
-  //activation call
-  dashActive='';
-  notificationActive='';
-  urHealthActive='';
-  massegeActive='';
-  urChildrenActive='';
-  ScheduleActive='';
-  EmergancyActive='';
+ 
+logoutcheck;
+
+ constructor(private userservice:UserService,private router:Router) { }
+
+   
 
 
-  constructor() {
-      this.navButtonSelected=0;
-      this.dashActive=''; 
-   }
-
-   //dash button control
-
-  Dashboard() 
-  {
-      this.navButtonSelected=0;
-      console.log(`Dashboard selected`+this.navButtonSelected);
-
-      this.dashActive='active';
-      this.notificationActive=this.urHealthActive=this.massegeActive=this.urChildrenActive=this.ScheduleActive=this.EmergancyActive='';
-
-  }
-  
-
-   //notification button control
-
-  Notification() 
-  {
-      this.navButtonSelected=1;
-      console.log(`Notification selected`+this.navButtonSelected);
-
-      this.notificationActive='active';
-      this.dashActive=this.urHealthActive=this.massegeActive=this.urChildrenActive=this.ScheduleActive=this.EmergancyActive='';
-
-  }
-
-   //your Health button control
-
-  YourHealth() 
-  {
-      this.navButtonSelected=2;
-      console.log(`Your Health selected`+this.navButtonSelected);
-
-      this.urHealthActive='active';
-      this.dashActive=this.notificationActive=this.massegeActive=this.urChildrenActive=this.ScheduleActive=this.EmergancyActive='';
-
-  }
-
-  //your Health button control
-
-  Massege() 
-  {
-      this.navButtonSelected=3;
-      console.log(`Message selected`+this.navButtonSelected);
-
-      this.massegeActive='active';
-      this.dashActive=this.notificationActive=this.urHealthActive=this.urChildrenActive=this.ScheduleActive=this.EmergancyActive='';
-
-  }
-
-  //your Children button control
-
-  YourChildren() 
-  {
-      this.navButtonSelected=4;
-      console.log(`Your Children selected`+this.navButtonSelected);
-
-      this.urChildrenActive='active';
-      this.dashActive=this.notificationActive=this.urHealthActive=this.massegeActive=this.ScheduleActive=this.EmergancyActive='';
-
-  }
-  
-  //Schedule button control
-
-  Schedule() 
-  {
-      this.navButtonSelected=5;
-      console.log(`Schedule selected`+this.navButtonSelected);
-
-      this.ScheduleActive='active';
-      this.dashActive=this.notificationActive=this.urHealthActive=this.massegeActive=this.urChildrenActive=this.EmergancyActive='';
-
-  }
 
 
-  //Emergancy button control
 
-  Emergancy() 
-  {
-      this.navButtonSelected=6;
-      console.log(`Emergancy selected`+this.navButtonSelected);
-
-      this.EmergancyActive='active';
-      this.dashActive=this.notificationActive=this.urHealthActive=this.massegeActive=this.urChildrenActive=this.ScheduleActive='';
-
+ logout(){
+    console.log("logout....");
+          
+          this.userservice.logout().subscribe(loggedout=>{this.logoutcheck=loggedout;
+              console.log(this.logoutcheck);
+              localStorage.removeItem('currentUser');
+              this.router.navigate(['/']);
+              console.log("logout end test");
+      });
+    
+    
+     
+     
   }
 
 

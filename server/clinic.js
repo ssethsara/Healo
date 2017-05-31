@@ -107,14 +107,14 @@ else{
     
     var weight= req.body.weight;
     var height= req.body.height;
-    var midewife_ID= req.body.midewifeID;
-    var note_doctor= req.body.noteForDoctor;
-    var doctor_ID= req.body.doctorID;
-    var note_mother= req.body.noteForMother;
+    var childID= req.body.childID;
+    var midewife_ID= req.body.midwifeID;
+    var note_doctor= req.body.note_Doctor;
+    var note_mother= req.body.note_Mother;
 
 //TEMP
 
- console.log(weight ," ",  height ," ",midewife_ID," ",not_doctor," ",doctor_ID," ",not_mother);
+ console.log(weight ," ",  height ," ",midewife_ID," ",note_doctor," ",childID," ",note_mother);
   
 
             
@@ -130,6 +130,7 @@ else{
                         midwifeId:midewife_ID,
                         height:height,
                         weight:weight,
+                        childId:childID,
                         Note_For_doctor:note_doctor,
                         Note_For_Mother:note_mother
                          

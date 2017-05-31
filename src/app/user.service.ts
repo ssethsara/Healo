@@ -5,10 +5,12 @@ import { Observable } from 'rxjs/Observable';
 import { Router,ActivatedRoute }from '@angular/router';
 
 
+
+
 import {LocationStrategy, HashLocationStrategy} from '@angular/common'; 
 
 import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/map';   
 import 'rxjs/Observable';
 import 'rxjs/add/observable/throw';
 
@@ -63,9 +65,15 @@ getUser(){
 
 
 logout(){
-    this.http.get('users/auth/logout')
-    .map(res => {return res.json()});
+  return this.http
+               .get('users/auth/logout')
+               .map(res =>res.json());
+  
 }
+
+
+  
+
 
 
 route(){
@@ -76,12 +84,15 @@ route(){
 }
 
 
-  private extractData(res) {
+extractData(res) {
+
+
+    console.log("refresh", this.router.navigate(['/']));
+ 
+
+ 
   let body = res.json();
   
-  
- 
- console.log(this.route());
  
 
   

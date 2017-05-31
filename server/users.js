@@ -193,8 +193,8 @@ function isLoggedIn(req, res, next) {
 
 
 
-router.post('/auth/logout',isLoggedIn,function(req, res){
-  console.log('logout');
+router.get('/auth/logout',isLoggedIn,function(req, res){
+  console.log("logged out....");
   req.logout();
   res.json(true);
   

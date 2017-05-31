@@ -339,7 +339,7 @@ module.exports = "<p>\n  mother-notifications works!\n</p>\n"
 /***/ 1102:
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n  \n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   \n  </head>\n  \n   <body>\n  \n      <div class=\"section\">\n        <div class=\"container-fluid\">\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <ul class=\"nav nav-pills\">\n                <h1>Mother</h1>\n                <h3>Full Name</h3>\n                <li class=\"active\">\n                  <a href=\"#\">Home</a>\n                </li>\n                <li>\n                  <a href=\"#\">Change Role</a>\n                </li>\n                <li>\n                  <a href=\"#\">logout</a>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n   \n \n      <br>\n    <div class=\"section\" >\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <div class=\"col-md-12\">\n                  <ul class=\"list-group\">\n                <a [routerLink]=\"['dashboard']\" ><li class=\"list-group-item\">\n               <h4>Dashboard</h4> </li></a>\n                \n                <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Scedule</h4></li></a>\n                <a [routerLink]=\"['sendmsg']\" routerLinkActive=\"active\"><li class=\"list-group-item\">\n               <h4>Send a Message</h4></li></a>\n               <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\">\n               <h4>Schedule</h4></li></a>\n                <a [routerLink]=\"['children']\" routerLinkActive=\"active\"><li class=\"list-group-item\">\n                <h4>Your Children</h4></li></a>\n             <!--   <a [routerLink]=\"['econtacts']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Emergancy Contacts</h4></li></a>\n              -->\n              </ul>\n\n            </div>\n          </div>\n        \n         \n         \n      \n              <div class=\"container-fluid\" > \n                  <div class=\"col-md-8\" style=\"background-color:white;\">\n                     <router-outlet></router-outlet>\n                    <!--your dashboard component\n                    <div *ngIf=\"navButtonSelected==0\">\n                      <app-mother-dashboard></app-mother-dashboard>\n                    </div>\n                    <!--your Notification component-->\n                    <div *ngIf=\"navButtonSelected==1\">\n                      <h1>Notification</h1>\n                    </div>\n                    <!--your Your Health component-->\n                    <div *ngIf=\"navButtonSelected==2\">\n                      <h1>Your Health</h1>\n                    </div>\n                    <!--your Massege component-->\n                    <div *ngIf=\"navButtonSelected==3\">\n                      <h1>Massege</h1>\n                    </div>\n                    <!--your child list component\n                    <div *ngIf=\"navButtonSelected==4\">\n                      <app-mother-child-list></app-mother-child-list>\n                    </div>-->\n                    <!--your Schedule component-->\n                    <div *ngIf=\"navButtonSelected==5\">\n                      <h1>Scedule</h1>\n                    </div>\n                    <!--your contactlist component-->\n                    <div *ngIf=\"navButtonSelected==6\">\n                      <h1>Emergancy</h1>\n                    </div>  \n                      \n                    \n\n                </div>\n            </div>\n         </div>  \n      </div>\n    </div>     \n   \n        <div class=\"section\" >\n          <!--child component-->\n            \n\n        </div>\n \n    \n  </body>\n\n</html>"
+module.exports = "<html>\n  \n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   \n  </head>\n  \n   <body>\n  \n      <div class=\"section\">\n        <div class=\"container-fluid\">\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <ul class=\"nav nav-pills\">\n                <h1>Mother</h1>\n                <h3>Full Name</h3>\n                <li class=\"active\">\n                  <a href=\"#\">Home</a>\n                </li>\n                <li>\n                  <a href=\"#\">Change Role</a>\n                </li>\n                <li>\n                  <a (click)=\"logout()\">logout</a>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n   \n \n      <br>\n    <div class=\"section\" >\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <div class=\"col-md-12\">\n                  <ul class=\"list-group\">\n                <a [routerLink]=\"['dashboard']\" ><li class=\"list-group-item\">\n               <h4>Dashboard</h4> </li></a>\n                \n                <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Scedule</h4></li></a>\n                <a [routerLink]=\"['sendmsg']\" routerLinkActive=\"active\"><li class=\"list-group-item\">\n               <h4>Send a Message</h4></li></a>\n               <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\">\n               <h4>Schedule</h4></li></a>\n                <a [routerLink]=\"['children']\" routerLinkActive=\"active\"><li class=\"list-group-item\">\n                <h4>Your Children</h4></li></a>\n             <!--   <a [routerLink]=\"['econtacts']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Emergancy Contacts</h4></li></a>\n              -->\n              </ul>\n\n            </div>\n          </div>\n        \n         \n         \n      \n              <div class=\"container-fluid\" > \n                  <div class=\"col-md-8\" style=\"background-color:white;\">\n                     <router-outlet></router-outlet>\n                    <!--your dashboard component\n                    <div *ngIf=\"navButtonSelected==0\">\n                      <app-mother-dashboard></app-mother-dashboard>\n                    </div>\n                    <!--your Notification component-->\n                    <div *ngIf=\"navButtonSelected==1\">\n                      <h1>Notification</h1>\n                    </div>\n                    <!--your Your Health component-->\n                    <div *ngIf=\"navButtonSelected==2\">\n                      <h1>Your Health</h1>\n                    </div>\n                    <!--your Massege component-->\n                    <div *ngIf=\"navButtonSelected==3\">\n                      <h1>Massege</h1>\n                    </div>\n                    <!--your child list component\n                    <div *ngIf=\"navButtonSelected==4\">\n                      <app-mother-child-list></app-mother-child-list>\n                    </div>-->\n                    <!--your Schedule component-->\n                    <div *ngIf=\"navButtonSelected==5\">\n                      <h1>Scedule</h1>\n                    </div>\n                    <!--your contactlist component-->\n                    <div *ngIf=\"navButtonSelected==6\">\n                      <h1>Emergancy</h1>\n                    </div>  \n                      \n                    \n\n                </div>\n            </div>\n         </div>  \n      </div>\n    </div>     \n   \n        <div class=\"section\" >\n          <!--child component-->\n            \n\n        </div>\n \n    \n  </body>\n\n</html>"
 
 /***/ }),
 
@@ -381,7 +381,7 @@ module.exports = "<p>\n  api works!\n</p>\n"
 /***/ 1108:
 /***/ (function(module, exports) {
 
-module.exports = "\n<head>\n  <base href=\"/\">\n</head>\n<body style=\"background-color:#f93636\">\n  \n<div class =\"section\" >\n  <div class =\"container-fluid\">\n  <div class=\"page-header\">\n\n       <div>\n        <img class=\"img-responsive\" src=\"./images/Healo.jpg\" alt=\"Chania\" style=\"width:148px ;height: 99px\">\n        </div>\n\n    </div>\n\n       \n         \n         <!-- <app-mothernev></app-mothernev>-->\n                \n    </div>\n</div>\n<div class=\"col-md-12 col-xs-12 col-sm-12\" style=\"min-height: 1500px; top:50px \" >\n     <router-outlet></router-outlet>\n\n </div>\n      \n  <footer class=\"section section-primary col-md-12 col-xs-12 col-sm-12\" style=\"position: absolute; bottom:10px;  background-color:#f93636 \">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-sm-4\">\n            <h1>HealO+</h1>\n            <p>copyrights 2017</p>\n          </div>\n          <div class=\"col-sm-6\">\n            <p class=\"text-info text-right\">\n              <br>\n              <br>\n            </p>\n            <div class=\"row\">\n              <div class=\"col-md-12 hidden-lg hidden-md hidden-sm text-left\">\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-instagram text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-twitter text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-facebook text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-github text-inverse\"></i></a>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-md-12 hidden-xs text-right\">\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-instagram text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-twitter text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-facebook text-inverse\"></i></a>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </footer>\n\n</body>  "
+module.exports = "\n<head>\n  <base href=\"/\">\n</head>\n<body style=\"background-color:#f93636\">\n  \n<div class =\"section\" >\n  <div class =\"container-fluid\">\n  <div class=\"page-header\">\n\n       <div>\n        <img class=\"img-responsive\" src=\"./images/Healo.jpg\" alt=\"Chania\" style=\"width:148px ;height: 99px\">\n        </div>\n\n    </div>\n\n       \n         \n         <!-- <app-mothernev></app-mothernev>-->\n                \n    </div>\n</div>\n\n<div class=\"col-md-12 col-xs-12 col-sm-12\" style=\"top:50px \" >\n     <router-outlet></router-outlet>\n</div>\n<!--<div class=\"col-md-12 col-xs-12 col-sm-12\" style=\"min-height: 1550px; top:50px \" >\n     \n\n </div>\n      \n  <footer class=\"section section-primary col-md-12 col-xs-12 col-sm-12\" style=\"position: relative; bottom:10px;  background-color:#f93636 \">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-sm-4\">\n            <h1>HealO+</h1>\n            <p>copyrights 2017</p>\n          </div>\n          <div class=\"col-sm-6\">\n            <p class=\"text-info text-right\">\n              <br>\n              <br>\n            </p>\n            <div class=\"row\">\n              <div class=\"col-md-12 hidden-lg hidden-md hidden-sm text-left\">\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-instagram text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-twitter text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-facebook text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-github text-inverse\"></i></a>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-md-12 hidden-xs text-right\">\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-instagram text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-twitter text-inverse\"></i></a>\n                <a href=\"#\"><i class=\"fa fa-3x fa-fw fa-facebook text-inverse\"></i></a>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </footer>-->\n\n</body>  "
 
 /***/ }),
 
@@ -500,7 +500,7 @@ module.exports = "\n  <html>\n  \n  <head>\n    <meta charset=\"utf-8\">\n    <m
 /***/ 1125:
 /***/ (function(module, exports) {
 
-module.exports = "\n        \n        \n        <div class=\"col-md-12\">\n           \n          <hr></div>\n\n          <form class=\"form-horizontal\" role=\"form\" [formGroup]=\"ChildVisit\">\n          <div class=\"row\">\n          <div class=\"col-md-12\">\n           \n            \n              <div class=\"form-group\">\n                <div class=\"col-sm-2\">\n                  <label for=\"inputEmail3\" class=\"control-label\">Weight(kg)</label>\n                </div>\n                <div class=\"col-sm-10\">\n                  <input type=\"text\" formControlName=\"weight\" name=\"weight\" class=\"form-control input-lg\" placeholder=\"enter number\" min=\"0\" max=\"100\" value=\"19.5\">\n                </div>\n              </div>\n              <div class=\"form-group has-feedback\">\n                <div class=\"col-sm-2\">\n                  <label for=\"inputEmail3\" class=\"control-label\">Height(inch)</label>\n                </div>\n                <div class=\"col-sm-10\">\n                  <input type=\"text\" class=\"form-control input-lg col-md-3\" formControlName=\"height\" name=\"height\" placeholder=\"enter number\" min=\"0\" max=\"100\" value=\"3.5\">\n                </div>\n              </div>\n           \n            <div class=\"row\">\n              <div class=\"col-md-12\">\n                <hr>\n              </div>\n            </div>\n          \n        \n        <div class=\"row\">\n          <div class=\"col-md-6\">\n            <div class=\"form-group\">\n              <div class=\"col-sm-2\">\n                <label for=\"inputEmail3\" class=\"control-label\">Note for Doctor</label>\n              </div>\n              <div class=\"col-sm-10\">\n                <input type=\"text\" style=\"height:50px; width:50px\" formControlName=\"NoteForDoctor\" name=\"NoteForDoctor\" class=\"form-control input-lg\" placeholder=\"Note....\">\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-6\">\n            <div class=\"form-group\">\n              <div class=\"col-sm-2\">\n                <label for=\"inputEmail3\" class=\"control-label\">Note for &nbsp;Mother</label>\n              </div>\n              <div class=\"col-sm-10\">\n                <input type=\"text\" style=\"height:50px; width:50px\" formControlName=\"NoteForMother\" name=\"NoteForMother\" class=\"form-control input-lg\" placeholder=\"Note...\">\n              </div>\n              <div class=\"row\"><div class=\"col-md-6\"><hr></div></div><div class=\"row\"><div class=\"col-md-12\"><div class=\"container\"><div class=\"row\"><div class=\"col-md-12\"><a class=\"btn btn-lg btn-primary\" style=\"float:right;\">Update</a></div></div></div></div></div>\n            </div>\n          </div>\n          \n          </div>\n        </div>\n  </div>\n </form> "
+module.exports = "\n        \n        \n        <div class=\"col-md-8\">\n           \n          <hr></div>\n\n          <form class=\"form-horizontal\" role=\"form\" [formGroup]=\"ChildVisit\">\n          <div class=\"row\">\n          <div class=\"col-md-12\">\n           \n            \n              <div class=\"form-group\">\n                <div class=\"col-sm-2\">\n                  <label for=\"inputEmail3\" class=\"control-label\">Weight(kg)</label>\n                </div>\n                <div class=\"col-sm-10\">\n                  <input type=\"number\" formControlName=\"weight\" name=\"weight\" class=\"form-control input-lg\" placeholder=\"enter number\" min=\"0\" max=\"100\" value=\"19.5\" >\n                </div>\n              </div>\n              <div class=\"form-group has-feedback\">\n                <div class=\"col-sm-2\">\n                  <label for=\"inputEmail3\" class=\"control-label\">Height(inch)</label>\n                </div>\n                <div class=\"col-sm-10\">\n                  <input type=\"number\" class=\"form-control input-lg col-md-3\" formControlName=\"height\" name=\"height\" placeholder=\"enter number\" min=\"0\" max=\"100\" value=\"3.5\">\n                </div>\n              </div>\n           \n            <div class=\"row\">\n              <div class=\"col-md-12\">\n                <hr>\n              </div>\n            </div>\n          \n        \n    \n          <div class=\"col-md-12\">\n            <div class=\"form-group\">\n              <div class=\"col-sm-6\">\n                <label for=\"inputEmail3\" class=\"control-label\">Note for Doctor</label>\n              </div>\n              <div class=\"col-sm-6\">\n                <textarea rows=\"3\" formControlName=\"NoteForDoctor\" name=\"NoteForDoctor\" class=\"form-control input-lg\" placeholder=\"Note....\"></textarea>\n               \n              </div>\n            </div>\n          </div>\n     \n          <div class=\"col-md-12\">\n            <div class=\"form-group\">\n              <div class=\"col-sm-6\">\n                <label for=\"inputEmail3\" class=\"control-label\">Note for &nbsp;Mother</label>\n              </div>\n              <div class=\"col-sm-6\">\n                <textarea rows=\"3\" formControlName=\"NoteForMother\" name=\"NoteForMother\" class=\"form-control input-lg\" placeholder=\"Note...\"></textarea>\n               \n              </div>\n              <div class=\"col-md-6\"><hr>\n\n             \n               <a class=\"btn btn-lg btn-primary\" style=\"float:right;\" (click)=\"Update()\" >Update</a>\n\n             </div>\n            </div>\n          </div>\n          \n          \n        </div>\n  </div>\n </form> "
 
 /***/ }),
 
@@ -535,7 +535,7 @@ module.exports = "<div class=\"section\">\r\n      <div class=\"container\">\r\n
 /***/ 1130:
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"background-color: white;\">\n  \n      <div class=\"section\">\n        <div class=\"container-fluid\">\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <ul class=\"nav nav-pills\">\n                <h1>Midwife</h1>\n                <h3>Full Name</h3>\n                <li class=\"active\">\n                  <a href=\"#\">Home</a>\n                </li>\n                <li>\n                  <a href=\"#\">change role</a>\n                </li>\n                <li>\n                  <a href=\"#\">logout</a>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n   \n \n      <br>\n    <div class=\"section\" >\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <div class=\"col-md-12\">\n                   <ul class=\"list-group\">\n                      <a [routerLink]=\"['dashboard']\" ><li class=\"list-group-item\"><h4>Dashboard</h4> </li></a>\n                      <a [routerLink]=\"['stat']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Statistics</h4></li></a>\n                     \n                      <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Scedule</h4></li></a>\n                      <a [routerLink]=\"['messages']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Send a Message</h4></li></a>\n                      <a [routerLink]=\"['searchchild']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Search Children</h4></li></a>\n                   <!--   <a [routerLink]=\"['contacts']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Contacts</h4></li></a>\n                      -->\n                   </ul>\n\n            </div>\n          </div>\n        \n         \n         \n      \n              <div class=\"container-fluid\" > \n                  <div class=\"col-md-8\" style=\"background-color:white;\">\n                     <router-outlet></router-outlet>\n                  \n                      \n                    \n\n                </div>\n            </div>\n         </div>  \n      </div>\n    </div>     \n   \n        <div class=\"section\" >\n          <!--child component-->\n        \n\n        </div>\n \n    \n</div>"
+module.exports = "<div style=\"background-color: white;\">\n  \n      <div class=\"section\">\n        <div class=\"container-fluid\">\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <ul class=\"nav nav-pills\">\n                <h1>Midwife</h1>\n                <h3>Full Name</h3>\n                <li class=\"active\">\n                  <a href=\"#\">Home</a>\n                </li>\n                <li>\n                  <a href=\"#\">change role</a>\n                </li>\n                <li>\n                  <a (click)=\"logout()\">logout</a>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n   \n \n      <br>\n    <div class=\"section\" >\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <div class=\"col-md-12\">\n                   <ul class=\"list-group\">\n                      <a [routerLink]=\"['dashboard']\" ><li class=\"list-group-item\"><h4>Dashboard</h4> </li></a>\n                      <a [routerLink]=\"['stat']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Statistics</h4></li></a>\n                     \n                      <a [routerLink]=\"['schedule']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Scedule</h4></li></a>\n                      <a [routerLink]=\"['messages']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Send a Message</h4></li></a>\n                      <a [routerLink]=\"['searchchild']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Search Children</h4></li></a>\n                   <!--   <a [routerLink]=\"['contacts']\" routerLinkActive=\"active\"><li class=\"list-group-item\"><h4>Contacts</h4></li></a>\n                      -->\n                   </ul>\n\n            </div>\n          </div>\n        \n         \n         \n      \n              <div class=\"container-fluid\" > \n                  <div class=\"col-md-8\" style=\"background-color:white;\">\n                     <router-outlet></router-outlet>\n                  \n                      \n                    \n\n                </div>\n            </div>\n         </div>  \n      </div>\n    </div>     \n   \n        <div class=\"section\" >\n          <!--child component-->\n        \n\n        </div>\n \n    \n</div>"
 
 /***/ }),
 
@@ -617,14 +617,14 @@ module.exports = __webpack_require__(655);
 
 /***/ }),
 
-/***/ 125:
+/***/ 126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap__ = __webpack_require__(1147);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__child_service__ = __webpack_require__(253);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildWindowComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -721,7 +721,7 @@ var ChildWindowComponent = (function () {
 
 /***/ }),
 
-/***/ 126:
+/***/ 127:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -832,7 +832,7 @@ var MyEvent = (function () {
 
 /***/ }),
 
-/***/ 127:
+/***/ 128:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -864,112 +864,6 @@ var SendMessageComponent = (function () {
     return SendMessageComponent;
 }());
 //# sourceMappingURL=D:/2nd Year Project/healo/Healo/src/send-message.component.js.map
-
-/***/ }),
-
-/***/ 128:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-
-var UserService = (function () {
-    function UserService(http, router) {
-        this.http = http;
-        this.router = router;
-        this.signupUrl = 'users/signup';
-        this.loginURL = 'users/login';
-    }
-    //AddUsers
-    UserService.prototype.addUser = function (newUser) {
-        console.log(newUser);
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Headers */]({ 'Content-Type': 'application/json' });
-        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
-        return this.http.post(this.signupUrl, JSON.stringify(newUser), options)
-            .map(this.extractData)
-            .catch(this.handleError);
-    };
-    //login
-    UserService.prototype.loginUser = function (userLogin) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Headers */]({ 'Content-Type': 'application/json' });
-        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
-        var log = this.http.post(this.loginURL, JSON.stringify(userLogin), options)
-            .map(this.extractData)
-            .catch(this.handleError);
-        return log;
-    };
-    UserService.prototype.getUser = function () {
-        this.http.get('users/auth/userdata', { withCredentials: true })
-            .map(function (res) { return res.json(); });
-    };
-    UserService.prototype.logout = function () {
-        this.http.get('users/auth/logout')
-            .map(function (res) { return res.json(); });
-    };
-    UserService.prototype.route = function () {
-        console.log("logging test");
-        this.router.navigate(['doctor']);
-        return true;
-    };
-    UserService.prototype.extractData = function (res) {
-        var body = res.json();
-        console.log(this.route());
-        //return body || { };
-    };
-    UserService.prototype.handleError = function (error) {
-        // In a real world app, you might use a remote logging infrastructure
-        var errMsg;
-        if (error instanceof __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* Response */]) {
-            var body = error.json() || '';
-            var err = body.error || JSON.stringify(body || null);
-            errMsg = error.status + " - " + (error.statusText || '') + " " + err;
-        }
-        else {
-            errMsg = error.message ? error.message : error.toString();
-        }
-        //console.error(errMsg);
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(errMsg);
-    };
-    UserService.prototype.checkLogin = function () {
-        return this.http.get('users/auth/data')
-            .map(function (res) { return res.json(); });
-    };
-    UserService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["f" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["f" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["Router"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_router__["Router"]) === 'function' && _b) || Object])
-    ], UserService);
-    return UserService;
-    var _a, _b;
-}());
-//# sourceMappingURL=D:/2nd Year Project/healo/Healo/src/user.service.js.map
 
 /***/ }),
 
@@ -1014,12 +908,12 @@ var ChildCheckupComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__send_message_send_message_component__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__send_message_send_message_component__ = __webpack_require__(128);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__send_message_inbox_inbox_component__ = __webpack_require__(793);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__schedule_schedule_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__schedule_schedule_component__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_primeng_primeng__ = __webpack_require__(297);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_primeng_primeng___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_primeng_primeng__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__schedule_schedule_service__ = __webpack_require__(402);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppCommonModule; });
@@ -1070,7 +964,7 @@ var AppCommonModule = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1196,7 +1090,7 @@ var DoctorModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__midwife_service__ = __webpack_require__(417);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_of__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_debounceTime__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_debounceTime__);
@@ -1278,7 +1172,7 @@ var MidewifeHomeVisitComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_of__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_debounceTime__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_debounceTime__);
@@ -1382,7 +1276,7 @@ var NurseVaccinationComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__child_window_child_service__ = __webpack_require__(253);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MotherChildListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1478,7 +1372,7 @@ var MotherContactsComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(8);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MotherDashboardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1588,6 +1482,8 @@ var MotherNotificationsComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(8);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MothernevComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1599,67 +1495,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var MothernevComponent = (function () {
-    function MothernevComponent() {
-        //activation call
-        this.dashActive = '';
-        this.notificationActive = '';
-        this.urHealthActive = '';
-        this.massegeActive = '';
-        this.urChildrenActive = '';
-        this.ScheduleActive = '';
-        this.EmergancyActive = '';
-        this.navButtonSelected = 0;
-        this.dashActive = '';
+    function MothernevComponent(userservice, router) {
+        this.userservice = userservice;
+        this.router = router;
     }
-    //dash button control
-    MothernevComponent.prototype.Dashboard = function () {
-        this.navButtonSelected = 0;
-        console.log("Dashboard selected" + this.navButtonSelected);
-        this.dashActive = 'active';
-        this.notificationActive = this.urHealthActive = this.massegeActive = this.urChildrenActive = this.ScheduleActive = this.EmergancyActive = '';
-    };
-    //notification button control
-    MothernevComponent.prototype.Notification = function () {
-        this.navButtonSelected = 1;
-        console.log("Notification selected" + this.navButtonSelected);
-        this.notificationActive = 'active';
-        this.dashActive = this.urHealthActive = this.massegeActive = this.urChildrenActive = this.ScheduleActive = this.EmergancyActive = '';
-    };
-    //your Health button control
-    MothernevComponent.prototype.YourHealth = function () {
-        this.navButtonSelected = 2;
-        console.log("Your Health selected" + this.navButtonSelected);
-        this.urHealthActive = 'active';
-        this.dashActive = this.notificationActive = this.massegeActive = this.urChildrenActive = this.ScheduleActive = this.EmergancyActive = '';
-    };
-    //your Health button control
-    MothernevComponent.prototype.Massege = function () {
-        this.navButtonSelected = 3;
-        console.log("Message selected" + this.navButtonSelected);
-        this.massegeActive = 'active';
-        this.dashActive = this.notificationActive = this.urHealthActive = this.urChildrenActive = this.ScheduleActive = this.EmergancyActive = '';
-    };
-    //your Children button control
-    MothernevComponent.prototype.YourChildren = function () {
-        this.navButtonSelected = 4;
-        console.log("Your Children selected" + this.navButtonSelected);
-        this.urChildrenActive = 'active';
-        this.dashActive = this.notificationActive = this.urHealthActive = this.massegeActive = this.ScheduleActive = this.EmergancyActive = '';
-    };
-    //Schedule button control
-    MothernevComponent.prototype.Schedule = function () {
-        this.navButtonSelected = 5;
-        console.log("Schedule selected" + this.navButtonSelected);
-        this.ScheduleActive = 'active';
-        this.dashActive = this.notificationActive = this.urHealthActive = this.massegeActive = this.urChildrenActive = this.EmergancyActive = '';
-    };
-    //Emergancy button control
-    MothernevComponent.prototype.Emergancy = function () {
-        this.navButtonSelected = 6;
-        console.log("Emergancy selected" + this.navButtonSelected);
-        this.EmergancyActive = 'active';
-        this.dashActive = this.notificationActive = this.urHealthActive = this.massegeActive = this.urChildrenActive = this.ScheduleActive = '';
+    MothernevComponent.prototype.logout = function () {
+        var _this = this;
+        console.log("logout....");
+        this.userservice.logout().subscribe(function (loggedout) {
+            _this.logoutcheck = loggedout;
+            console.log(_this.logoutcheck);
+            localStorage.removeItem('currentUser');
+            _this.router.navigate(['/']);
+            console.log("logout end test");
+        });
     };
     MothernevComponent.prototype.ngOnInit = function () {
     };
@@ -1669,9 +1521,10 @@ var MothernevComponent = (function () {
             template: __webpack_require__(1102),
             styles: [__webpack_require__(965)]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"]) === 'function' && _b) || Object])
     ], MothernevComponent);
     return MothernevComponent;
+    var _a, _b;
 }());
 //# sourceMappingURL=D:/2nd Year Project/healo/Healo/src/mothernev.component.js.map
 
@@ -1683,7 +1536,7 @@ var MothernevComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildSearchService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1795,10 +1648,10 @@ var AddChildComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__);
@@ -1979,7 +1832,7 @@ var DoctorContactsComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(8);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorDashboardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2020,8 +1873,8 @@ var DoctorDashboardComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(8);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorNavComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2044,11 +1897,15 @@ var DoctorNavComponent = (function () {
         this.profile = JSON.parse(localStorage.getItem('currentUser'));
     };
     DoctorNavComponent.prototype.logout = function () {
+        var _this = this;
         console.log("logout....");
-        this.userservice.logout();
-        console.log("logged out....");
-        localStorage.removeItem('currentUser');
-        this.router.navigate(['/']);
+        this.userservice.logout().subscribe(function (loggedout) {
+            _this.logoutcheck = loggedout;
+            console.log(_this.logoutcheck);
+            localStorage.removeItem('currentUser');
+            _this.router.navigate(['/']);
+            console.log("logout end test");
+        });
     };
     DoctorNavComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2176,8 +2033,8 @@ var DoctorStatisticsComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_service__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_service__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(8);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2302,7 +2159,7 @@ var MidwifeAssignedChildsComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(8);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MidwifeChildSearchComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2411,6 +2268,8 @@ var MidwifeDashboardComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(8);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MidwifeNavComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2422,10 +2281,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var MidwifeNavComponent = (function () {
-    function MidwifeNavComponent() {
+    function MidwifeNavComponent(userservice, router) {
+        this.userservice = userservice;
+        this.router = router;
     }
     MidwifeNavComponent.prototype.ngOnInit = function () {
+    };
+    MidwifeNavComponent.prototype.logout = function () {
+        var _this = this;
+        console.log("logout....");
+        this.userservice.logout().subscribe(function (loggedout) {
+            _this.logoutcheck = loggedout;
+            console.log(_this.logoutcheck);
+            localStorage.removeItem('currentUser');
+            _this.router.navigate(['/']);
+            console.log("logout end test");
+        });
     };
     MidwifeNavComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2433,9 +2307,10 @@ var MidwifeNavComponent = (function () {
             template: __webpack_require__(1130),
             styles: [__webpack_require__(992)]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"]) === 'function' && _b) || Object])
     ], MidwifeNavComponent);
     return MidwifeNavComponent;
+    var _a, _b;
 }());
 //# sourceMappingURL=D:/2nd Year Project/healo/Healo/src/midwife-nav.component.js.map
 
@@ -2519,10 +2394,10 @@ var MidwifeStatComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__);
@@ -2629,8 +2504,8 @@ var NurseDashboardComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(8);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NurseNavComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2653,11 +2528,15 @@ var NurseNavComponent = (function () {
         this.profile = JSON.parse(localStorage.getItem('currentUser'));
     };
     NurseNavComponent.prototype.logout = function () {
+        var _this = this;
         console.log("logout....");
-        this.userservice.logout();
-        console.log("logged out....");
-        localStorage.removeItem('currentUser');
-        this.router.navigate(['/']);
+        this.userservice.logout().subscribe(function (loggedout) {
+            _this.logoutcheck = loggedout;
+            console.log(_this.logoutcheck);
+            localStorage.removeItem('currentUser');
+            _this.router.navigate(['/']);
+            console.log("logout end test");
+        });
     };
     NurseNavComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2752,10 +2631,10 @@ var NurseSearchChildComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__);
@@ -2833,7 +2712,7 @@ var VaccineService = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_service__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_service__ = __webpack_require__(78);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2941,21 +2820,128 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
+/***/ 78:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+var UserService = (function () {
+    function UserService(http, router) {
+        this.http = http;
+        this.router = router;
+        this.signupUrl = 'users/signup';
+        this.loginURL = 'users/login';
+    }
+    //AddUsers
+    UserService.prototype.addUser = function (newUser) {
+        console.log(newUser);
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Headers */]({ 'Content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        return this.http.post(this.signupUrl, JSON.stringify(newUser), options)
+            .map(this.extractData)
+            .catch(this.handleError);
+    };
+    //login
+    UserService.prototype.loginUser = function (userLogin) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Headers */]({ 'Content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        var log = this.http.post(this.loginURL, JSON.stringify(userLogin), options)
+            .map(this.extractData)
+            .catch(this.handleError);
+        return log;
+    };
+    UserService.prototype.getUser = function () {
+        this.http.get('users/auth/userdata', { withCredentials: true })
+            .map(function (res) { return res.json(); });
+    };
+    UserService.prototype.logout = function () {
+        return this.http
+            .get('users/auth/logout')
+            .map(function (res) { return res.json(); });
+    };
+    UserService.prototype.route = function () {
+        console.log("logging test");
+        this.router.navigate(['doctor']);
+        return true;
+    };
+    UserService.prototype.extractData = function (res) {
+        console.log("refresh", this.router.navigate(['/']));
+        var body = res.json();
+        //return body || { };
+    };
+    UserService.prototype.handleError = function (error) {
+        // In a real world app, you might use a remote logging infrastructure
+        var errMsg;
+        if (error instanceof __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* Response */]) {
+            var body = error.json() || '';
+            var err = body.error || JSON.stringify(body || null);
+            errMsg = error.status + " - " + (error.statusText || '') + " " + err;
+        }
+        else {
+            errMsg = error.message ? error.message : error.toString();
+        }
+        //console.error(errMsg);
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(errMsg);
+    };
+    UserService.prototype.checkLogin = function () {
+        return this.http.get('users/auth/data')
+            .map(function (res) { return res.json(); });
+    };
+    UserService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["f" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["f" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["Router"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_router__["Router"]) === 'function' && _b) || Object])
+    ], UserService);
+    return UserService;
+    var _a, _b;
+}());
+//# sourceMappingURL=D:/2nd Year Project/healo/Healo/src/user.service.js.map
+
+/***/ }),
+
 /***/ 781:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mothernev_mothernev_component__ = __webpack_require__(397);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mother_dashboard_mother_dashboard_component__ = __webpack_require__(395);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mother_child_list_mother_child_list_component__ = __webpack_require__(393);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__child_window_immunization_table_immunization_table_component__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__child_window_immunization_table_immunization_table_component__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mother_contacts_mother_contacts_component__ = __webpack_require__(394);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mother_notifications_mother_notifications_component__ = __webpack_require__(396);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__charts_weight_weight_component__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__common_send_message_send_message_component__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_schedule_schedule_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__charts_weight_weight_component__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__common_send_message_send_message_component__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_schedule_schedule_component__ = __webpack_require__(127);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MotherModuleRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3065,7 +3051,7 @@ var MotherModuleRoutingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_primeng_primeng__ = __webpack_require__(297);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_primeng_primeng___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_primeng_primeng__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__charts_height_height_component__ = __webpack_require__(790);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__charts_weight_weight_component__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__charts_weight_weight_component__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__common_app_common_module__ = __webpack_require__(176);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MotherModuleModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3161,14 +3147,14 @@ var ChildDisplayComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_of__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_debounceTime__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_debounceTime__);
@@ -3252,7 +3238,7 @@ var ChildSearchComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlertService; });
@@ -3357,7 +3343,7 @@ var AlertComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login_component__ = __webpack_require__(409);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup_component__ = __webpack_require__(423);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__api_api_component__ = __webpack_require__(401);
@@ -3440,14 +3426,14 @@ var AppComponent = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login_component__ = __webpack_require__(409);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(788);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__user_service__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__user_service__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__SearchChild_search_service__ = __webpack_require__(398);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__add_child_add_child_service__ = __webpack_require__(400);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ng2_bootstrap_ng2_bootstrap__ = __webpack_require__(1015);
@@ -3587,10 +3573,10 @@ var HeightComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__child_window_component__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__child_window_immunization_table_immunization_table_component__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__charts_weight_weight_component__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__child_window_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__child_window_immunization_table_immunization_table_component__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__charts_weight_weight_component__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__child_window_child_checkup_child_checkup_component__ = __webpack_require__(175);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nurse_nurse_vaccination_nurse_vaccination_component__ = __webpack_require__(256);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__midwife_midewife_home_visit_midewife_home_visit_component__ = __webpack_require__(255);
@@ -3667,9 +3653,9 @@ var ChildRoutingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__immunization_table_immunization_table_component__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__immunization_table_immunization_table_component__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__child_routing_module__ = __webpack_require__(791);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__child_window_component__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__child_window_component__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__child_checkup_child_checkup_component__ = __webpack_require__(175);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3755,19 +3741,19 @@ var InboxComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doctor_nav_doctor_nav_component__ = __webpack_require__(405);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__doctor_dashboard_doctor_dashboard_component__ = __webpack_require__(404);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__doctor_search_child_doctor_search_child_component__ = __webpack_require__(407);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__doctor_contacts_doctor_contacts_component__ = __webpack_require__(403);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__doctor_statistics_doctor_statistics_component__ = __webpack_require__(408);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__doctor_notifications_doctor_notifications_component__ = __webpack_require__(406);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__child_window_child_window_component__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__child_window_immunization_table_immunization_table_component__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__charts_weight_weight_component__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__child_window_child_window_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__child_window_immunization_table_immunization_table_component__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__charts_weight_weight_component__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__child_window_child_checkup_child_checkup_component__ = __webpack_require__(175);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__common_send_message_send_message_component__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_schedule_schedule_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__common_send_message_send_message_component__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_schedule_schedule_component__ = __webpack_require__(127);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3913,7 +3899,7 @@ var DoctorScheduleComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__midwife_nav_midwife_nav_component__ = __webpack_require__(414);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__midwife_dashboard_midwife_dashboard_component__ = __webpack_require__(413);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__midwife_notifications_midwife_notifications_component__ = __webpack_require__(415);
@@ -3921,13 +3907,13 @@ var DoctorScheduleComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__midwife_child_search_midwife_child_search_component__ = __webpack_require__(411);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__midwife_contacts_midwife_contacts_component__ = __webpack_require__(412);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__midwife_stat_midwife_stat_component__ = __webpack_require__(416);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__child_window_child_window_component__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__child_window_immunization_table_immunization_table_component__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__charts_weight_weight_component__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__child_window_child_window_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__child_window_immunization_table_immunization_table_component__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__charts_weight_weight_component__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__child_window_child_checkup_child_checkup_component__ = __webpack_require__(175);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__add_child_add_child_component__ = __webpack_require__(399);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_send_message_send_message_component__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__common_schedule_schedule_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_send_message_send_message_component__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__common_schedule_schedule_component__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__midewife_home_visit_midewife_home_visit_component__ = __webpack_require__(255);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MidwifeRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -4203,17 +4189,17 @@ var NotFoundComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nurse_nav_nurse_nav_component__ = __webpack_require__(419);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__nurse_notification_nurse_notification_component__ = __webpack_require__(420);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nurse_search_child_nurse_search_child_component__ = __webpack_require__(421);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__nurse_vaccination_nurse_vaccination_component__ = __webpack_require__(256);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nurse_dashboard_nurse_dashboard_component__ = __webpack_require__(418);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__child_window_child_window_component__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__child_window_immunization_table_immunization_table_component__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__charts_weight_weight_component__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_send_message_send_message_component__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__common_schedule_schedule_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__child_window_child_window_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__child_window_immunization_table_immunization_table_component__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__charts_weight_weight_component__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_send_message_send_message_component__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__common_schedule_schedule_component__ = __webpack_require__(127);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NurseRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4447,54 +4433,6 @@ var environment = {
 
 /***/ }),
 
-/***/ 96:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WeightComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var WeightComponent = (function () {
-    function WeightComponent() {
-        this.data = {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-            datasets: [
-                {
-                    label: 'First Dataset',
-                    data: [3, 5, 7, 8, 12],
-                    fill: false,
-                    borderColor: '#4bc0c0'
-                },
-            ]
-        };
-    }
-    WeightComponent.prototype.selectData = function (event) {
-        this.msgs = [];
-        this.msgs.push({ severity: 'info', summary: 'Data Selected', 'detail': this.data.datasets[event.element._datasetIndex].data[event.element._index] });
-    };
-    WeightComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-weight',
-            template: __webpack_require__(1110),
-            styles: [__webpack_require__(972)]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], WeightComponent);
-    return WeightComponent;
-}());
-//# sourceMappingURL=D:/2nd Year Project/healo/Healo/src/weight.component.js.map
-
-/***/ }),
-
 /***/ 961:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4662,8 +4600,7 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__child_service__ = __webpack_require__(253);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImmunizationTableComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WeightComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4674,33 +4611,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-var ImmunizationTableComponent = (function () {
-    function ImmunizationTableComponent(childService) {
-        this.childService = childService;
+var WeightComponent = (function () {
+    function WeightComponent() {
+        this.data = {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [
+                {
+                    label: 'First Dataset',
+                    data: [3, 5, 7, 8, 12],
+                    fill: false,
+                    borderColor: '#4bc0c0'
+                },
+            ]
+        };
     }
-    ImmunizationTableComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.childDetails = JSON.parse(localStorage.getItem('SelectedChild'));
-        console.log(this.childDetails.childId);
-        this.childService.getImmu(this.childDetails.childId)
-            .subscribe(function (immun) {
-            _this.immunization = immun;
-            console.log(_this.immunization);
-        });
+    WeightComponent.prototype.selectData = function (event) {
+        this.msgs = [];
+        this.msgs.push({ severity: 'info', summary: 'Data Selected', 'detail': this.data.datasets[event.element._datasetIndex].data[event.element._index] });
     };
-    ImmunizationTableComponent = __decorate([
+    WeightComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-immunization-table',
-            template: __webpack_require__(1113),
-            styles: [__webpack_require__(975)]
+            selector: 'app-weight',
+            template: __webpack_require__(1110),
+            styles: [__webpack_require__(972)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__child_service__["a" /* ChildService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__child_service__["a" /* ChildService */]) === 'function' && _a) || Object])
-    ], ImmunizationTableComponent);
-    return ImmunizationTableComponent;
-    var _a;
+        __metadata('design:paramtypes', [])
+    ], WeightComponent);
+    return WeightComponent;
 }());
-//# sourceMappingURL=D:/2nd Year Project/healo/Healo/src/immunization-table.component.js.map
+//# sourceMappingURL=D:/2nd Year Project/healo/Healo/src/weight.component.js.map
 
 /***/ }),
 
@@ -4881,6 +4820,53 @@ exports.push([module.i, "", ""]);
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 98:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__child_service__ = __webpack_require__(253);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImmunizationTableComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ImmunizationTableComponent = (function () {
+    function ImmunizationTableComponent(childService) {
+        this.childService = childService;
+    }
+    ImmunizationTableComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.childDetails = JSON.parse(localStorage.getItem('SelectedChild'));
+        console.log(this.childDetails.childId);
+        this.childService.getImmu(this.childDetails.childId)
+            .subscribe(function (immun) {
+            _this.immunization = immun;
+            console.log(_this.immunization);
+        });
+    };
+    ImmunizationTableComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-immunization-table',
+            template: __webpack_require__(1113),
+            styles: [__webpack_require__(975)]
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__child_service__["a" /* ChildService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__child_service__["a" /* ChildService */]) === 'function' && _a) || Object])
+    ], ImmunizationTableComponent);
+    return ImmunizationTableComponent;
+    var _a;
+}());
+//# sourceMappingURL=D:/2nd Year Project/healo/Healo/src/immunization-table.component.js.map
 
 /***/ }),
 

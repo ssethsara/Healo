@@ -12,6 +12,8 @@ export class DoctorNavComponent implements OnInit {
 
   profile:LoginUser;
 
+  logoutcheck;
+
   constructor(private userservice:UserService,private router:Router) { }
 
   ngOnInit() {
@@ -30,11 +32,17 @@ export class DoctorNavComponent implements OnInit {
 
   logout(){
     console.log("logout....");
+          
+          this.userservice.logout().subscribe(loggedout=>{this.logoutcheck=loggedout;
+              console.log(this.logoutcheck);
+              localStorage.removeItem('currentUser');
+              this.router.navigate(['/']);
+              console.log("logout end test");
+      });
     
-    this.userservice.logout();
-    console.log("logged out....");
-    localStorage.removeItem('currentUser');
-     this.router.navigate(['/']);
+    
+     
+     
   }
 
 }

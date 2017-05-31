@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
 
   }
 
-  checkLogged(){
+ checkLogged(){
      this.userservice.checkLogin().subscribe(posts => {
                   //posts = JSON.stringify(posts);
                   this.loginPerson=posts;
@@ -98,7 +98,10 @@ loginUser(event) {
 
   this.userservice.loginUser(loginUser)
   
-    .subscribe(login=>{this.login=login}),
+    .subscribe(login=>{this.login=login}
+    
+    
+    ),
                  this.checkLogged(); 
                       
  
