@@ -4,7 +4,7 @@ import { ChildWindowComponent } from './child-window.component';
 import { ImmunizationTableComponent } from '../child-window/immunization-table/immunization-table.component';
 import { HeightComponent } from '../charts/height/height.component';
 import { WeightComponent } from '../charts/weight/weight.component';
-import { ChildCheckupComponent } from '../child-window/child-checkup/child-checkup.component';
+import { ChildCheckupComponent } from '../doctor/doctor-search-child/child-checkup/child-checkup.component';
 
 import { NurseVaccinationComponent } from '../nurse/nurse-vaccination/nurse-vaccination.component';
 import { MidewifeHomeVisitComponent } from '../midwife/midewife-home-visit/midewife-home-visit.component';

@@ -1,0 +1,149 @@
+<div class="col-md-8">
+                        
+
+                         <div class="form-group">
+                                    <div class="col-sm-2">
+                                        <label for="inputEmail3" class="control-label">Other Allergies</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="col-sm-8" style="float:right;">
+                                        <ul class="list-group" *ngFor="let allergieO of allergieOther">
+                                            <li *ngIf="allergieO" class="list-group-item">{{allergieO.name}} {{allergieO.date}}
+                                               
+                                            </li>
+                        
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+                                    <form >
+                                        <div class="form-group">
+                                    <div class="col-sm-2">
+                                        <label for="inputEmail3" class="control-label">Allergies</label>
+                                    </div>
+                                </div>
+                            <input class="form-control input-md"  #searchBox  (keyup)="allergySearch(searchBox.value)  " /></form>
+                            <div>
+                              <div class="col-md-12" *ngIf="allergieListopen" >
+                                    <ul  class="list-group-item"  *ngFor="let allerg of allergie | async" >
+                                        <div class="col-md-08" *ngIf="allergieListopen">
+                                              <li class="list-group-item" Style="position:relative; Z-index:4; "  (click)=" allergieAssign(allerg) ; searchBox.value='' ; ">
+                                                <a>{{allerg.allergiesName}} </a>
+                                              </li>
+                                              </div>
+                                               </ul>
+
+                                             
+                              </div>
+                            </div>
+                 
+
+
+
+      
+                            <div class="col-sm-12">
+                                <div class="col-sm-8" style="float:right;">
+                                    <ul class="list-group" >
+                                        <li *ngIf="allergieDetails" class="list-group-item" >{{allergieDetails.allergiesName}}
+                                            <a class="btn btn-danger btn-xs" style="float:right;" (click)="allergieRemove()">Remove</a>
+                                        </li>          
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-2">
+                                        <label for="inputEmail3" class="control-label">Previously Used Medicines</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="col-sm-8" style="float:right;">
+                                        <ul class="list-group" *ngFor="let medicineUsed of medicinesUsed">
+                                            <li *ngIf="medicineUsed" class="list-group-item">{{medicineUsed.name}} {{medicineUsed.date}}
+                                               
+                                            </li>
+                        
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+
+
+                                 <form >
+                                        <div class="form-group">
+                                    <div class="col-sm-2">
+                                        <label for="inputEmail3" class="control-label">Priscribe Medicines</label>
+                                    </div>
+                                </div>
+                            <input class="form-control input-md"  #searchBoxMed  (keyup)="medSearch(searchBoxMed.value)  " /></form>
+                            <div>
+                              <div class="col-md-12" *ngIf="medListopen" >
+                                    <ul  class="list-group-item"  *ngFor="let med of medicine | async" >
+                                        <div class="col-md-08" *ngIf="medListopen">
+                                              <li class="list-group-item" Style="position:relative; Z-index:4; "  (click)=" medAssign(med) ; searchBoxMed.value='' ; ">
+                                                <a>{{med.name}} </a>
+                                              </li>
+                                              </div>
+                                               </ul>
+
+                                             
+                              </div>
+                            </div>
+
+
+                         <form class="form-horizontal" role="form" [formGroup]="checkup">
+
+                                <div class="col-sm-12">
+                                <div class="col-sm-8" style="float:right;">
+                                    <ul class="list-group" >
+                                        <li *ngIf="medDetails" class="list-group-item" >{{medDetails.name}}
+                                            <a class="btn btn-danger btn-xs" style="float:right;" (click)="medRemove()">Remove</a>
+                                        </li>          
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <div class="col-sm-2">
+                                            <label for="inputEmail3" class="control-label">Special Notes for Mother</label>
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <input type="text" formControlName="MotherNote" name="MotherNote" class="form-control" id="inputEmail3" placeholder="Type.." row=3 >
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-2">
+                                            <label for="inputEmail3" class="control-label">Special Notes for Midwife</label>
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="inputEmail3"  formControlName="MidwifeNote" name="MidwifeNote" row=3 placeholder="Type.." >
+                                        </div>
+                                    </div>
+                                    <div class="form-group" draggable="true">
+                                        <div class="col-sm-2">
+                                            <label for="inputEmail3" class="control-label">Special Notes for Vaccination</label>
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="inputEmail3" placeholder="Type.." formControlName="NoteforNurse" name="NoteforNurse" row=3 >
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button type="submit" class="btn btn-success" (click)="given()" >Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>

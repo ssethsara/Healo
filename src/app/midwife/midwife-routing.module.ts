@@ -14,7 +14,7 @@ import { MidwifeStatComponent } from './midwife-stat/midwife-stat.component';
 import { ChildWindowComponent } from '../child-window/child-window.component';
 import { ImmunizationTableComponent } from '../child-window/immunization-table/immunization-table.component';
 import { WeightComponent } from '../charts/weight/weight.component';
-import { ChildCheckupComponent } from '../child-window/child-checkup/child-checkup.component';
+
 import { AddChildComponent } from '../add-child/add-child.component';
 
 import { SendMessageComponent } from '../common/send-message/send-message.component';
@@ -83,10 +83,7 @@ const midwifeRoute: Routes = [
                                         path: 'weight',
                                         component: WeightComponent
                                       },
-                                      {
-                                        path: 'checkup',
-                                        component: ChildCheckupComponent
-                                      },
+                                    
                                       {
                                         path: 'HomeVisit',
                                         component: MidewifeHomeVisitComponent

@@ -18,6 +18,55 @@ router.get('/injection/search/:name',function(req,res){
   });
 });
 
+router.get('/allergie/search/:name',function(req,res){
+  models.allergies_list.findAll({where: ["allergies_Name like ?", '%' + req.params.name + '%']}).then(function(allergie) {
+      
+        console.log("adasf");
+        res.json(allergie);
+       
+        
+  });
+});
+
+
+router.get('/allergie/other/:id',function(req,res){
+  /*models.child.findOne({where:{childId:parseInt(req.params.id, 10)}}).then(function(child) {
+  //  res.send('index', {child});
+    res.json(child);
+  });*/
+
+ models.allergie.belongsTo(models.allergies_list,{ foreignKey: 'allergie_Id' })
+models.allergie.belongsTo(models.child,{ foreignKey: 'childId' })
+//models.child.hasMany(models.allergie,{ foreignKey: 'childId' })
+
+  models.allergie.findAll({
+    where: {child_id:parseInt(req.params.id, 10)},
+    include: [{model: models.child},{model: models.allergies_list}],
+    
+  }).then(function(allergie) {
+    // Do something with clientProjectUsers.
+    // Which has the client, its projects, and its users.
+
+    res.json(allergie);
+  });
+
+});
+
+
+
+
+router.get('/med/search/:name',function(req,res){
+  models.medicine.findAll({where: ["name like ?", '%' + req.params.name + '%']}).then(function(medicine) {
+      
+        console.log("adasf");
+        res.json(medicine);
+       
+        
+  });
+});
+
+
+
 
 router.get('/vaccine/details/:id',function(req,res){
 

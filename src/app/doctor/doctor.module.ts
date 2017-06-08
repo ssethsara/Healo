@@ -13,17 +13,18 @@ import { DoctorScheduleComponent } from './doctor-schedule/doctor-schedule.compo
 
 import { ChildDisplayComponent } from '../SearchChild/child-display/child-display.component';
 import { Ng2FilterPipeModule } from 'ng2-filter-pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ChildSearchComponent } from '../SearchChild/child-search/child-search.component';
 import { AppCommonModule }        from '../common/app-common.module';
-
+import { ChildCheckupComponent } from './doctor-search-child/child-checkup/child-checkup.component';
+import { CheckupService } from './doctor-search-child/child-checkup/checkup.service';
 
 @NgModule({
   imports: [
     CommonModule,
    Ng2FilterPipeModule,
     DoctorRoutingModule,
-    FormsModule,AppCommonModule 
+    FormsModule,AppCommonModule ,ReactiveFormsModule
   ],
   declarations: [
     DoctorNavComponent,
@@ -33,12 +34,13 @@ import { AppCommonModule }        from '../common/app-common.module';
     DoctorContactsComponent,
     DoctorStatisticsComponent,
     DoctorNotificationsComponent,
-    DoctorScheduleComponent,
+    DoctorScheduleComponent,ChildCheckupComponent,
 
     ChildSearchComponent,
     ChildDisplayComponent,
    
   ],
-  exports: [ChildSearchComponent]
+  providers:[CheckupService],
+  exports: [ChildSearchComponent,ChildCheckupComponent]
 })
 export class DoctorModule { }

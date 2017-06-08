@@ -12,7 +12,7 @@ import { DoctorScheduleComponent } from './doctor-schedule/doctor-schedule.compo
 import { ChildWindowComponent } from '../child-window/child-window.component';
 import { ImmunizationTableComponent } from '../child-window/immunization-table/immunization-table.component';
 import { WeightComponent } from '../charts/weight/weight.component';
-import { ChildCheckupComponent } from '../child-window/child-checkup/child-checkup.component';
+import { ChildCheckupComponent } from './doctor-search-child/child-checkup/child-checkup.component';
 import { SendMessageComponent } from '../common/send-message/send-message.component';
 
 import { ScheduleComponent } from '../common/schedule/schedule.component';

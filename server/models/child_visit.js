@@ -53,12 +53,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       field: 'child_id'
     },
-    childId: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
-      
-      field: 'child_id'
-    }
+    
 
   }, {
     tableName: 'clinic_visit'
