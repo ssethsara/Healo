@@ -2,12 +2,12 @@
 
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('allergies_list', {
-    id: {
+    allergieId: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-      field: 'Al_id'
+      field: 'allergieId'
     },
     allergiesName: {
       type: DataTypes.STRING,

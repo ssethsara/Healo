@@ -37,7 +37,7 @@ router.get('/child/:id',function(req,res){
   });*/
 
  models.child.belongsTo(models.user ,{ foreignKey: 'trusteeId' })
-models.bloodGroup.belongsTo(models.child ,{ foreignKey: 'bloodId' })
+models.child.hasOne(models.bloodGroup ,{ foreignKey: 'blood_id' })
 models.child.hasMany(models.childVisit ,{ foreignKey: 'child_id' })
 
   models.child.findOne({

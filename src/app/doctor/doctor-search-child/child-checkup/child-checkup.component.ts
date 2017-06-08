@@ -35,10 +35,18 @@ export class ChildCheckupComponent implements OnInit {
   childDetails;
   userdetails;
 
+  fullRecord;
+
+  allergies;
+  medicines;
+
  constructor(public fb: FormBuilder,public checkupService:CheckupService) { }
 
   allergieListopen=false;
   allergieDetails;
+
+
+  sendReport;
 
 
   medListopen=false;
@@ -90,8 +98,20 @@ medicine: Observable<Medicine[]>;
       })
 
 
-     //  this.checkupService.Other_alergies(this.childDetails.id)
-     // .subscribe(child=>{this.child=child;});
+      console.log(this.childDetails.childId);
+      this.checkupService.full_record(this.childDetails.childId)
+     .subscribe(record=>{this.fullRecord=record;
+     
+               console.log(this.fullRecord[0]);
+
+
+     this.allergies=this.fullRecord[0].allergies_lists;
+    this.medicines=this.fullRecord[0].medicines;
+
+
+    console.log(this.medicines);
+  
+});
 
 
   }
@@ -152,6 +172,35 @@ medicine: Observable<Medicine[]>;
       
         this.medDetails=null;
       }
-    }  
+     
 
 
+send()
+{
+
+
+  var newCheckup={
+    allergies: this.allergieDetails.allergieId,
+    medicines: this.medDetails.id,
+    MotherNote:this.checkup.value.MotherNote,
+    MidwifeNote:this.checkup.value.MidwifeNote,
+    NoteforNurse:this.checkup.value.NoteforNurse,
+    childID:this.childDetails.childId,
+    doctorId:this.userdetails.nic,
+
+  
+  }
+   
+  
+    console.log(newCheckup);
+
+
+
+  this.checkupService.reportSend(newCheckup)
+    .subscribe(user=>{this.sendReport.push(newCheckup);
+                      
+  });
+
+}      
+
+}

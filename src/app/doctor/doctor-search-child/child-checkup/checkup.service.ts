@@ -17,6 +17,9 @@ import{GivenMedicine}from './classes/GivenMedicine';
 @Injectable()
 export class CheckupService {
 
+
+ sendReportURL='clinic/sendReport';
+
  constructor(private http: Http,private router:Router) { }
 
 
@@ -39,12 +42,51 @@ console.log(term);
 
 
 
-  Other_alergies(id:string): Observable<Allergie[]> {
+  full_record(id:number): Observable<Allergie[]> {
     
-
+console.log(id);
     return this.http
-               .get(`clinic/allergie/other/${id}`)
+               .get(`clinic/record/${id}`)
                .map(res =>res.json());
   }
+
+
+
+
+reportSend(report): Observable<GivenMedicine> {
+
+   console.log(report);
+    var headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+
+    return this.http.post(this.sendReportURL,JSON.stringify(report), options)
+                    .map(this.extractData)
+                    .catch(this.handleError);
+  }
+
+ private extractData(res: Response) {
+  let body = res.json();
+  
+                        console.log(body.data);
+  return body.data || { };
+}
+
+
+private handleError (error: Response | any) {
+  // In a real world app, you might use a remote logging infrastructure
+  
+  let errMsg: string;
+  
+  if (error instanceof Response) {
+    const body = error.json() || '';
+    const err = body.error || JSON.stringify(body|| null);
+    errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
+  } else {
+    errMsg = error.message ? error.message : error.toString();
+  }
+  //console.error(errMsg);
+  return Observable.throw(errMsg);
+}
+
 
 }

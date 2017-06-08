@@ -130,7 +130,7 @@ export class NurseVaccinationComponent implements OnInit {
 
 
   this.vaccineService.immunization(newVaccine)
-    .subscribe(user=>{this.vaccine.push(user);
+    .subscribe(user=>{this.vaccine.push(newVaccine);
                       
   });
 

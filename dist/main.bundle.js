@@ -490,7 +490,7 @@ module.exports = "<p>\n  doctor-schedule works!\n</p>\n"
 /***/ 1122:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-8\">\n                        \n\n                         <div class=\"form-group\">\n                                    <div class=\"col-sm-2\">\n                                        <label for=\"inputEmail3\" class=\"control-label\">Other Allergies</label>\n                                    </div>\n                                </div>\n                                <div class=\"col-sm-12\">\n                                    <div class=\"col-sm-8\" style=\"float:right;\">\n                                        <ul class=\"list-group\" *ngFor=\"let allergieO of allergieOther\">\n                                            <li *ngIf=\"allergieO\" class=\"list-group-item\">{{allergieO.name}} {{allergieO.date}}\n                                               \n                                            </li>\n                        \n                                        </ul>\n                                    </div>\n                                </div>\n\n\n\n\n\n\n\n                                    <form >\n                                        <div class=\"form-group\">\n                                    <div class=\"col-sm-2\">\n                                        <label for=\"inputEmail3\" class=\"control-label\">Allergies</label>\n                                    </div>\n                                </div>\n                            <input class=\"form-control input-md\"  #searchBox  (keyup)=\"allergySearch(searchBox.value)  \" /></form>\n                            <div>\n                              <div class=\"col-md-12\" *ngIf=\"allergieListopen\" >\n                                    <ul  class=\"list-group-item\"  *ngFor=\"let allerg of allergie | async\" >\n                                        <div class=\"col-md-08\" *ngIf=\"allergieListopen\">\n                                              <li class=\"list-group-item\" Style=\"position:relative; Z-index:4; \"  (click)=\" allergieAssign(allerg) ; searchBox.value='' ; \">\n                                                <a>{{allerg.allergiesName}} </a>\n                                              </li>\n                                              </div>\n                                               </ul>\n\n                                             \n                              </div>\n                            </div>\n                 \n\n\n\n      \n                            <div class=\"col-sm-12\">\n                                <div class=\"col-sm-8\" style=\"float:right;\">\n                                    <ul class=\"list-group\" >\n                                        <li *ngIf=\"allergieDetails\" class=\"list-group-item\" >{{allergieDetails.allergiesName}}\n                                            <a class=\"btn btn-danger btn-xs\" style=\"float:right;\" (click)=\"allergieRemove()\">Remove</a>\n                                        </li>          \n                                    </ul>\n                                </div>\n                            </div>\n                            <div>\n\n                                <div class=\"form-group\">\n                                    <div class=\"col-sm-2\">\n                                        <label for=\"inputEmail3\" class=\"control-label\">Previously Used Medicines</label>\n                                    </div>\n                                </div>\n                                <div class=\"col-sm-12\">\n                                    <div class=\"col-sm-8\" style=\"float:right;\">\n                                        <ul class=\"list-group\" *ngFor=\"let medicineUsed of medicinesUsed\">\n                                            <li *ngIf=\"medicineUsed\" class=\"list-group-item\">{{medicineUsed.name}} {{medicineUsed.date}}\n                                               \n                                            </li>\n                        \n                                        </ul>\n                                    </div>\n                                </div>\n\n\n\n\n                                 <form >\n                                        <div class=\"form-group\">\n                                    <div class=\"col-sm-2\">\n                                        <label for=\"inputEmail3\" class=\"control-label\">Priscribe Medicines</label>\n                                    </div>\n                                </div>\n                            <input class=\"form-control input-md\"  #searchBoxMed  (keyup)=\"medSearch(searchBoxMed.value)  \" /></form>\n                            <div>\n                              <div class=\"col-md-12\" *ngIf=\"medListopen\" >\n                                    <ul  class=\"list-group-item\"  *ngFor=\"let med of medicine | async\" >\n                                        <div class=\"col-md-08\" *ngIf=\"medListopen\">\n                                              <li class=\"list-group-item\" Style=\"position:relative; Z-index:4; \"  (click)=\" medAssign(med) ; searchBoxMed.value='' ; \">\n                                                <a>{{med.name}} </a>\n                                              </li>\n                                              </div>\n                                               </ul>\n\n                                             \n                              </div>\n                            </div>\n\n\n                         <form class=\"form-horizontal\" role=\"form\" [formGroup]=\"checkup\">\n\n                                <div class=\"col-sm-12\">\n                                <div class=\"col-sm-8\" style=\"float:right;\">\n                                    <ul class=\"list-group\" >\n                                        <li *ngIf=\"medDetails\" class=\"list-group-item\" >{{medDetails.name}}\n                                            <a class=\"btn btn-danger btn-xs\" style=\"float:right;\" (click)=\"medRemove()\">Remove</a>\n                                        </li>          \n                                    </ul>\n                                </div>\n                            </div>\n                            <div>\n\n                                <div class=\"col-sm-12\">\n                                    <div class=\"form-group\">\n                                        <div class=\"col-sm-2\">\n                                            <label for=\"inputEmail3\" class=\"control-label\">Special Notes for Mother</label>\n                                        </div>\n                                        <div class=\"col-sm-10\">\n                                            <input type=\"text\" formControlName=\"MotherNote\" name=\"MotherNote\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"Type..\" row=3 >\n                                        </div>\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <div class=\"col-sm-2\">\n                                            <label for=\"inputEmail3\" class=\"control-label\">Special Notes for Midwife</label>\n                                        </div>\n                                        <div class=\"col-sm-10\">\n                                            <input type=\"text\" class=\"form-control\" id=\"inputEmail3\"  formControlName=\"MidwifeNote\" name=\"MidwifeNote\" row=3 placeholder=\"Type..\" >\n                                        </div>\n                                    </div>\n                                    <div class=\"form-group\" draggable=\"true\">\n                                        <div class=\"col-sm-2\">\n                                            <label for=\"inputEmail3\" class=\"control-label\">Special Notes for Vaccination</label>\n                                        </div>\n                                        <div class=\"col-sm-10\">\n                                            <input type=\"text\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"Type..\" formControlName=\"NoteforNurse\" name=\"NoteforNurse\" row=3 >\n                                        </div>\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <div class=\"col-sm-offset-2 col-sm-10\">\n                                            <button type=\"submit\" class=\"btn btn-success\" (click)=\"given()\" >Send</button>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </form>\n                    </div>"
+module.exports = "<div class=\"col-md-8\">\n                        \n\n                         <div class=\"form-group\">\n                                    <div class=\"col-sm-2\">\n                                        <label for=\"inputEmail3\" class=\"control-label\">Other Allergies</label>\n                                    </div>\n                                </div>\n                                <div class=\"col-sm-12\">\n                                    <div class=\"col-sm-8\" style=\"float:right;\">\n                                        <ul class=\"list-group\" *ngFor=\"let allergieO of allergies\">\n                                            <li *ngIf=\"allergieO\" class=\"list-group-item\" >Name : {{allergieO.allergiesName}}  <br> Description :  {{allergieO.Description}}\n                                               \n                                            </li>\n                        \n                                        </ul>\n                                    </div>\n                                </div>\n\n\n\n\n\n\n\n                                    <form >\n                                        <div class=\"form-group\">\n                                    <div class=\"col-sm-2\">\n                                        <label for=\"inputEmail3\" class=\"control-label\">Allergies</label>\n                                    </div>\n                                </div>\n                            <input class=\"form-control input-md\"  #searchBox  (keyup)=\"allergySearch(searchBox.value)  \" /></form>\n                            <div>\n                              <div class=\"col-md-12\" *ngIf=\"allergieListopen\" >\n                                    <ul  class=\"list-group-item\"  *ngFor=\"let allerg of allergie | async\" >\n                                        <div class=\"col-md-08\" *ngIf=\"allergieListopen\">\n                                              <li class=\"list-group-item\" Style=\"position:relative; Z-index:4; \"  (click)=\" allergieAssign(allerg) ; searchBox.value='' ; \">\n                                                <a>{{allerg.allergiesName}} </a>\n                                              </li>\n                                              </div>\n                                               </ul>\n\n                                             \n                              </div>\n                            </div>\n                 \n\n\n\n      \n                            <div class=\"col-sm-12\">\n                                <div class=\"col-sm-8\" style=\"float:right;\">\n                                    <ul class=\"list-group\" >\n                                        <li *ngIf=\"allergieDetails\" class=\"list-group-item\" >{{allergieDetails.allergiesName}}\n                                            <a class=\"btn btn-danger btn-xs\" style=\"float:right;\" (click)=\"allergieRemove()\">Remove</a>\n                                        </li>          \n                                    </ul>\n                                </div>\n                            </div>\n                         \n\n                                <div class=\"form-group\">\n                                    <div class=\"col-sm-2\">\n                                        <label for=\"inputEmail3\" class=\"control-label\">Previously Used Medicines</label>\n                                    </div>\n                                </div>\n                                <div class=\"col-sm-12\">\n                                    <div class=\"col-sm-8\" style=\"float:right;\">\n                                        <ul class=\"list-group\" *ngFor=\"let medicineUsed of medicines\">\n                                            <li *ngIf=\"medicineUsed\" class=\"list-group-item\">Name :{{medicineUsed.name}} <br> Date: {{medicineUsed.givenMedicine.date}}\n                                               \n                                            </li>\n                        \n                                        </ul>\n                                    </div>\n                                </div>\n\n\n\n\n                                 <form >\n                                        <div class=\"form-group\">\n                                    <div class=\"col-sm-2\">\n                                        <label for=\"inputEmail3\" class=\"control-label\">Priscribe Medicines</label>\n                                    </div>\n                                </div>\n                            <input class=\"form-control input-md\"  #searchBoxMed  (keyup)=\"medSearch(searchBoxMed.value)  \" /></form>\n                            <div>\n                              <div class=\"col-md-12\" *ngIf=\"medListopen\" >\n                                    <ul  class=\"list-group-item\"  *ngFor=\"let med of medicine | async\" >\n                                        <div class=\"col-md-08\" *ngIf=\"medListopen\">\n                                              <li class=\"list-group-item\" Style=\"position:relative; Z-index:4; \"  (click)=\" medAssign(med) ; searchBoxMed.value='' ; \">\n                                                <a>{{med.name}} </a>\n                                              </li>\n                                              </div>\n                                               </ul>\n\n                                             \n                              </div>\n                            </div>\n\n\n                         \n\n                                <div class=\"col-sm-12\">\n                                <div class=\"col-sm-8\" style=\"float:right;\">\n                                    <ul class=\"list-group\" >\n                                        <li *ngIf=\"medDetails\" class=\"list-group-item\" >{{medDetails.name}}\n                                            <a class=\"btn btn-danger btn-xs\" style=\"float:right;\" (click)=\"medRemove()\">Remove</a>\n                                        </li>          \n                                    </ul>\n                                </div>\n                            </div>\n\n\n                             <form class=\"form-horizontal\" role=\"form\" [formGroup]=\"checkup\">\n                            <div>\n\n                   \n                                <div class=\"col-sm-12\">\n                                    <div class=\"form-group\">\n                                        <div class=\"col-sm-2\">\n                                            <label for=\"inputEmail3\" class=\"control-label\">Special Notes for Mother</label>\n                                        </div>\n                                        <div class=\"col-sm-10\">\n                                            <input type=\"text\" formControlName=\"MotherNote\" name=\"MotherNote\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"Type..\" row=3 >\n                                        </div>\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <div class=\"col-sm-2\">\n                                            <label for=\"inputEmail3\" class=\"control-label\">Special Notes for Midwife</label>\n                                        </div>\n                                        <div class=\"col-sm-10\">\n                                            <input type=\"text\" class=\"form-control\" id=\"inputEmail3\"  formControlName=\"MidwifeNote\" name=\"MidwifeNote\" row=3 placeholder=\"Type..\" >\n                                        </div>\n                                    </div>\n                                    <div class=\"form-group\" draggable=\"true\">\n                                        <div class=\"col-sm-2\">\n                                            <label for=\"inputEmail3\" class=\"control-label\">Special Notes for Vaccination</label>\n                                        </div>\n                                        <div class=\"col-sm-10\">\n                                            <input type=\"text\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"Type..\" formControlName=\"NoteforNurse\" name=\"NoteforNurse\" row=3 >\n                                        </div>\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <div class=\"col-sm-offset-2 col-sm-10\">\n                                            <button type=\"submit\" class=\"btn btn-success\" (click)=\"send()\" >Send</button>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </form>\n                    </div>"
 
 /***/ }),
 
@@ -1028,7 +1028,7 @@ var DoctorModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(70);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildService; });
@@ -1147,8 +1147,15 @@ var ChildCheckupComponent = (function () {
             console.log(error);
             return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].of([]);
         });
-        //  this.checkupService.Other_alergies(this.childDetails.id)
-        // .subscribe(child=>{this.child=child;});
+        console.log(this.childDetails.childId);
+        this.checkupService.full_record(this.childDetails.childId)
+            .subscribe(function (record) {
+            _this.fullRecord = record;
+            console.log(_this.fullRecord[0]);
+            _this.allergies = _this.fullRecord[0].allergies_lists;
+            _this.medicines = _this.fullRecord[0].medicines;
+            console.log(_this.medicines);
+        });
     };
     ChildCheckupComponent.prototype.allergySearch = function (term) {
         console.log(term);
@@ -1173,6 +1180,23 @@ var ChildCheckupComponent = (function () {
     };
     ChildCheckupComponent.prototype.medRemove = function () {
         this.medDetails = null;
+    };
+    ChildCheckupComponent.prototype.send = function () {
+        var _this = this;
+        var newCheckup = {
+            allergies: this.allergieDetails.allergieId,
+            medicines: this.medDetails.id,
+            MotherNote: this.checkup.value.MotherNote,
+            MidwifeNote: this.checkup.value.MidwifeNote,
+            NoteforNurse: this.checkup.value.NoteforNurse,
+            childID: this.childDetails.childId,
+            doctorId: this.userdetails.nic,
+        };
+        console.log(newCheckup);
+        this.checkupService.reportSend(newCheckup)
+            .subscribe(function (user) {
+            _this.sendReport.push(newCheckup);
+        });
     };
     ChildCheckupComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -1361,7 +1385,7 @@ var NurseVaccinationComponent = (function () {
         console.log(newVaccine);
         this.vaccineService.immunization(newVaccine)
             .subscribe(function (user) {
-            _this.vaccine.push(user);
+            _this.vaccine.push(newVaccine);
         });
     };
     NurseVaccinationComponent = __decorate([
@@ -1643,7 +1667,7 @@ var MothernevComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(70);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildSearchService; });
@@ -1753,7 +1777,7 @@ var AddChildComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(8);
@@ -1866,7 +1890,7 @@ var ApiComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(26);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScheduleService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2070,14 +2094,14 @@ var DoctorNotificationsComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__ = __webpack_require__(136);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_throw__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckupService; });
@@ -2097,10 +2121,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var CheckupService = (function () {
     function CheckupService(http, router) {
         this.http = http;
         this.router = router;
+        this.sendReportURL = 'clinic/sendReport';
     }
     CheckupService.prototype.searchAllerge = function (term) {
         return this.http
@@ -2113,14 +2140,42 @@ var CheckupService = (function () {
             .get("clinic/med/search/" + term)
             .map(function (res) { return res.json(); });
     };
-    CheckupService.prototype.Other_alergies = function (id) {
+    CheckupService.prototype.full_record = function (id) {
+        console.log(id);
         return this.http
-            .get("clinic/allergie/other/" + id)
+            .get("clinic/record/" + id)
             .map(function (res) { return res.json(); });
+    };
+    CheckupService.prototype.reportSend = function (report) {
+        console.log(report);
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Headers */]({ 'Content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        return this.http.post(this.sendReportURL, JSON.stringify(report), options)
+            .map(this.extractData)
+            .catch(this.handleError);
+    };
+    CheckupService.prototype.extractData = function (res) {
+        var body = res.json();
+        console.log(body.data);
+        return body.data || {};
+    };
+    CheckupService.prototype.handleError = function (error) {
+        // In a real world app, you might use a remote logging infrastructure
+        var errMsg;
+        if (error instanceof __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* Response */]) {
+            var body = error.json() || '';
+            var err = body.error || JSON.stringify(body || null);
+            errMsg = error.status + " - " + (error.statusText || '') + " " + err;
+        }
+        else {
+            errMsg = error.message ? error.message : error.toString();
+        }
+        //console.error(errMsg);
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(errMsg);
     };
     CheckupService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["f" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["f" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["f" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["f" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["Router"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_router__["Router"]) === 'function' && _b) || Object])
     ], CheckupService);
     return CheckupService;
     var _a, _b;
@@ -2563,7 +2618,7 @@ var MidwifeStatComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(8);
@@ -2800,7 +2855,7 @@ var NurseSearchChildComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(8);
@@ -3494,7 +3549,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login_component__ = __webpack_require__(410);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(789);
@@ -4213,7 +4268,7 @@ var MidwifeModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(8);

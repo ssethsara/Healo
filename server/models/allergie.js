@@ -17,14 +17,14 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
       field: 'date'
     },
-    allergie_Id: {
+    allergieId: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
       references: {
         model: 'allergies_list',
-        key: 'id'
+        key: 'allergieId'
       },
-      field: 'allergie_Id'
+      field: 'allergieId'
     },
     childId: {
       type: DataTypes.INTEGER(11),
@@ -35,8 +35,18 @@ module.exports = function(sequelize, DataTypes) {
       },
       field: 'child_id'
     },
+    check_id: {
+      type: DataTypes.INTEGER(11),
+       allowNull: false,
+       references: {
+        model: 'doctor_checkup',
+        key: 'checkup_id'
+      },
+      field: 'check_id'
+    }
+  },
    
-  }, {
+   {
     tableName: 'allergies'
   });
 };

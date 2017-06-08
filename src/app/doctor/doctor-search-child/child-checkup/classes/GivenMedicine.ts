@@ -1,7 +1,12 @@
 export class GivenMedicine {
 
-             id:number;   
-             name:string;
+             allergies: string;
+            medicines: string;
+            MotherNote:string;
+            MidwifeNote:string;
+            NoteforNurse:string;
+            childID:number;
+            doctorId:string;
              
 
 }
