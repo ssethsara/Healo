@@ -258,6 +258,8 @@ else{
 
 router.post('/sendReport',function(req,res,next){
 
+var checkup_id;
+
 var found=false;
 if(!req.body)
 {
@@ -284,22 +286,110 @@ else{
 
             
       
-        /*     models.vaccination.findOrCreate({
+            models.doctor_checkup.findOrCreate({
                 where: {//object containing fields to found
-                    injection_name:injection,
-                    chil_id:childID
+                   doctor_id:doctorId,
+                      child_Id:childID,
+                        note_Mother:MotherNote,
+                        note_Nurse:NoteforNurse,
+                        note_midwife:MidwifeNote,
                 }, 
 
           
                  defaults: { 
                         
-                        injectionName:injection,
-                        chilId:childID,
-                        nurseId:nurseID,
-                        remarks:remarks,
+                        doctor_id:doctorId,
+                        child_Id:childID,
+                        note_Mother:MotherNote,
+                        note_Nurse:NoteforNurse,
+                        note_midwife:MidwifeNote,
                  }    
                 
             }).spread(function(user, created) {
+
+                
+                
+                checkup_id=user.checkup_id;
+                
+                console.log(checkup_id);
+
+
+                //alergies insert
+
+              models.allergie.findOrCreate({
+                
+                where: {//object containing fields to found
+                   
+                        allergieId:allergies,
+                        childId:childID,
+                        check_id:checkup_id,
+                }, 
+
+          
+                 defaults: { 
+                        
+                        allergieId:allergies,
+                        childId:childID,
+                        check_id:checkup_id,
+                      
+                 }    
+                
+            }).spread(function(user, created) {
+
+                
+               
+
+
+                console.log(user.get({
+                  plain: true
+                }))
+                console.log(created)
+
+             //   res.status(300).send({ redirect:"http://localhost:3000"});
+                
+              });
+
+
+
+
+// given medicines
+
+                   models.allergie.findOrCreate({
+                where: {//object containing fields to found
+                   
+                        allergieId:allergies,
+                        childId:childID,
+                        check_id:checkup_id,
+                }, 
+
+          
+                 defaults: { 
+                        
+                        allergieId:allergies,
+                        childId:childID,
+                        check_id:checkup_id,
+                      
+                 }    
+                
+            }).spread(function(user, created) {
+
+                
+               
+
+
+                console.log(user.get({
+                  plain: true
+                }))
+                console.log(created)
+
+               // res.status(300).send({ redirect:"http://localhost:3000"});
+                
+              });
+
+
+
+
+
                 console.log(user.get({
                   plain: true
                 }))
@@ -309,7 +399,7 @@ else{
                 
               });
 
-*/
+            
 
 
       }

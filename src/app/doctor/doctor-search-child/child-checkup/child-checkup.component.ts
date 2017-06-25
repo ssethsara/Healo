@@ -105,7 +105,7 @@ medicine: Observable<Medicine[]>;
                console.log(this.fullRecord[0]);
 
 
-     this.allergies=this.fullRecord[0].allergies_lists;
+   //  this.allergies=this.fullRecord[0].allergies_lists;
     this.medicines=this.fullRecord[0].medicines;
 
 

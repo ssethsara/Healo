@@ -1152,7 +1152,7 @@ var ChildCheckupComponent = (function () {
             .subscribe(function (record) {
             _this.fullRecord = record;
             console.log(_this.fullRecord[0]);
-            _this.allergies = _this.fullRecord[0].allergies_lists;
+            //  this.allergies=this.fullRecord[0].allergies_lists;
             _this.medicines = _this.fullRecord[0].medicines;
             console.log(_this.medicines);
         });
